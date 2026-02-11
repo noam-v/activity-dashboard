@@ -27,6 +27,12 @@ h1 { font-size: 24px; font-weight: 600; margin-bottom: 4px; }
 .section { margin-bottom: 32px; }
 .section-title { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
 
+/* Legend */
+.legend { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; font-size: 12px; color: var(--text-muted); align-items: center; }
+.legend-item { display: flex; align-items: center; gap: 5px; }
+.legend-swatch { width: 14px; height: 14px; border-radius: 3px; }
+.legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
 /* Heatmap */
 .heatmap-wrap { display: flex; overflow-x: auto; }
 .heatmap-hour-labels { display: flex; flex-direction: column; gap: 3px; margin-right: 6px; }
@@ -40,6 +46,11 @@ h1 { font-size: 24px; font-weight: 600; margin-bottom: 4px; }
 .heatmap-cell.l3 { background: #26a641; border-color: #26a641; }
 .heatmap-cell.l4 { background: #39d353; border-color: #39d353; }
 .heatmap-label { font-size: 10px; color: var(--text-muted); margin-top: 4px; white-space: nowrap; }
+
+/* Tooltip */
+.tooltip { position: fixed; background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  padding: 8px 12px; font-size: 12px; z-index: 1000; max-width: 350px; pointer-events: none;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.6); line-height: 1.5; display: none; }
 
 /* Day nav */
 .nav { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
@@ -65,40 +76,51 @@ h1 { font-size: 24px; font-weight: 600; margin-bottom: 4px; }
 .gantt { width: 100%; border-collapse: collapse; }
 .gantt th { font-size: 11px; color: var(--text-muted); font-weight: 400; padding: 4px 0; text-align: center;
   border-bottom: 1px solid var(--border); min-width: 48px; }
-.gantt th:first-child { min-width: 280px; text-align: left; padding-left: 8px; }
+.gantt th:first-child { min-width: 300px; text-align: left; padding-left: 8px; }
 .gantt td { padding: 0; text-align: center; border-bottom: 1px solid var(--border); height: 26px; position: relative; }
-.gantt .row-label { text-align: left; padding: 4px 8px; font-size: 12px; max-width: 280px;
-  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gantt .row-label { text-align: left; padding: 4px 8px; font-size: 12px; max-width: 300px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: default; }
 .gantt .row-label.task-row { font-weight: 600; font-size: 13px; }
+.gantt .row-label.task-row a { color: var(--text); }
+.gantt .row-label.task-row a:hover { color: var(--accent); }
 .gantt .row-label.sub-row { padding-left: 24px; color: var(--text-muted); font-size: 11px; }
-.gantt .row-label .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
-.gantt .row-label .status-dot.done { background: var(--green); }
-.gantt .row-label .status-dot.progress { background: var(--yellow); }
-.gantt .row-label .status-dot.other { background: var(--text-muted); }
+.gantt .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.gantt .status-dot.done { background: var(--green); }
+.gantt .status-dot.progress { background: var(--yellow); }
+.gantt .status-dot.other { background: var(--text-muted); }
 
-.gantt-bar { position: absolute; top: 3px; left: 2px; right: 2px; bottom: 3px; border-radius: 3px; opacity: 0.85; }
+.gantt-bar { position: absolute; top: 3px; left: 2px; right: 2px; bottom: 3px; border-radius: 3px; opacity: 0.85; cursor: pointer; }
+.gantt-bar:hover { opacity: 1; }
 .gantt-bar.task { background: var(--purple); }
 .gantt-bar.pr { background: var(--green); }
-.gantt-bar.push { background: var(--orange); }
 .gantt-bar.session { background: var(--accent); }
-
-.gantt .type-icon { margin-right: 4px; font-size: 11px; }
+.gantt-bar.orphan-pr { background: var(--orange); }
+.gantt-bar.orphan-session { background: var(--text-muted); }
 
 /* === TIMELINE === */
 .timeline { display: flex; flex-direction: column; gap: 0; }
 .tl-hour { border-bottom: 1px solid var(--border); padding: 10px 0; }
-.tl-hour.inactive { opacity: 0.25; padding: 4px 0; }
+.tl-hour.inactive { opacity: 0.2; padding: 4px 0; }
 .tl-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
 .tl-time { font-size: 14px; font-weight: 600; color: var(--text-muted); min-width: 50px; }
 .tl-summary { font-size: 13px; color: var(--text); flex: 1; }
-.tl-details { margin-left: 62px; display: flex; flex-direction: column; gap: 4px; }
-.tl-item { font-size: 12px; line-height: 1.5; display: flex; gap: 6px; align-items: flex-start; }
-.tl-item .icon { min-width: 16px; text-align: center; }
-.tl-item.event { color: var(--green); }
-.tl-item.task { color: var(--purple); }
-.tl-item.session { color: var(--accent); }
-.tl-item .detail-text { color: var(--text); }
-.tl-item .tag { font-size: 10px; padding: 1px 6px; border-radius: 8px; background: rgba(255,255,255,0.06); color: var(--text-muted); margin-left: 4px; }
+.tl-details { margin-left: 62px; display: flex; flex-direction: column; gap: 3px; }
+.tl-item { font-size: 12px; line-height: 1.5; display: flex; gap: 6px; align-items: flex-start; transition: opacity 0.15s; }
+.tl-item .icon { min-width: 16px; text-align: center; font-size: 10px; padding-top: 2px; }
+.tl-item.highlight { font-weight: 600; font-size: 13px; }
+.tl-item.highlight .detail-text { color: var(--text); }
+.tl-item.muted { opacity: 0.5; }
+.tl-item.muted:hover { opacity: 0.9; }
+.tl-item.event .icon { color: var(--green); }
+.tl-item.task .icon { color: var(--purple); }
+.tl-item.session .icon { color: var(--accent); }
+.tl-item .detail-text { color: var(--text-muted); }
+.tl-item.highlight .detail-text { color: var(--text); }
+.tl-item .tag { font-size: 10px; padding: 1px 6px; border-radius: 8px; background: rgba(255,255,255,0.06); color: var(--text-muted); margin-left: 4px; font-weight: 400; }
+.tl-item .tag.pr-opened { background: rgba(63,185,80,0.15); color: var(--green); }
+.tl-item .tag.pr-merged { background: rgba(188,140,255,0.15); color: var(--purple); }
+.tl-item .tag.status-done { background: rgba(63,185,80,0.15); color: var(--green); }
+.tl-item .tag.status-progress { background: rgba(210,153,34,0.15); color: var(--yellow); }
 
 .loading { text-align: center; padding: 60px; color: var(--text-muted); }
 
@@ -130,21 +152,50 @@ h1 { font-size: 24px; font-weight: 600; margin-bottom: 4px; }
   </div>
   <div class="view-content active" id="view-gantt"><div class="section">
     <div class="section-title">Task-Centric Gantt</div>
+    <div class="legend" id="gantt-legend">
+      <span style="color:var(--text-muted)">Bars:</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--purple)"></span> Task</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--green)"></span> PR</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--accent)"></span> Agent Session</span>
+      <span class="legend-item"><span class="legend-swatch" style="background:var(--orange)"></span> Orphan PR</span>
+      <span style="margin-left:12px;color:var(--text-muted)">Status:</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--green)"></span> Done</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--yellow)"></span> In Progress</span>
+      <span class="legend-item"><span class="legend-dot" style="background:var(--text-muted)"></span> Other</span>
+    </div>
     <div class="gantt-container"><table class="gantt" id="gantt-table"></table></div>
   </div></div>
   <div class="view-content" id="view-timeline"><div class="section">
     <div class="section-title">Hourly Timeline</div>
+    <div class="legend">
+      <span style="color:var(--text-muted)">Highlighted:</span>
+      <span class="legend-item" style="font-weight:600"><span class="legend-dot" style="background:var(--green)"></span> PR opened/merged</span>
+      <span class="legend-item" style="font-weight:600"><span class="legend-dot" style="background:var(--purple)"></span> Task Done/In Progress</span>
+      <span style="margin-left:8px;color:var(--text-muted)">Other events shown dimmed</span>
+    </div>
     <div class="timeline" id="timeline"></div>
   </div></div>
 </div>
+<div class="tooltip" id="tooltip"></div>
 <script>
 const DATES = ["2026-02-08", "2026-02-09", "2026-02-10", "2026-02-11"];
 let allData = {}, currentDate = null;
+const tooltipEl = document.getElementById('tooltip');
+
+function showTooltip(e, html) {
+  tooltipEl.innerHTML = html;
+  tooltipEl.style.display = 'block';
+  const x = Math.min(e.clientX + 12, window.innerWidth - 370);
+  const y = Math.min(e.clientY + 12, window.innerHeight - 100);
+  tooltipEl.style.left = x + 'px';
+  tooltipEl.style.top = y + 'px';
+}
+function hideTooltip() { tooltipEl.style.display = 'none'; }
 
 async function loadData() {
   await Promise.all(DATES.map(async d => {
     try { const r = await fetch(`data/${d}.json`); if (r.ok) allData[d] = await r.json(); }
-    catch(e) { console.warn(`Failed: ${d}`, e); }
+    catch(e) {}
   }));
 }
 
@@ -163,14 +214,13 @@ function renderStats() {
     <div class="stat-card"><div class="value">${s}</div><div class="label">Agent sessions</div></div>
     <div class="stat-card"><div class="value">${e}</div><div class="label">GitHub events</div></div>
     <div class="stat-card"><div class="value">${t}</div><div class="label">Notion tasks</div></div>
-    <div class="stat-card"><div class="value">${lt}</div><div class="label">Tasks linked to PRs</div></div>`;
+    <div class="stat-card"><div class="value">${lt}</div><div class="label">Tasks with PRs</div></div>`;
 }
 
 function renderHeatmap() {
   const dates = Object.keys(allData).sort();
   if (!dates.length) return;
-  const hl = document.getElementById('heatmap-hlabels');
-  hl.innerHTML = '';
+  const hl = document.getElementById('heatmap-hlabels'); hl.innerHTML = '';
   for (let h=0; h<24; h++) {
     const l = document.createElement('div'); l.className='heatmap-hour-label';
     l.textContent = h%3===0 ? h : ''; hl.appendChild(l);
@@ -188,7 +238,11 @@ function renderHeatmap() {
         const i = (hd.session_count||0)+(hd.github_event_count||0)+(hd.task_count||0);
         cell.classList.add(i>=6?'l4':i>=4?'l3':i>=2?'l2':'l1');
       }
-      cell.title = `${d} ${hh}:00`;
+      cell.addEventListener('mouseenter', e => {
+        const sum = hd?.summary || 'No activity';
+        showTooltip(e, `<strong>${d} ${hh}:00</strong><br>${sum}`);
+      });
+      cell.addEventListener('mouseleave', hideTooltip);
       col.appendChild(cell);
     }
     const lbl = document.createElement('div'); lbl.className='heatmap-label';
@@ -210,34 +264,31 @@ function renderNav() {
     nav.appendChild(b);
   });
 }
-
 function selectDate(d) { currentDate=d; renderNav(); renderDayView(); }
 
 function renderDayView() {
   const data = allData[currentDate]; if (!data) return;
   document.getElementById('day-summary').textContent = data.day_summary||'';
-  renderGantt(data);
-  renderTimeline(data);
+  renderGantt(data); renderTimeline(data);
 }
 
 function statusDot(status) {
   const s = (status||'').toLowerCase();
-  if (s==='done') return '<span class="status-dot done"></span>';
-  if (s.includes('progress')) return '<span class="status-dot progress"></span>';
-  return '<span class="status-dot other"></span>';
+  if (s==='done') return '<span class="status-dot done" title="Done"></span>';
+  if (s.includes('progress')) return '<span class="status-dot progress" title="In Progress"></span>';
+  return '<span class="status-dot other" title="'+esc(status)+'"></span>';
 }
 
-function esc(s) { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+function esc(s) { if(!s)return''; const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
 
 function renderGantt(data) {
   const items = data.work_items || [];
   if (!items.length) { document.getElementById('gantt-table').innerHTML='<tr><td>No work items</td></tr>'; return; }
 
-  // Determine hour range
   let allHours = new Set();
   items.forEach(w => (w.active_hours||[]).forEach(h => allHours.add(parseInt(h))));
   Object.keys(data.hours||{}).forEach(h => allHours.add(parseInt(h)));
-  if (!allHours.size) { document.getElementById('gantt-table').innerHTML=''; return; }
+  if (!allHours.size) return;
   const minH = Math.max(0, Math.min(...allHours)-1);
   const maxH = Math.min(23, Math.max(...allHours)+1);
 
@@ -245,7 +296,6 @@ function renderGantt(data) {
   for (let h=minH; h<=maxH; h++) html += `<th>${h}:00</th>`;
   html += '</tr></thead><tbody>';
 
-  // Sort: tasks first (by number of active hours desc), then orphan PRs, then orphan sessions
   const sorted = [...items].sort((a,b) => {
     const order = {task:0, orphan_pr:1, orphan_session:2};
     if (order[a.type]!==order[b.type]) return order[a.type]-order[b.type];
@@ -253,55 +303,60 @@ function renderGantt(data) {
   });
 
   for (const w of sorted) {
-    if (!(w.active_hours?.length) && w.type==='task' && !w.prs?.length && !w.sessions?.length) continue;
+    if (!(w.active_hours?.length) && !w.prs?.length && !w.sessions?.length) continue;
 
-    // Main row: task / orphan_pr / orphan_session
-    const icon = w.type==='task' ? '&#x1f4cb;' : w.type==='orphan_pr' ? '&#x1f500;' : '&#x1f4ac;';
-    const label = w.type==='task'
-      ? `${statusDot(w.status)}${esc(w.name)}`
-      : w.type==='orphan_pr'
-        ? `<span class="type-icon">&#x1f500;</span>${esc(w.name)}`
-        : `<span class="type-icon">&#x1f4ac;</span>${esc(w.name)}`;
-    const rowClass = w.type==='task' ? 'task-row' : '';
-
-    // Composite bar: show all active hours for this work item
     const activeSet = new Set(w.active_hours||[]);
-    html += `<tr><td class="row-label ${rowClass}">${label}</td>`;
+    const prCount = (w.prs||[]).length;
+    const sessCount = (w.sessions||[]).length;
+
+    // Main row
+    let label = '';
+    if (w.type==='task') {
+      const taskLink = w.url ? `<a href="${w.url}" target="_blank" title="${esc(w.name)}&#10;Status: ${esc(w.status)}&#10;${prCount} PR(s), ${sessCount} session(s)">${esc(w.name)}</a>` : esc(w.name);
+      label = `${statusDot(w.status)}${taskLink}`;
+    } else if (w.type==='orphan_pr') {
+      const prLink = w.url ? `<a href="${w.url}" target="_blank">${esc(w.name)}</a>` : esc(w.name);
+      label = `<span style="color:var(--orange);font-size:11px;margin-right:4px">PR</span>${prLink}`;
+    } else {
+      label = `<span style="color:var(--accent);font-size:11px;margin-right:4px">session</span>${esc(w.name)}`;
+    }
+
+    html += `<tr><td class="row-label ${w.type==='task'?'task-row':''}">${label}</td>`;
     for (let h=minH; h<=maxH; h++) {
       const hh = h.toString().padStart(2,'0');
       if (activeSet.has(hh)) {
-        const cls = w.type==='task'?'task':w.type==='orphan_pr'?'pr':'session';
-        html += `<td><div class="gantt-bar ${cls}"></div></td>`;
+        const cls = w.type==='task'?'task':w.type==='orphan_pr'?'orphan-pr':'orphan-session';
+        const tip = `${w.name}\\n${hh}:00`;
+        html += `<td><div class="gantt-bar ${cls}" data-tip="${esc(tip)}"></div></td>`;
       } else html += '<td></td>';
     }
     html += '</tr>';
 
-    // Sub-rows: PRs linked to this task
+    // Sub-rows: PRs
     for (const pr of (w.prs||[])) {
       const prHours = new Set([...(pr.event_hours||[]),...(pr.push_hours||[])]);
       if (!prHours.size) continue;
-      const merged = pr.merged ? ' (merged)' : '';
-      const prLabel = pr.url
-        ? `<a href="${pr.url}" target="_blank">#${pr.number}</a> ${esc(pr.title||'')}${merged}`
-        : `#${pr.number} ${esc(pr.title||'')}${merged}`;
-      html += `<tr><td class="row-label sub-row"><span class="type-icon">&#x1f500;</span>${prLabel}</td>`;
+      const merged = pr.merged ? ' <span style="color:var(--purple)">(merged)</span>' : '';
+      const prLink = pr.url ? `<a href="${pr.url}" target="_blank">#${pr.number}</a>` : `#${pr.number}`;
+      html += `<tr><td class="row-label sub-row">${prLink} ${esc(pr.title||'')}${merged}</td>`;
       for (let h=minH; h<=maxH; h++) {
         const hh = h.toString().padStart(2,'0');
-        if (prHours.has(hh)) html += '<td><div class="gantt-bar pr"></div></td>';
+        if (prHours.has(hh)) html += `<td><div class="gantt-bar pr" data-tip="${esc(pr.title||'')}\\n${hh}:00"></div></td>`;
         else html += '<td></td>';
       }
       html += '</tr>';
     }
 
-    // Sub-rows: Sessions linked to this task
+    // Sub-rows: Sessions
     for (const s of (w.sessions||[])) {
       if (!(s.active_hours?.length)) continue;
       const sHours = new Set(s.active_hours);
-      const sLabel = esc((s.title_slug||'').replace(/-/g,' ').substring(0,40));
-      html += `<tr><td class="row-label sub-row"><span class="type-icon">&#x1f4ac;</span>${sLabel} (${s.message_count} msgs)</td>`;
+      const sName = (s.title_slug||'').replace(/-/g,' ').substring(0,40);
+      const mc = s.merged_count > 1 ? ` (${s.merged_count} runs, ` : ' (';
+      html += `<tr><td class="row-label sub-row" title="${esc(s.topic||'')}">${esc(sName)}${mc}${s.message_count} msgs)</td>`;
       for (let h=minH; h<=maxH; h++) {
         const hh = h.toString().padStart(2,'0');
-        if (sHours.has(hh)) html += '<td><div class="gantt-bar session"></div></td>';
+        if (sHours.has(hh)) html += `<td><div class="gantt-bar session" data-tip="${esc(s.topic||sName)}"></div></td>`;
         else html += '<td></td>';
       }
       html += '</tr>';
@@ -309,6 +364,12 @@ function renderGantt(data) {
   }
   html += '</tbody>';
   document.getElementById('gantt-table').innerHTML = html;
+
+  // Attach hover handlers to gantt bars
+  document.querySelectorAll('.gantt-bar[data-tip]').forEach(bar => {
+    bar.addEventListener('mouseenter', e => showTooltip(e, bar.dataset.tip.replace(/\\n/g,'<br>')));
+    bar.addEventListener('mouseleave', hideTooltip);
+  });
 }
 
 function renderTimeline(data) {
@@ -323,25 +384,45 @@ function renderTimeline(data) {
     html += `<div class="tl-hour"><div class="tl-header"><span class="tl-time">${hh}:00</span><span class="tl-summary">${esc(hd.summary||'')}</span></div>`;
     html += '<div class="tl-details">';
 
-    // Events with details
+    // Events - highlight PR open/merge, dim others
     for (const ev of (hd.events||[])) {
-      const desc = esc(ev.description||'');
+      const hi = ev.highlight;
+      const cls = hi ? 'tl-item event highlight' : 'tl-item event muted';
+      let desc = esc(ev.description||'');
       let extra = '';
-      if (ev.commits?.length) extra = '<br>' + ev.commits.map(c => `<span style="color:var(--text-muted);margin-left:22px;font-size:11px">${esc(c)}</span>`).join('<br>');
-      if (ev.pr_url) extra += ` <a href="${ev.pr_url}" target="_blank" style="font-size:11px">view</a>`;
-      html += `<div class="tl-item event"><span class="icon">&#9679;</span><span class="detail-text">${desc}${extra}</span></div>`;
+      if (ev.pr_url) desc = `<a href="${ev.pr_url}" target="_blank">${desc}</a>`;
+      if (hi) {
+        const action = (ev.description||'').match(/PR #\d+ (\w+)/)?.[1]||'';
+        if (action==='opened') extra += ' <span class="tag pr-opened">opened</span>';
+        else if (action==='merged') extra += ' <span class="tag pr-merged">merged</span>';
+      }
+      if (ev.commits?.length && !hi) {
+        // Show commits collapsed for non-highlighted
+      } else if (ev.commits?.length) {
+        extra += '<br>' + ev.commits.map(c => `<span style="color:var(--text-muted);margin-left:22px;font-size:11px">${esc(c)}</span>`).join('<br>');
+      }
+      html += `<div class="${cls}"><span class="icon">${hi?'&#9679;':'&#9675;'}</span><span class="detail-text">${desc}${extra}</span></div>`;
     }
 
-    // Tasks with status
+    // Tasks - highlight Done/In Progress, dim others
     for (const t of (hd.tasks||[])) {
+      const s = (t.status||'').toLowerCase();
+      const hi = t.highlight || s==='done' || s.includes('progress');
+      const cls = hi ? 'tl-item task highlight' : 'tl-item task muted';
       const tags = (t.tags||[]).map(tg => `<span class="tag">${esc(tg)}</span>`).join('');
-      html += `<div class="tl-item task"><span class="icon">&#9679;</span><span class="detail-text">${statusDot(t.status)}<strong>[${esc(t.status)}]</strong> ${esc(t.name)} ${tags}</span></div>`;
+      let statusTag = '';
+      if (s==='done') statusTag = '<span class="tag status-done">Done</span>';
+      else if (s.includes('progress')) statusTag = '<span class="tag status-progress">In Progress</span>';
+      else statusTag = `<span class="tag">${esc(t.status)}</span>`;
+      html += `<div class="${cls}"><span class="icon">${hi?'&#9679;':'&#9675;'}</span><span class="detail-text">${esc(t.name)} ${statusTag} ${tags}</span></div>`;
     }
 
-    // Sessions
+    // Sessions - always dimmed unless nothing else is highlighted
+    const hasHighlights = (hd.events||[]).some(e=>e.highlight) || (hd.tasks||[]).some(t=>t.highlight||(t.status||'').toLowerCase()==='done'||(t.status||'').toLowerCase().includes('progress'));
     for (const s of (hd.sessions||[])) {
-      const topic = esc((s.topic||s.title_slug||'').substring(0,100));
-      html += `<div class="tl-item session"><span class="icon">&#9679;</span><span class="detail-text">${topic} <span class="tag">${s.messages||0} msgs</span></span></div>`;
+      const topic = esc((s.topic||s.title_slug||'').substring(0,120));
+      const cls = hasHighlights ? 'tl-item session muted' : 'tl-item session';
+      html += `<div class="${cls}"><span class="icon">&#9675;</span><span class="detail-text">${topic} <span class="tag">${s.messages||0} msgs</span></span></div>`;
     }
 
     html += '</div></div>';
@@ -349,7 +430,6 @@ function renderTimeline(data) {
   el.innerHTML = html;
 }
 
-// View tabs
 document.querySelectorAll('.view-tab').forEach(tab => {
   tab.onclick = () => {
     document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));

@@ -1,102 +1,75 @@
 {
   "date": "2026-02-08",
-  "day_summary": "The developer had a productive day working on the Script.it platform, focusing on infrastructure changes, bug fixes, and code reviews. They successfully migrated API endpoints from vincent.so to script.it, implemented a stop execution feature, and resolved several production issues including 401 authentication errors and token rotation bugs. The day included extensive code review sessions and updates to various frontend and backend components.",
+  "day_summary": "The developer had a productive day focused on infrastructure updates and code reviews. Major accomplishments included migrating API URLs from vincent.so to script.it, implementing a stop execution feature, updating opencode, and conducting extensive code reviews. The day involved significant collaboration through agent sessions and multiple PR merges.",
   "active_hours": 14,
   "stats": {
     "sessions": 16,
     "github_events": 16,
-    "notion_tasks": 11
+    "notion_tasks": 11,
+    "linked_tasks": 3
   },
   "hours": {
     "06": {
-      "summary": "Created a new repository and opened a PR for the script.it-dsl project.",
+      "summary": "Created and assigned PR #40 for cancel all flag functionality and initialized a new repository.",
       "session_count": 0,
       "github_event_count": 3,
       "task_count": 0,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-08T06:55:14Z",
-          "hour": "06",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "action": "assigned",
+          "description": "PR #40 assigned: cancel all flag",
           "pr_number": 40,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/40"
         },
         {
           "timestamp": "2026-02-08T06:55:14Z",
-          "hour": "06",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "action": "opened",
+          "description": "PR #40 opened: cancel all flag",
           "pr_number": 40,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/40"
         },
         {
           "timestamp": "2026-02-08T06:55:06Z",
-          "hour": "06",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "ref_type": "branch",
-          "ref": "noam/feat/cancel-all"
+          "description": "Created branch noam/feat/cancel-all"
         }
       ],
-      "notion_tasks": []
+      "tasks": [],
+      "sessions": []
     },
     "07": {
-      "summary": "Worked on changing API base URLs from vincent.so to script.it across the platform while making commits to the cancel-all feature branch.",
+      "summary": "Worked on changing API base URL from vincent.so to script.it through agent collaboration and code commits.",
       "session_count": 1,
       "github_event_count": 2,
       "task_count": 1,
-      "sessions": [
-        {
-          "filename": "2026-02-08_07-27-11Z-command-name-fast-command.md",
-          "title_slug": "command-name-fast-command",
-          "topic": "For default search integration - change the api_base_url from vincent.so to script.it (in all places - backend, integration helper, everywhere) Specifically in the backend, add a backwards compatabili",
-          "messages": 18
-        }
-      ],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-08T07:14:20Z",
-          "hour": "07",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "branch": "noam/feat/cancel-all",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/cancel-all",
+          "commits": []
         },
         {
           "timestamp": "2026-02-08T07:03:57Z",
-          "hour": "07",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "branch": "noam/feat/cancel-all",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/cancel-all",
+          "commits": []
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "301ec4e5-8f15-8070-9a0c-f5905f5bd6d6",
           "name": "ZDR for analytics & LLM logs in LiteLLM",
           "status": "Not started",
           "tags": []
         }
-      ]
-    },
-    "08": {
-      "summary": "Continued the API URL migration work, merged a PR for the DSL project, and opened a new PR for the main script.it repository.",
-      "session_count": 1,
-      "github_event_count": 4,
-      "task_count": 1,
+      ],
       "sessions": [
         {
           "filename": "2026-02-08_07-27-11Z-command-name-fast-command.md",
@@ -104,54 +77,46 @@
           "topic": "For default search integration - change the api_base_url from vincent.so to script.it (in all places - backend, integration helper, everywhere) Specifically in the backend, add a backwards compatabili",
           "messages": 18
         }
-      ],
-      "github_events": [
+      ]
+    },
+    "08": {
+      "summary": "Merged the cancel all flag PR and opened a new PR for renaming web search gateway URL while continuing API migration work.",
+      "session_count": 1,
+      "github_event_count": 4,
+      "task_count": 1,
+      "events": [
         {
           "timestamp": "2026-02-08T08:44:33Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "action": "merged",
+          "description": "PR #40 merged: cancel all flag",
           "pr_number": 40,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/40"
         },
         {
           "timestamp": "2026-02-08T08:35:37Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #272 assigned: Rename web search gateway URL from vincent.so to script.it",
           "pr_number": 272,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/272"
         },
         {
           "timestamp": "2026-02-08T08:35:37Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #272 opened: Rename web search gateway URL from vincent.so to script.it",
           "pr_number": 272,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/272"
         },
         {
           "timestamp": "2026-02-08T08:35:00Z",
-          "hour": "08",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "feature/search-url-rename"
+          "description": "Created branch feature/search-url-rename"
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "301ec4e5-8f15-80ce-8f43-c434b31aaf0e",
           "name": "Remote Cloud Adapter - Running the sandbox in \u201cin your cloud\u201d environment",
@@ -160,112 +125,86 @@
             "Script.it Backend"
           ]
         }
-      ]
-    },
-    "09": {
-      "summary": "Investigated production 401 authentication errors in LiteLLM logs while pushing changes to the script view stop button feature.",
-      "session_count": 1,
-      "github_event_count": 1,
-      "task_count": 0,
-      "sessions": [
-        {
-          "filename": "2026-02-08_09-17-19Z-command-name-fast-command.md",
-          "title_slug": "command-name-fast-command",
-          "topic": "Please check litellm logs in production for 401 --- _**Agent (claude-opus-4-6 2026-02-08 09:17:35Z)**_ _**Agent (claude-opus-4-6 2026-02-08 09:17:36Z)**_ The user wants me to check LiteLLM logs in pro",
-          "messages": 52
-        }
       ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-08T09:57:29Z",
-          "hour": "09",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "feature/script-view-stop-button",
-          "commit_count": 0,
-          "commit_messages": []
-        }
-      ],
-      "notion_tasks": []
-    },
-    "10": {
-      "summary": "Completed the API URL migration and stop execution feature, merging multiple PRs and marking related tasks as done.",
-      "session_count": 2,
-      "github_event_count": 5,
-      "task_count": 2,
       "sessions": [
         {
           "filename": "2026-02-08_07-27-11Z-command-name-fast-command.md",
           "title_slug": "command-name-fast-command",
           "topic": "For default search integration - change the api_base_url from vincent.so to script.it (in all places - backend, integration helper, everywhere) Specifically in the backend, add a backwards compatabili",
           "messages": 18
-        },
+        }
+      ]
+    },
+    "09": {
+      "summary": "Investigated production LiteLLM logs for 401 errors and pushed changes to script view stop button feature.",
+      "session_count": 1,
+      "github_event_count": 1,
+      "task_count": 0,
+      "events": [
+        {
+          "timestamp": "2026-02-08T09:57:29Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feature/script-view-stop-button",
+          "commits": []
+        }
+      ],
+      "tasks": [],
+      "sessions": [
         {
           "filename": "2026-02-08_09-17-19Z-command-name-fast-command.md",
           "title_slug": "command-name-fast-command",
           "topic": "Please check litellm logs in production for 401 --- _**Agent (claude-opus-4-6 2026-02-08 09:17:35Z)**_ _**Agent (claude-opus-4-6 2026-02-08 09:17:36Z)**_ The user wants me to check LiteLLM logs in pro",
           "messages": 52
         }
-      ],
-      "github_events": [
+      ]
+    },
+    "10": {
+      "summary": "Completed multiple tasks including stop execution and API URL changes, while merging several PRs and opening an opencode update PR.",
+      "session_count": 2,
+      "github_event_count": 5,
+      "task_count": 2,
+      "events": [
         {
           "timestamp": "2026-02-08T10:31:12Z",
-          "hour": "10",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #273 assigned: update opencode",
           "pr_number": 273,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/273"
         },
         {
           "timestamp": "2026-02-08T10:31:12Z",
-          "hour": "10",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #273 opened: update opencode",
           "pr_number": 273,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/273"
         },
         {
           "timestamp": "2026-02-08T10:31:04Z",
-          "hour": "10",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "noam/feat/update-opencode"
+          "description": "Created branch noam/feat/update-opencode"
         },
         {
           "timestamp": "2026-02-08T10:13:36Z",
-          "hour": "10",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "merged",
+          "description": "PR #272 merged: Rename web search gateway URL from vincent.so to script.it",
           "pr_number": 272,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/272"
         },
         {
           "timestamp": "2026-02-08T10:12:26Z",
-          "hour": "10",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "merged",
+          "description": "PR #267 merged: Stop button for script view",
           "pr_number": 267,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/267"
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "2f9ec4e5-8f15-807b-a5d7-c3532ab17de8",
           "name": "\u201cStop Execution\u201d",
@@ -283,13 +222,38 @@
             "Script.it Backend"
           ]
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-08_07-27-11Z-command-name-fast-command.md",
+          "title_slug": "command-name-fast-command",
+          "topic": "For default search integration - change the api_base_url from vincent.so to script.it (in all places - backend, integration helper, everywhere) Specifically in the backend, add a backwards compatabili",
+          "messages": 18
+        },
+        {
+          "filename": "2026-02-08_09-17-19Z-command-name-fast-command.md",
+          "title_slug": "command-name-fast-command",
+          "topic": "Please check litellm logs in production for 401 --- _**Agent (claude-opus-4-6 2026-02-08 09:17:35Z)**_ _**Agent (claude-opus-4-6 2026-02-08 09:17:36Z)**_ The user wants me to check LiteLLM logs in pro",
+          "messages": 52
+        }
       ]
     },
     "11": {
-      "summary": "Investigated recent changes to subagent behavior in opencode and merged another PR.",
+      "summary": "Investigated recent changes to subagents in opencode and merged the opencode update PR.",
       "session_count": 1,
       "github_event_count": 1,
       "task_count": 0,
+      "events": [
+        {
+          "timestamp": "2026-02-08T11:14:13Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #273 merged: update opencode",
+          "pr_number": 273,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/273"
+        }
+      ],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-08_11-13-32Z-opencode-recently-started-being.md",
@@ -297,28 +261,15 @@
           "topic": "opencode recently started being very intent on using subagents. Please check what changes about sub agents in the recent days - system prompt, tool description etc --- _**Agent (claude-opus-4-6 2026-0",
           "messages": 4
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-08T11:14:13Z",
-          "hour": "11",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "merged",
-          "pr_number": 273,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        }
-      ],
-      "notion_tasks": []
+      ]
     },
     "12": {
-      "summary": "Checked if the latest opencode version supports Claude Opus 4.6 with 1M context length.",
+      "summary": "Verified opus 4.6 1M context length support in the latest opencode version through agent consultation.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 0,
+      "events": [],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-08_12-24-08Z-does-the-latest-version.md",
@@ -326,25 +277,15 @@
           "topic": "does the latest version of opencode support opus 4.6 1M context length - and how --- _**Agent (claude-opus-4-6 2026-02-08 12:24:13Z)**_ _**Agent (claude-opus-4-6 2026-02-08 12:24:15Z)**_ The user is a",
           "messages": 8
         }
-      ],
-      "github_events": [],
-      "notion_tasks": []
+      ]
     },
     "13": {
-      "summary": "Continued investigating production 401 errors while updating opencode and working on sandbox selection frontend improvements.",
+      "summary": "Continued investigating LiteLLM production logs and updated task statuses including opencode completion.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 2,
-      "sessions": [
-        {
-          "filename": "2026-02-08_09-17-19Z-command-name-fast-command.md",
-          "title_slug": "command-name-fast-command",
-          "topic": "Please check litellm logs in production for 401 --- _**Agent (claude-opus-4-6 2026-02-08 09:17:35Z)**_ _**Agent (claude-opus-4-6 2026-02-08 09:17:36Z)**_ The user wants me to check LiteLLM logs in pro",
-          "messages": 52
-        }
-      ],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "301ec4e5-8f15-80c1-8b4a-e06e38ad78e6",
           "name": "Update opencode",
@@ -361,13 +302,23 @@
             "Script.it Frontend"
           ]
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-08_09-17-19Z-command-name-fast-command.md",
+          "title_slug": "command-name-fast-command",
+          "topic": "Please check litellm logs in production for 401 --- _**Agent (claude-opus-4-6 2026-02-08 09:17:35Z)**_ _**Agent (claude-opus-4-6 2026-02-08 09:17:36Z)**_ The user wants me to check LiteLLM logs in pro",
+          "messages": 52
+        }
       ]
     },
     "14": {
-      "summary": "Continued debugging production authentication issues with additional agent sessions.",
+      "summary": "Maintained focus on production log investigation while engaging in additional agent sessions.",
       "session_count": 2,
       "github_event_count": 0,
       "task_count": 0,
+      "events": [],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-08_09-17-19Z-command-name-fast-command.md",
@@ -381,15 +332,15 @@
           "topic": "",
           "messages": 6
         }
-      ],
-      "github_events": [],
-      "notion_tasks": []
+      ]
     },
     "15": {
-      "summary": "Conducted extensive code reviews using automated tools, reviewing changes against the dev branch.",
+      "summary": "Conducted extensive code reviews using automated tools and expert review processes across multiple sessions.",
       "session_count": 3,
       "github_event_count": 0,
       "task_count": 0,
+      "events": [],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-08_15-37-20Z-command-message-review-command.md",
@@ -409,18 +360,15 @@
           "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is c17f36fdfbfb32c369de1e2ded5049252364c0ea. Run `git diff c17f36fdfbfb32c369de1e2ded5049252364c0ea` to",
           "messages": 1
         }
-      ],
-      "github_events": [],
-      "notion_tasks": []
+      ]
     },
     "17": {
-      "summary": "Updated task statuses for frontend improvements including new script button design and Edge browser compatibility issues.",
+      "summary": "Identified new frontend issues including unintuitive script button and potential Edge browser bugs.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 2,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "301ec4e5-8f15-808e-a700-e5abc6609db2",
           "name": "new script button is not intuitive",
@@ -435,23 +383,16 @@
             "Script.it Frontend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "18": {
-      "summary": "Continued the comprehensive code review session while fixing a token rotation bug in the backend.",
+      "summary": "Continued comprehensive code review work and resolved token rotation restart bug.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 1,
-      "sessions": [
-        {
-          "filename": "2026-02-08_15-37-46Z-review-the-code-changes.md",
-          "title_slug": "review-the-code-changes",
-          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is c17f36fdfbfb32c369de1e2ded5049252364c0ea. Run `git diff c17f36fdfbfb32c369de1e2ded5049252364c0ea` to",
-          "messages": 175
-        }
-      ],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "301ec4e5-8f15-807d-9646-c48a65d30077",
           "name": "BUG - token rotation not restarting",
@@ -460,13 +401,23 @@
             "Script.it Backend"
           ]
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-08_15-37-46Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is c17f36fdfbfb32c369de1e2ded5049252364c0ea. Run `git diff c17f36fdfbfb32c369de1e2ded5049252364c0ea` to",
+          "messages": 175
+        }
       ]
     },
     "19": {
-      "summary": "Initiated another code review session using the expert reviewer workflow.",
+      "summary": "Initiated additional code review processes using expert reviewer protocols.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 0,
+      "events": [],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-08_19-00-12Z-command-message-review-command.md",
@@ -474,18 +425,15 @@
           "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR number is provided, use Bash(\"gh pr view <number>\") ",
           "messages": 2
         }
-      ],
-      "github_events": [],
-      "notion_tasks": []
+      ]
     },
     "21": {
-      "summary": "Completed frontend redesign tasks for session open blocks and manual script execution with inputs.",
+      "summary": "Completed frontend redesign tasks for open block sessions and manual script execution with inputs.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 2,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "2f8ec4e5-8f15-804f-b9ab-c744e3cf5dd8",
           "name": "Redesign open block in session",
@@ -502,23 +450,44 @@
             "Script.it Frontend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     }
   },
-  "tasks": [
+  "work_items": [
     {
+      "type": "task",
       "id": "301ec4e5-8f15-8070-9a0c-f5905f5bd6d6",
       "name": "ZDR for analytics & LLM logs in LiteLLM",
       "status": "Not started",
       "priority": "High",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/ZDR-for-analytics-LLM-logs-in-LiteLLM-301ec4e58f1580709a0cf5905f5bd6d6",
       "active_hours": [
-        "07"
+        "07",
+        "09",
+        "10",
+        "13",
+        "14"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-08_09-17-19Z-command-name-fast-command.md",
+          "title_slug": "command-name-fast-command",
+          "topic": "Please check litellm logs in production for 401 --- _**Agent (claude-opus-4-6 2026-02-08 09:17:35Z)**_ _**Agent (claude-opus-4-6 2026-02-08 09:17:36Z)",
+          "active_hours": [
+            "09",
+            "10",
+            "13",
+            "14"
+          ],
+          "message_count": 52
+        }
       ]
     },
     {
+      "type": "task",
       "id": "301ec4e5-8f15-80ce-8f43-c434b31aaf0e",
       "name": "Remote Cloud Adapter - Running the sandbox in \u201cin your cloud\u201d environment",
       "status": "Upcoming",
@@ -526,13 +495,36 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Remote-Cloud-Adapter-Running-the-sandbox-in-in-your-cloud-environment-301ec4e58f1580ce8f43c434b31aaf0e",
       "active_hours": [
-        "08"
+        "08",
+        "15",
+        "19"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-08_15-37-20Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
+          "active_hours": [
+            "15"
+          ],
+          "message_count": 2
+        },
+        {
+          "filename": "2026-02-08_19-00-12Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
+          "active_hours": [
+            "19"
+          ],
+          "message_count": 2
+        }
       ]
     },
     {
+      "type": "task",
       "id": "2f9ec4e5-8f15-807b-a5d7-c3532ab17de8",
       "name": "\u201cStop Execution\u201d",
       "status": "Done",
@@ -541,13 +533,51 @@
         "Script.it Frontend",
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Stop-Execution-2f9ec4e58f15807ba5d7c3532ab17de8",
       "active_hours": [
+        "06",
+        "07",
+        "08",
+        "09",
         "10"
-      ]
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#267",
+          "repo": "bespo-ai/script.it",
+          "number": 267,
+          "title": "Stop button for script view",
+          "url": "https://github.com/bespo-ai/script.it/pull/267",
+          "branch": "feature/script-view-stop-button",
+          "merged": true,
+          "event_hours": [
+            "10"
+          ],
+          "push_hours": [
+            "09"
+          ]
+        },
+        {
+          "key": "bespo-ai/script.it-dsl#40",
+          "repo": "bespo-ai/script.it-dsl",
+          "number": 40,
+          "title": "cancel all flag",
+          "url": "https://github.com/bespo-ai/script.it-dsl/pull/40",
+          "branch": "noam/feat/cancel-all",
+          "merged": true,
+          "event_hours": [
+            "06",
+            "08"
+          ],
+          "push_hours": [
+            "07"
+          ]
+        }
+      ],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2feec4e5-8f15-80ba-afb8-ecfc4daf4d6a",
       "name": "Change api_base_url to  script.it  instead of vincent.so",
       "status": "Done",
@@ -555,13 +585,44 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Change-api_base_url-to-script-it-instead-of-vincent-so-2feec4e58f1580baafb8ecfc4daf4d6a",
       "active_hours": [
+        "07",
+        "08",
         "10"
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#272",
+          "repo": "bespo-ai/script.it",
+          "number": 272,
+          "title": "Rename web search gateway URL from vincent.so to script.it",
+          "url": "https://github.com/bespo-ai/script.it/pull/272",
+          "branch": "feature/search-url-rename",
+          "merged": true,
+          "event_hours": [
+            "08",
+            "10"
+          ],
+          "push_hours": []
+        }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-08_07-27-11Z-command-name-fast-command.md",
+          "title_slug": "command-name-fast-command",
+          "topic": "For default search integration - change the api_base_url from vincent.so to script.it (in all places - backend, integration helper, everywhere) Specif",
+          "active_hours": [
+            "07",
+            "08",
+            "10"
+          ],
+          "message_count": 18
+        }
       ]
     },
     {
+      "type": "task",
       "id": "301ec4e5-8f15-80c1-8b4a-e06e38ad78e6",
       "name": "Update opencode",
       "status": "Done",
@@ -569,25 +630,73 @@
       "tags": [
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Update-opencode-301ec4e58f1580c18b4ae06e38ad78e6",
       "active_hours": [
+        "10",
+        "11",
+        "12",
         "13"
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#273",
+          "repo": "bespo-ai/script.it",
+          "number": 273,
+          "title": "update opencode",
+          "url": "https://github.com/bespo-ai/script.it/pull/273",
+          "branch": "noam/feat/update-opencode",
+          "merged": true,
+          "event_hours": [
+            "10",
+            "11"
+          ],
+          "push_hours": []
+        }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-08_10-20-33Z-update-default-codex-to-53.md",
+          "title_slug": "update-default-codex-to-53",
+          "topic": "",
+          "active_hours": [],
+          "message_count": 0
+        },
+        {
+          "filename": "2026-02-08_11-13-32Z-opencode-recently-started-being.md",
+          "title_slug": "opencode-recently-started-being",
+          "topic": "opencode recently started being very intent on using subagents. Please check what changes about sub agents in the recent days - system prompt, tool de",
+          "active_hours": [
+            "11"
+          ],
+          "message_count": 4
+        },
+        {
+          "filename": "2026-02-08_12-24-08Z-does-the-latest-version.md",
+          "title_slug": "does-the-latest-version",
+          "topic": "does the latest version of opencode support opus 4.6 1M context length - and how --- _**Agent (claude-opus-4-6 2026-02-08 12:24:13Z)**_ _**Agent (clau",
+          "active_hours": [
+            "12"
+          ],
+          "message_count": 8
+        }
       ]
     },
     {
+      "type": "task",
       "id": "301ec4e5-8f15-808e-a700-e5abc6609db2",
       "name": "new script button is not intuitive",
       "status": "Not started",
       "priority": "High",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/new-script-button-is-not-intuitive-301ec4e58f15808ea700e5abc6609db2",
       "active_hours": [
         "17"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "301ec4e5-8f15-80d6-a3e0-c7997ae0dd77",
       "name": "Is the frontend buggy on edge browser?",
       "status": "Not started",
@@ -595,13 +704,37 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Is-the-frontend-buggy-on-edge-browser-301ec4e58f1580d6a3e0c7997ae0dd77",
       "active_hours": [
-        "17"
+        "15",
+        "17",
+        "18"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-08_15-37-46Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is c17f36fdfbfb32c369de1e2ded5049252364c0ea. Run `git",
+          "active_hours": [
+            "15",
+            "18"
+          ],
+          "message_count": 175
+        },
+        {
+          "filename": "2026-02-08_15-37-47Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is c17f36fdfbfb32c369de1e2ded5049252364c0ea. Run `git",
+          "active_hours": [
+            "15"
+          ],
+          "message_count": 1
+        }
       ]
     },
     {
+      "type": "task",
       "id": "2f8ec4e5-8f15-804f-b9ab-c744e3cf5dd8",
       "name": "Redesign open block in session",
       "status": "Done",
@@ -609,13 +742,15 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Redesign-open-block-in-session-2f8ec4e58f15804fb9abc744e3cf5dd8",
       "active_hours": [
         "21"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2f8ec4e5-8f15-8040-b553-f99ebb01ee32",
       "name": "Running scripts manually with inputs from the session",
       "status": "Done",
@@ -623,13 +758,15 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Running-scripts-manually-with-inputs-from-the-session-2f8ec4e58f158040b553f99ebb01ee32",
       "active_hours": [
         "21"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "301ec4e5-8f15-807d-9646-c48a65d30077",
       "name": "BUG - token rotation not restarting",
       "status": "Done",
@@ -637,13 +774,15 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-token-rotation-not-restarting-301ec4e58f15807d9646c48a65d30077",
       "active_hours": [
         "18"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "301ec4e5-8f15-80a0-ac1b-eab89cb5afec",
       "name": "\u201cSelect a sandbox to get started\u201d",
       "status": "In progress",
@@ -651,114 +790,32 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Select-a-sandbox-to-get-started-301ec4e58f1580a0ac1beab89cb5afec",
       "active_hours": [
         "13"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "orphan_session",
+      "id": "session-10",
+      "name": "command name extra usage",
+      "active_hours": [
+        "14"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-08_14-25-46Z-command-name-extra-usage.md",
+          "title_slug": "command-name-extra-usage",
+          "topic": "",
+          "active_hours": [
+            "14"
+          ],
+          "message_count": 6
+        }
       ]
-    }
-  ],
-  "session_timeline": [
-    {
-      "title": "command-name-fast-command",
-      "topic": "For default search integration - change the api_base_url from vincent.so to script.it (in all places - backend, integration helper, everywhere) Specif",
-      "start_hour": "07",
-      "end_hour": "10",
-      "message_count": 18
-    },
-    {
-      "title": "command-name-fast-command",
-      "topic": "Please check litellm logs in production for 401 --- _**Agent (claude-opus-4-6 2026-02-08 09:17:35Z)**_ _**Agent (claude-opus-4-6 2026-02-08 09:17:36Z)",
-      "start_hour": "09",
-      "end_hour": "14",
-      "message_count": 52
-    },
-    {
-      "title": "opencode-recently-started-being",
-      "topic": "opencode recently started being very intent on using subagents. Please check what changes about sub agents in the recent days - system prompt, tool de",
-      "start_hour": "11",
-      "end_hour": "11",
-      "message_count": 4
-    },
-    {
-      "title": "does-the-latest-version",
-      "topic": "does the latest version of opencode support opus 4.6 1M context length - and how --- _**Agent (claude-opus-4-6 2026-02-08 12:24:13Z)**_ _**Agent (clau",
-      "start_hour": "12",
-      "end_hour": "12",
-      "message_count": 8
-    },
-    {
-      "title": "command-name-extra-usage",
-      "topic": "",
-      "start_hour": "14",
-      "end_hour": "14",
-      "message_count": 6
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
-      "start_hour": "15",
-      "end_hour": "15",
-      "message_count": 2
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is c17f36fdfbfb32c369de1e2ded5049252364c0ea. Run `git",
-      "start_hour": "15",
-      "end_hour": "18",
-      "message_count": 175
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is c17f36fdfbfb32c369de1e2ded5049252364c0ea. Run `git",
-      "start_hour": "15",
-      "end_hour": "15",
-      "message_count": 1
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
-      "start_hour": "19",
-      "end_hour": "19",
-      "message_count": 2
-    }
-  ],
-  "pr_timeline": [
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 273,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "11"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 272,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "10"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 267,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "10"
-    },
-    {
-      "repo": "bespo-ai/script.it-dsl",
-      "number": 40,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "08"
     }
   ]
 }

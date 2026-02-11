@@ -1,104 +1,82 @@
 {
   "date": "2026-02-10",
-  "day_summary": "The developer had a productive day working on the Script.it project, focusing heavily on bug fixes and system improvements. They started early with GitHub repository management and PR work, then spent significant time using AI agents to investigate database latency issues and review code changes. The day concluded with completing several backend error fixes and frontend improvements.",
+  "day_summary": "The developer had a productive day focused on bug fixes and infrastructure improvements for the Script.it platform. Major accomplishments included merging several PRs to fix zombie runs, database connection issues, and timeout errors, while also working extensively with AI agents to investigate database latency and performance issues. The day involved significant collaboration through GitHub PRs, Notion task management, and multiple agent sessions for code review and system analysis.",
   "active_hours": 14,
   "stats": {
     "sessions": 11,
     "github_events": 23,
-    "notion_tasks": 16
+    "notion_tasks": 16,
+    "linked_tasks": 3
   },
   "hours": {
     "06": {
-      "summary": "Created new repositories and opened pull requests for zombie run fixes in the Script.it project.",
+      "summary": "Opened and assigned PR #281 for prompt updates and PR #44 for zombie run fixes, along with repository creation activities.",
       "session_count": 0,
       "github_event_count": 7,
       "task_count": 0,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-10T06:57:08Z",
-          "hour": "06",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #281 assigned: Update prompt about wait and status commands",
           "pr_number": 281,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/281"
         },
         {
           "timestamp": "2026-02-10T06:57:26Z",
-          "hour": "06",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/fix-zombie-runs",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/fix-zombie-runs",
+          "commits": []
         },
         {
           "timestamp": "2026-02-10T06:57:08Z",
-          "hour": "06",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #281 opened: Update prompt about wait and status commands",
           "pr_number": 281,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/281"
         },
         {
           "timestamp": "2026-02-10T06:57:03Z",
-          "hour": "06",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "noam/feat/fix-zombie-runs"
+          "description": "Created branch noam/feat/fix-zombie-runs"
         },
         {
           "timestamp": "2026-02-10T06:56:31Z",
-          "hour": "06",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "action": "assigned",
+          "description": "PR #44 assigned: Add wait, add pid usage and fix zombie runs",
           "pr_number": 44,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/44"
         },
         {
           "timestamp": "2026-02-10T06:56:31Z",
-          "hour": "06",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "action": "opened",
+          "description": "PR #44 opened: Add wait, add pid usage and fix zombie runs",
           "pr_number": 44,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/44"
         },
         {
           "timestamp": "2026-02-10T06:56:25Z",
-          "hour": "06",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "ref_type": "branch",
-          "ref": "noam/feat/fix-zombie-runs-add-wait"
+          "description": "Created branch noam/feat/fix-zombie-runs-add-wait"
         }
       ],
-      "notion_tasks": []
+      "tasks": [],
+      "sessions": []
     },
     "07": {
-      "summary": "Reviewed upcoming tasks related to preparing for scale in the Script.it backend.",
+      "summary": "Reviewed upcoming task to prepare for Scale in the Script.it Backend.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 1,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "303ec4e5-8f15-80aa-8e86-f8c428b92e7e",
           "name": "Prepare for Scale",
@@ -107,35 +85,31 @@
             "Script.it Backend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "08": {
-      "summary": "Pushed code changes for zombie run fixes and completed email automation welcome prompt updates.",
+      "summary": "Pushed code changes to the DSL repository for zombie run fixes and completed email automation welcome prompt updates.",
       "session_count": 0,
       "github_event_count": 2,
       "task_count": 1,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-10T08:52:57Z",
-          "hour": "08",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "branch": "noam/feat/fix-zombie-runs-add-wait",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/fix-zombie-runs-add-wait",
+          "commits": []
         },
         {
           "timestamp": "2026-02-10T08:52:46Z",
-          "hour": "08",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "branch": "noam/feat/fix-zombie-runs-add-wait",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/fix-zombie-runs-add-wait",
+          "commits": []
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "303ec4e5-8f15-8135-8575-e1b2914f1551",
           "name": "Update email automation welcome prompt for Gmail suggestions",
@@ -144,13 +118,50 @@
             "Script.it Frontend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "09": {
-      "summary": "Used AI agents to install skills and manage codex folders while merging PRs and fixing frontend bugs.",
+      "summary": "Worked with AI agents to install skills and manage codex folders while merging two important PRs and completing bug fixes for DSL and frontend issues.",
       "session_count": 3,
       "github_event_count": 2,
       "task_count": 2,
+      "events": [
+        {
+          "timestamp": "2026-02-10T09:05:58Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #281 merged: Update prompt about wait and status commands",
+          "pr_number": 281,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/281"
+        },
+        {
+          "timestamp": "2026-02-10T09:05:17Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it-dsl",
+          "description": "PR #44 merged: Add wait, add pid usage and fix zombie runs",
+          "pr_number": 44,
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/44"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "2fcec4e5-8f15-8046-b573-fb6cee3e1172",
+          "name": "BUG - Yahel issue",
+          "status": "Done",
+          "tags": [
+            "Script.it DSL"
+          ]
+        },
+        {
+          "id": "303ec4e5-8f15-8010-8571-da904c55a98c",
+          "name": "BUG - No model showing as selected in dev FE",
+          "status": "Done",
+          "tags": [
+            "Script.it Frontend"
+          ]
+        }
+      ],
       "sessions": [
         {
           "filename": "2026-02-10_09-08-55Z-create-a-codex-skills.md",
@@ -170,60 +181,15 @@
           "topic": "please install all skills from .claude/skills --- _**Agent (gpt-5.3-codex 2026-02-10 09:16:41Z)**_ **Planning skill installation approach** _**Agent (gpt-5.3-codex 2026-02-10 09:16:43Z)**_ I\u2019ll instal",
           "messages": 2
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-10T09:05:58Z",
-          "hour": "09",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "merged",
-          "pr_number": 281,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-10T09:05:17Z",
-          "hour": "09",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it-dsl",
-          "action": "merged",
-          "pr_number": 44,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        }
-      ],
-      "notion_tasks": [
-        {
-          "id": "2fcec4e5-8f15-8046-b573-fb6cee3e1172",
-          "name": "BUG - Yahel issue",
-          "status": "Done",
-          "tags": [
-            "Script.it DSL"
-          ]
-        },
-        {
-          "id": "303ec4e5-8f15-8010-8571-da904c55a98c",
-          "name": "BUG - No model showing as selected in dev FE",
-          "status": "Done",
-          "tags": [
-            "Script.it Frontend"
-          ]
-        }
       ]
     },
     "10": {
-      "summary": "Identified and tracked a bug related to agent runs stopping when messages are sent while moving tabs.",
+      "summary": "Identified an upcoming bug related to agent runs stopping when messages are sent and tabs are moved.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 1,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "2faec4e5-8f15-8016-9298-f27f786ae9b7",
           "name": "Bug - sending a message and moving a tab - stops the agent run",
@@ -233,16 +199,16 @@
             "Script.it Backend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "11": {
-      "summary": "Worked on infrastructure tasks including cloud logging exports and Stripe payment implementation.",
+      "summary": "Progressed on Stripe payment implementation and noted tasks for cloud logging exports.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 2,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "303ec4e5-8f15-80f5-b80a-f88487292e3e",
           "name": "Export bridge & opencode logs to cloud logging",
@@ -258,23 +224,16 @@
             "Script.it Backend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "12": {
-      "summary": "Used AI agents extensively to analyze database latency documentation and completed frontend progress indicators.",
+      "summary": "Conducted extensive agent session (19 messages) reviewing database latency investigation documentation and completed frontend progress indication tasks.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 2,
-      "sessions": [
-        {
-          "filename": "2026-02-10_12-46-33Z-please-read-users-noam.md",
-          "title_slug": "please-read-users-noam",
-          "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, which are plans for mitigating the issues discovered ",
-          "messages": 19
-        }
-      ],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "303ec4e5-8f15-8071-95f7-eb05a9f7f98c",
           "name": "BUG - message is not sent (and is deleted) if sent before session/new completes",
@@ -291,84 +250,80 @@
             "Script.it Frontend"
           ]
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-10_12-46-33Z-please-read-users-noam.md",
+          "title_slug": "please-read-users-noam",
+          "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, which are plans for mitigating the issues discovered ",
+          "messages": 19
+        }
       ]
     },
     "13": {
-      "summary": "Continued database latency investigation with AI agents while opening new pull requests.",
+      "summary": "Continued the database latency investigation with agents while opening and assigning PR #285 to fix exa timeout errors.",
       "session_count": 1,
       "github_event_count": 3,
       "task_count": 0,
-      "sessions": [
-        {
-          "filename": "2026-02-10_12-46-33Z-please-read-users-noam.md",
-          "title_slug": "please-read-users-noam",
-          "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, which are plans for mitigating the issues discovered ",
-          "messages": 19
-        }
-      ],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-10T13:12:16Z",
-          "hour": "13",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #285 assigned: avoid exa timeout error",
           "pr_number": 285,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/285"
         },
         {
           "timestamp": "2026-02-10T13:12:16Z",
-          "hour": "13",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #285 opened: avoid exa timeout error",
           "pr_number": 285,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/285"
         },
         {
           "timestamp": "2026-02-10T13:11:37Z",
-          "hour": "13",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "noam/fix/avoid-exa-timeout"
+          "description": "Created branch noam/fix/avoid-exa-timeout"
         }
       ],
-      "notion_tasks": []
+      "tasks": [],
+      "sessions": [
+        {
+          "filename": "2026-02-10_12-46-33Z-please-read-users-noam.md",
+          "title_slug": "please-read-users-noam",
+          "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, which are plans for mitigating the issues discovered ",
+          "messages": 19
+        }
+      ]
     },
     "14": {
-      "summary": "Merged a pull request in the Script.it repository.",
+      "summary": "Successfully merged PR #285 addressing the exa timeout error fix.",
       "session_count": 0,
       "github_event_count": 1,
       "task_count": 0,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-10T14:33:19Z",
-          "hour": "14",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "merged",
+          "description": "PR #285 merged: avoid exa timeout error",
           "pr_number": 285,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/285"
         }
       ],
-      "notion_tasks": []
+      "tasks": [],
+      "sessions": []
     },
     "16": {
-      "summary": "Continued working with AI agents on database latency analysis and documentation review.",
+      "summary": "Continued working with agents on the database latency investigation documentation review.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 0,
+      "events": [],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-10_12-46-33Z-please-read-users-noam.md",
@@ -376,123 +331,87 @@
           "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, which are plans for mitigating the issues discovered ",
           "messages": 19
         }
-      ],
-      "github_events": [],
-      "notion_tasks": []
+      ]
     },
     "17": {
-      "summary": "Persisted with database latency investigation using AI agents and identified session hardening tasks.",
+      "summary": "Maintained focus on database latency analysis through agent sessions and identified session hardening tasks.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 1,
-      "sessions": [
-        {
-          "filename": "2026-02-10_12-46-33Z-please-read-users-noam.md",
-          "title_slug": "please-read-users-noam",
-          "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, which are plans for mitigating the issues discovered ",
-          "messages": 19
-        }
-      ],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "303ec4e5-8f15-80e5-87b6-e031d32676c0",
           "name": "Harden session/new",
           "status": "Not started",
           "tags": []
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-10_12-46-33Z-please-read-users-noam.md",
+          "title_slug": "please-read-users-noam",
+          "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, which are plans for mitigating the issues discovered ",
+          "messages": 19
+        }
       ]
     },
     "18": {
-      "summary": "Conducted extensive code reviews with AI agents, pushed database latency fixes, and completed multiple backend and frontend bug fixes.",
+      "summary": "Engaged in multiple agent sessions for code review and SSE race condition analysis, while pushing major database connection fixes and completing several backend and frontend bug fixes.",
       "session_count": 3,
       "github_event_count": 7,
       "task_count": 4,
-      "sessions": [
-        {
-          "filename": "2026-02-10_18-23-44Z-please-read-docs-sse.md",
-          "title_slug": "please-read-docs-sse",
-          "topic": "Please read docs/SSE_RACE_CONDITION_REPORT.md This report was written by an external agent. I don't fully trust the work of this agent - please review it. Main things to review: - correctness of flow ",
-          "messages": 7
-        },
-        {
-          "filename": "2026-02-10_18-38-15Z-review-the-code-changes.md",
-          "title_slug": "review-the-code-changes",
-          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec. Run `git diff 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec` to",
-          "messages": 1
-        },
-        {
-          "filename": "2026-02-10_18-42-37Z-review-the-code-changes.md",
-          "title_slug": "review-the-code-changes",
-          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec. Run `git diff 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec` to",
-          "messages": 51
-        }
-      ],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-10T18:46:16Z",
-          "hour": "18",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "fix/db-latency-consolidation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to fix/db-latency-consolidation",
+          "commits": []
         },
         {
           "timestamp": "2026-02-10T18:36:02Z",
-          "hour": "18",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "fix/db-latency-consolidation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to fix/db-latency-consolidation",
+          "commits": []
         },
         {
           "timestamp": "2026-02-10T18:36:27Z",
-          "hour": "18",
           "type": "IssueCommentEvent",
-          "repo": "bespo-ai/script.it"
+          "repo": "bespo-ai/script.it",
+          "description": "IssueCommentEvent"
         },
         {
           "timestamp": "2026-02-10T18:12:03Z",
-          "hour": "18",
           "type": "IssueCommentEvent",
-          "repo": "bespo-ai/script.it"
+          "repo": "bespo-ai/script.it",
+          "description": "IssueCommentEvent"
         },
         {
           "timestamp": "2026-02-10T18:04:03Z",
-          "hour": "18",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #287 assigned: fix DB connection exhaustion: consolidate subscription reads + cache Composio API calls",
           "pr_number": 287,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/287"
         },
         {
           "timestamp": "2026-02-10T18:04:03Z",
-          "hour": "18",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #287 opened: fix DB connection exhaustion: consolidate subscription reads + cache Composio API calls",
           "pr_number": 287,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/287"
         },
         {
           "timestamp": "2026-02-10T18:03:43Z",
-          "hour": "18",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "fix/db-latency-consolidation"
+          "description": "Created branch fix/db-latency-consolidation"
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "303ec4e5-8f15-815f-9330-e73ff1d4fccb",
           "name": "BUG - Local sandbox doesn't detect stale Docker image on start/resume",
@@ -525,29 +444,44 @@
             "Script.it Frontend"
           ]
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-10_18-23-44Z-please-read-docs-sse.md",
+          "title_slug": "please-read-docs-sse",
+          "topic": "Please read docs/SSE_RACE_CONDITION_REPORT.md This report was written by an external agent. I don't fully trust the work of this agent - please review it. Main things to review: - correctness of flow ",
+          "messages": 7
+        },
+        {
+          "filename": "2026-02-10_18-38-15Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec. Run `git diff 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec` to",
+          "messages": 1
+        },
+        {
+          "filename": "2026-02-10_18-42-37Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec. Run `git diff 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec` to",
+          "messages": 51
+        }
       ]
     },
     "19": {
-      "summary": "Merged database latency consolidation changes and resolved backend error issues.",
+      "summary": "Successfully merged PR #287 fixing database connection exhaustion and completed backend error resolution tasks.",
       "session_count": 0,
       "github_event_count": 1,
       "task_count": 1,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-10T19:06:18Z",
-          "hour": "19",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "merged",
+          "description": "PR #287 merged: fix DB connection exhaustion: consolidate subscription reads + cache Composio API calls",
           "pr_number": 287,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/287"
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "302ec4e5-8f15-8089-b860-f8f255a6b2dd",
           "name": "Backend Errors",
@@ -556,16 +490,16 @@
             "Script.it Backend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "23": {
-      "summary": "Completed work on typed references, decoupled UI metadata, and GitHub actions expression syntax for the Script.it agent.",
+      "summary": "Completed work on typed references, decoupled UI metadata, and GitHub actions expression syntax for the Script.it Agent.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 1,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "2ebec4e5-8f15-80e3-81fc-ccb89a09240d",
           "name": "Typed References, Decoupled UI Metadata and GitHub actions expression syntax",
@@ -574,11 +508,13 @@
             "Script.it Agent"
           ]
         }
-      ]
+      ],
+      "sessions": []
     }
   },
-  "tasks": [
+  "work_items": [
     {
+      "type": "task",
       "id": "2fcec4e5-8f15-8046-b573-fb6cee3e1172",
       "name": "BUG - Yahel issue",
       "status": "Done",
@@ -586,13 +522,50 @@
       "tags": [
         "Script.it DSL"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-Yahel-issue-2fcec4e58f158046b573fb6cee3e1172",
       "active_hours": [
+        "06",
+        "08",
         "09"
-      ]
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#281",
+          "repo": "bespo-ai/script.it",
+          "number": 281,
+          "title": "Update prompt about wait and status commands",
+          "url": "https://github.com/bespo-ai/script.it/pull/281",
+          "branch": "noam/feat/fix-zombie-runs",
+          "merged": true,
+          "event_hours": [
+            "06",
+            "09"
+          ],
+          "push_hours": [
+            "06"
+          ]
+        },
+        {
+          "key": "bespo-ai/script.it-dsl#44",
+          "repo": "bespo-ai/script.it-dsl",
+          "number": 44,
+          "title": "Add wait, add pid usage and fix zombie runs",
+          "url": "https://github.com/bespo-ai/script.it-dsl/pull/44",
+          "branch": "noam/feat/fix-zombie-runs-add-wait",
+          "merged": true,
+          "event_hours": [
+            "06",
+            "09"
+          ],
+          "push_hours": [
+            "08"
+          ]
+        }
+      ],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-8010-8571-da904c55a98c",
       "name": "BUG - No model showing as selected in dev FE",
       "status": "Done",
@@ -600,13 +573,51 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-No-model-showing-as-selected-in-dev-FE-303ec4e58f1580108571da904c55a98c",
       "active_hours": [
-        "09"
+        "09",
+        "12",
+        "13",
+        "16",
+        "17",
+        "18"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-10_12-46-33Z-please-read-users-noam.md",
+          "title_slug": "please-read-users-noam",
+          "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, whi",
+          "active_hours": [
+            "12",
+            "13",
+            "16",
+            "17"
+          ],
+          "message_count": 19
+        },
+        {
+          "filename": "2026-02-10_18-38-15Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec. Run `git",
+          "active_hours": [
+            "18"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-10_18-42-37Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec. Run `git",
+          "active_hours": [
+            "18"
+          ],
+          "message_count": 51
+        }
       ]
     },
     {
+      "type": "task",
       "id": "2faec4e5-8f15-8016-9298-f27f786ae9b7",
       "name": "Bug - sending a message and moving a tab - stops the agent run",
       "status": "Upcoming",
@@ -615,25 +626,29 @@
         "Script.it Agent",
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Bug-sending-a-message-and-moving-a-tab-stops-the-agent-run-2faec4e58f1580169298f27f786ae9b7",
       "active_hours": [
         "10"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-80f5-b80a-f88487292e3e",
       "name": "Export bridge & opencode logs to cloud logging",
       "status": "Not started",
       "priority": "High",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/Export-bridge-opencode-logs-to-cloud-logging-303ec4e58f1580f5b80af88487292e3e",
       "active_hours": [
         "11"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2faec4e5-8f15-8072-8193-cc9c341192c6",
       "name": "Implement Stripe Payment",
       "status": "In progress",
@@ -642,13 +657,15 @@
         "Script.it Infra",
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Implement-Stripe-Payment-2faec4e58f1580728193cc9c341192c6",
       "active_hours": [
         "11"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-8071-95f7-eb05a9f7f98c",
       "name": "BUG - message is not sent (and is deleted) if sent before session/new completes",
       "status": "Not started",
@@ -656,25 +673,37 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-message-is-not-sent-and-is-deleted-if-sent-before-session-new-completes-303ec4e58f15807195f7eb05a9f7f98c",
       "active_hours": [
         "12"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-80e5-87b6-e031d32676c0",
       "name": "Harden session/new",
       "status": "Not started",
       "priority": "Medium",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/Harden-session-new-303ec4e58f1580e587b6e031d32676c0",
       "active_hours": [
         "17"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-10_17-06-31Z-notion-session-hardening-documentation-update.md",
+          "title_slug": "notion-session-hardening-documentation-update",
+          "topic": "",
+          "active_hours": [],
+          "message_count": 0
+        }
       ]
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-815f-9330-e73ff1d4fccb",
       "name": "BUG - Local sandbox doesn't detect stale Docker image on start/resume",
       "status": "Not started",
@@ -682,13 +711,15 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-Local-sandbox-doesn-t-detect-stale-Docker-image-on-start-resume-303ec4e58f15815f9330e73ff1d4fccb",
       "active_hours": [
         "18"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-80be-a2f2-d042a830c305",
       "name": "BUG - Wrap synchronous Composio SDK calls with asyncio.to_thread",
       "status": "Not started",
@@ -696,13 +727,15 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-Wrap-synchronous-Composio-SDK-calls-with-asyncio-to_thread-303ec4e58f1580bea2f2d042a830c305",
       "active_hours": [
         "18"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2e8ec4e5-8f15-80fb-ad34-ca8e8789c789",
       "name": "BUG - Exa timeout logs",
       "status": "Done",
@@ -710,13 +743,32 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-Exa-timeout-logs-2e8ec4e58f1580fbad34ca8e8789c789",
       "active_hours": [
+        "13",
+        "14",
         "18"
-      ]
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#285",
+          "repo": "bespo-ai/script.it",
+          "number": 285,
+          "title": "avoid exa timeout error",
+          "url": "https://github.com/bespo-ai/script.it/pull/285",
+          "branch": "noam/fix/avoid-exa-timeout",
+          "merged": true,
+          "event_hours": [
+            "13",
+            "14"
+          ],
+          "push_hours": []
+        }
+      ],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2f0ec4e5-8f15-8015-9c9f-d32f51f7de75",
       "name": "Add a \u201cthinking\u201d indicator to the chat",
       "status": "Done",
@@ -724,13 +776,26 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Add-a-thinking-indicator-to-the-chat-2f0ec4e58f1580159c9fd32f51f7de75",
       "active_hours": [
+        "09",
         "18"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-10_09-08-55Z-create-a-codex-skills.md",
+          "title_slug": "create-a-codex-skills",
+          "topic": "create a .codex/skills folder. Inside it, create folders to match the folders in .claude/skills and symlink the skills there into codex --- _**Agent (",
+          "active_hours": [
+            "09"
+          ],
+          "message_count": 4
+        }
       ]
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-8089-b860-f8f255a6b2dd",
       "name": "Backend Errors",
       "status": "Done",
@@ -738,13 +803,33 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Backend-Errors-302ec4e58f158089b860f8f255a6b2dd",
       "active_hours": [
+        "18",
         "19"
-      ]
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#287",
+          "repo": "bespo-ai/script.it",
+          "number": 287,
+          "title": "fix DB connection exhaustion: consolidate subscription reads + cache Composio API calls",
+          "url": "https://github.com/bespo-ai/script.it/pull/287",
+          "branch": "fix/db-latency-consolidation",
+          "merged": true,
+          "event_hours": [
+            "18",
+            "19"
+          ],
+          "push_hours": [
+            "18"
+          ]
+        }
+      ],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2ebec4e5-8f15-80e3-81fc-ccb89a09240d",
       "name": "Typed References, Decoupled UI Metadata and GitHub actions expression syntax",
       "status": "Done",
@@ -752,13 +837,26 @@
       "tags": [
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Typed-References-Decoupled-UI-Metadata-and-GitHub-actions-expression-syntax-2ebec4e58f1580e381fcccb89a09240d",
       "active_hours": [
+        "18",
         "23"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-10_18-23-44Z-please-read-docs-sse.md",
+          "title_slug": "please-read-docs-sse",
+          "topic": "Please read docs/SSE_RACE_CONDITION_REPORT.md This report was written by an external agent. I don't fully trust the work of this agent - please review",
+          "active_hours": [
+            "18"
+          ],
+          "message_count": 7
+        }
       ]
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-8021-b66b-e240f426e7c6",
       "name": "Running scripts manually need to show progress in the script view and some indication in the chat",
       "status": "Done",
@@ -766,13 +864,15 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Running-scripts-manually-need-to-show-progress-in-the-script-view-and-some-indication-in-the-chat-303ec4e58f158021b66be240f426e7c6",
       "active_hours": [
         "12"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-80aa-8e86-f8c428b92e7e",
       "name": "Prepare for Scale",
       "status": "Upcoming",
@@ -780,13 +880,15 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Prepare-for-Scale-303ec4e58f1580aa8e86f8c428b92e7e",
       "active_hours": [
         "07"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-8135-8575-e1b2914f1551",
       "name": "Update email automation welcome prompt for Gmail suggestions",
       "status": "Done",
@@ -794,100 +896,43 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Update-email-automation-welcome-prompt-for-Gmail-suggestions-303ec4e58f1581358575e1b2914f1551",
       "active_hours": [
-        "08"
+        "08",
+        "09"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-10_09-16-20Z-please-install-all-skills.md",
+          "title_slug": "please-install-all-skills",
+          "topic": "please install all skills from .claude/skills --- _**Agent (gpt-5.3-codex 2026-02-10 09:16:41Z)**_ **Planning skill installation approach** _**Agent (",
+          "active_hours": [
+            "09"
+          ],
+          "message_count": 2
+        }
       ]
-    }
-  ],
-  "session_timeline": [
-    {
-      "title": "create-a-codex-skills",
-      "topic": "create a .codex/skills folder. Inside it, create folders to match the folders in .claude/skills and symlink the skills there into codex --- _**Agent (",
-      "start_hour": "09",
-      "end_hour": "09",
-      "message_count": 4
     },
     {
-      "title": "command-name-exit-command",
-      "topic": "",
-      "start_hour": "09",
-      "end_hour": "09",
-      "message_count": 3
-    },
-    {
-      "title": "please-install-all-skills",
-      "topic": "please install all skills from .claude/skills --- _**Agent (gpt-5.3-codex 2026-02-10 09:16:41Z)**_ **Planning skill installation approach** _**Agent (",
-      "start_hour": "09",
-      "end_hour": "09",
-      "message_count": 2
-    },
-    {
-      "title": "please-read-users-noam",
-      "topic": "Please read /Users/noam/code/script.it/docs/db-latency/2026-02-10-prod-latency-and-billing-path-investigation.md and all other docs in the folder, whi",
-      "start_hour": "12",
-      "end_hour": "17",
-      "message_count": 19
-    },
-    {
-      "title": "please-read-docs-sse",
-      "topic": "Please read docs/SSE_RACE_CONDITION_REPORT.md This report was written by an external agent. I don't fully trust the work of this agent - please review",
-      "start_hour": "18",
-      "end_hour": "18",
-      "message_count": 7
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec. Run `git",
-      "start_hour": "18",
-      "end_hour": "18",
-      "message_count": 1
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 65c7b1a8c4f68e81d8a79c2b80f63beecd844fec. Run `git",
-      "start_hour": "18",
-      "end_hour": "18",
-      "message_count": 51
-    }
-  ],
-  "pr_timeline": [
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 287,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "19"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 285,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "14"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 281,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "09"
-    },
-    {
-      "repo": "bespo-ai/script.it-dsl",
-      "number": 44,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "09"
+      "type": "orphan_session",
+      "id": "session-1",
+      "name": "command name exit command",
+      "active_hours": [
+        "09"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-10_09-11-58Z-command-name-exit-command.md",
+          "title_slug": "command-name-exit-command",
+          "topic": "",
+          "active_hours": [
+            "09"
+          ],
+          "message_count": 3
+        }
+      ]
     }
   ]
 }

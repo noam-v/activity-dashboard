@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Activity Dashboard</title>
+<style>
+  :root {
+    --bg: #0d1117; --surface: #161b22; --border: #30363d;
+    --text: #e6edf3; --text-muted: #7d8590; --accent: #58a6ff;
+    --green: #3fb950; --yellow: #d29922; --red: #f85149; --purple: #bc8cff;
+    --orange: #d18616;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif; background: var(--bg); color: var(--text); }
+  .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+  h1 { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
+  .subtitle { color: var(--text-muted); margin-bottom: 24px; font-size: 14px; }
+
+  /* Navigation */
+  .nav { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; align-items: center; }
+  .nav button { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 6px 14px;
+    border-radius: 6px; cursor: pointer; font-size: 13px; transition: all 0.15s; }
+  .nav button:hover { border-color: var(--accent); }
+  .nav button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .nav .spacer { flex: 1; }
+  .nav select { background: var(--surface); border: 1px solid var(--border); color: var(--text);
+    padding: 6px 10px; border-radius: 6px; font-size: 13px; }
+
+  /* Stats bar */
+  .stats { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px 20px; min-width: 150px; }
+  .stat-card .value { font-size: 28px; font-weight: 700; }
+  .stat-card .label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+
+  /* Heatmap */
+  .section { margin-bottom: 32px; }
+  .section-title { font-size: 16px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+  .heatmap { display: flex; gap: 3px; flex-wrap: wrap; }
+  .heatmap-col { display: flex; flex-direction: column; gap: 3px; align-items: center; }
+  .heatmap-cell { width: 14px; height: 14px; border-radius: 2px; background: var(--surface); border: 1px solid var(--border);
+    cursor: pointer; transition: all 0.1s; position: relative; }
+  .heatmap-cell:hover { transform: scale(1.5); z-index: 10; }
+  .heatmap-cell.l1 { background: #0e4429; border-color: #0e4429; }
+  .heatmap-cell.l2 { background: #006d32; border-color: #006d32; }
+  .heatmap-cell.l3 { background: #26a641; border-color: #26a641; }
+  .heatmap-cell.l4 { background: #39d353; border-color: #39d353; }
+  .heatmap-label { font-size: 10px; color: var(--text-muted); width: 14px; text-align: center; margin-top: 4px; }
+  .heatmap-hour-labels { display: flex; flex-direction: column; gap: 3px; margin-right: 6px; padding-top: 0; }
+  .heatmap-hour-label { height: 14px; font-size: 10px; color: var(--text-muted); line-height: 14px; }
+
+  /* Gantt */
+  .gantt { width: 100%; border-collapse: collapse; }
+  .gantt th { font-size: 11px; color: var(--text-muted); font-weight: 400; padding: 4px 2px; text-align: center;
+    border-bottom: 1px solid var(--border); min-width: 40px; }
+  .gantt td { padding: 4px 2px; text-align: center; border-bottom: 1px solid var(--border); height: 28px; }
+  .gantt .row-label { text-align: left; font-size: 12px; max-width: 250px; overflow: hidden;
+    text-overflow: ellipsis; white-space: nowrap; padding-right: 12px; }
+  .gantt-bar { height: 18px; border-radius: 3px; min-width: 100%; }
+  .gantt-bar.session { background: var(--accent); opacity: 0.8; }
+  .gantt-bar.task { background: var(--purple); opacity: 0.8; }
+  .gantt-bar.pr { background: var(--green); opacity: 0.8; }
+  .gantt-bar.github { background: var(--orange); opacity: 0.8; }
+  .gantt td.active { position: relative; }
+
+  /* Timeline */
+  .timeline { display: flex; flex-direction: column; gap: 2px; }
+  .timeline-hour { display: flex; gap: 12px; min-height: 36px; align-items: flex-start; padding: 6px 0;
+    border-bottom: 1px solid var(--border); }
+  .timeline-hour.inactive { opacity: 0.3; }
+  .timeline-time { font-size: 13px; font-weight: 600; color: var(--text-muted); min-width: 50px; padding-top: 2px; }
+  .timeline-content { flex: 1; font-size: 13px; line-height: 1.5; }
+  .timeline-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
+  .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
+  .badge.session { background: rgba(88,166,255,0.15); color: var(--accent); }
+  .badge.github { background: rgba(63,185,80,0.15); color: var(--green); }
+  .badge.task { background: rgba(188,140,255,0.15); color: var(--purple); }
+
+  /* Day summary */
+  .day-summary { background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px 20px; margin-bottom: 24px; font-size: 14px; line-height: 1.6; }
+
+  /* Tooltip */
+  .tooltip { display: none; position: absolute; background: var(--surface); border: 1px solid var(--border);
+    border-radius: 6px; padding: 8px 12px; font-size: 12px; z-index: 100; white-space: nowrap;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4); pointer-events: none; }
+
+  /* View tabs */
+  .view-tabs { display: flex; gap: 0; margin-bottom: 24px; border-bottom: 1px solid var(--border); }
+  .view-tab { padding: 8px 16px; font-size: 13px; color: var(--text-muted); cursor: pointer;
+    border-bottom: 2px solid transparent; transition: all 0.15s; background: none; border-top: none;
+    border-left: none; border-right: none; }
+  .view-tab:hover { color: var(--text); }
+  .view-tab.active { color: var(--text); border-bottom-color: var(--accent); }
+  .view-content { display: none; }
+  .view-content.active { display: block; }
+
+  /* Loading */
+  .loading { text-align: center; padding: 60px; color: var(--text-muted); }
+
+  @media (max-width: 768px) {
+    .container { padding: 12px; }
+    .stats { gap: 8px; }
+    .stat-card { min-width: 100px; padding: 12px; }
+    .stat-card .value { font-size: 22px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Activity Dashboard</h1>
+  <p class="subtitle">Noam Bressler &mdash; development activity at 1-hour resolution</p>
+
+  <div class="stats" id="stats"></div>
+
+  <div class="section">
+    <div class="section-title">Activity Heatmap</div>
+    <div style="display:flex;">
+      <div class="heatmap-hour-labels" id="heatmap-hour-labels"></div>
+      <div class="heatmap" id="heatmap"></div>
+    </div>
+  </div>
+
+  <div class="nav" id="day-nav"></div>
+
+  <div class="day-summary" id="day-summary"></div>
+
+  <div class="view-tabs">
+    <button class="view-tab active" data-view="gantt">Gantt</button>
+    <button class="view-tab" data-view="timeline">Timeline</button>
+    <button class="view-tab" data-view="breakdown">Breakdown</button>
+  </div>
+
+  <div class="view-content active" id="view-gantt">
+    <div class="section"><div class="section-title">Daily Gantt</div>
+      <div style="overflow-x:auto;"><table class="gantt" id="gantt-table"></table></div>
+    </div>
+  </div>
+  <div class="view-content" id="view-timeline">
+    <div class="section"><div class="section-title">Hourly Timeline</div>
+      <div class="timeline" id="timeline"></div>
+    </div>
+  </div>
+  <div class="view-content" id="view-breakdown">
+    <div class="section"><div class="section-title">Activity Breakdown</div>
+      <canvas id="breakdown-chart" height="300"></canvas>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<script>
+const DATES = ["2026-02-11"];
+
+let allData = {};
+let currentDate = null;
+let breakdownChart = null;
+
+async function loadData() {
+  const loads = DATES.map(async d => {
+    try {
+      const resp = await fetch(`data/${d}.json`);
+      if (resp.ok) allData[d] = await resp.json();
+    } catch(e) { console.warn(`Failed to load ${d}`, e); }
+  });
+  await Promise.all(loads);
+}
+
+function renderStats() {
+  const dates = Object.keys(allData).sort();
+  const totalSessions = dates.reduce((s,d) => s + (allData[d].stats?.sessions || 0), 0);
+  const totalEvents = dates.reduce((s,d) => s + (allData[d].stats?.github_events || 0), 0);
+  const totalTasks = dates.reduce((s,d) => s + (allData[d].stats?.notion_tasks || 0), 0);
+  const totalActiveHours = dates.reduce((s,d) => s + (allData[d].active_hours || 0), 0);
+
+  document.getElementById('stats').innerHTML = `
+    <div class="stat-card"><div class="value">${dates.length}</div><div class="label">Days tracked</div></div>
+    <div class="stat-card"><div class="value">${totalActiveHours}</div><div class="label">Active hours</div></div>
+    <div class="stat-card"><div class="value">${totalSessions}</div><div class="label">Agent sessions</div></div>
+    <div class="stat-card"><div class="value">${totalEvents}</div><div class="label">GitHub events</div></div>
+    <div class="stat-card"><div class="value">${totalTasks}</div><div class="label">Notion tasks</div></div>
+  `;
+}
+
+function renderHeatmap() {
+  const dates = Object.keys(allData).sort();
+  if (!dates.length) return;
+
+  // Hour labels (0-23)
+  const hlEl = document.getElementById('heatmap-hour-labels');
+  hlEl.innerHTML = '';
+  for (let h = 0; h < 24; h++) {
+    if (h % 3 === 0) {
+      const lbl = document.createElement('div');
+      lbl.className = 'heatmap-hour-label';
+      lbl.textContent = `${h}`;
+      hlEl.appendChild(lbl);
+    } else {
+      const spacer = document.createElement('div');
+      spacer.className = 'heatmap-hour-label';
+      hlEl.appendChild(spacer);
+    }
+  }
+
+  const heatEl = document.getElementById('heatmap');
+  heatEl.innerHTML = '';
+
+  for (const d of dates) {
+    const col = document.createElement('div');
+    col.className = 'heatmap-col';
+    const data = allData[d];
+
+    for (let h = 0; h < 24; h++) {
+      const hh = h.toString().padStart(2, '0');
+      const hourData = data.hours?.[hh];
+      const cell = document.createElement('div');
+      cell.className = 'heatmap-cell';
+
+      if (hourData) {
+        const intensity = (hourData.session_count || 0) + (hourData.github_event_count || 0) + (hourData.task_count || 0);
+        if (intensity >= 6) cell.classList.add('l4');
+        else if (intensity >= 4) cell.classList.add('l3');
+        else if (intensity >= 2) cell.classList.add('l2');
+        else cell.classList.add('l1');
+      }
+
+      cell.title = `${d} ${hh}:00 — ${hourData?.summary || 'No activity'}`;
+      cell.onclick = () => selectDate(d);
+      col.appendChild(cell);
+    }
+
+    const lbl = document.createElement('div');
+    lbl.className = 'heatmap-label';
+    const dayDate = new Date(d + 'T12:00:00');
+    lbl.textContent = dayDate.toLocaleDateString('en', { month: 'short', day: 'numeric' });
+    col.appendChild(lbl);
+    heatEl.appendChild(col);
+  }
+}
+
+function renderNav() {
+  const dates = Object.keys(allData).sort();
+  const nav = document.getElementById('day-nav');
+  nav.innerHTML = '';
+
+  for (const d of dates) {
+    const btn = document.createElement('button');
+    const dayDate = new Date(d + 'T12:00:00');
+    btn.textContent = dayDate.toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' });
+    if (d === currentDate) btn.className = 'active';
+    btn.onclick = () => selectDate(d);
+    nav.appendChild(btn);
+  }
+}
+
+function selectDate(d) {
+  currentDate = d;
+  renderNav();
+  renderDayView();
+}
+
+function renderDayView() {
+  const data = allData[currentDate];
+  if (!data) return;
+
+  // Day summary
+  document.getElementById('day-summary').textContent = data.day_summary || 'No summary available.';
+
+  renderGantt(data);
+  renderTimeline(data);
+  renderBreakdown(data);
+}
+
+function renderGantt(data) {
+  const table = document.getElementById('gantt-table');
+  // Find active hour range
+  const activeHours = Object.keys(data.hours || {}).map(Number).sort((a,b) => a-b);
+  const minH = Math.max(0, (activeHours[0] || 8) - 1);
+  const maxH = Math.min(23, (activeHours[activeHours.length-1] || 18) + 1);
+
+  let html = '<thead><tr><th style="min-width:200px"></th>';
+  for (let h = minH; h <= maxH; h++) html += `<th>${h}:00</th>`;
+  html += '</tr></thead><tbody>';
+
+  // Session rows
+  const sessions = data.session_timeline || [];
+  for (const s of sessions) {
+    html += `<tr><td class="row-label" title="${s.topic || s.title}">&#x1f4ac; ${s.title.replace(/-/g,' ').substring(0,35)}</td>`;
+    for (let h = minH; h <= maxH; h++) {
+      const hh = h.toString().padStart(2,'0');
+      const startH = parseInt(s.start_hour);
+      const endH = parseInt(s.end_hour);
+      const active = h >= startH && h <= endH;
+      html += `<td${active?' class="active"':''}>${active?'<div class="gantt-bar session"></div>':''}</td>`;
+    }
+    html += '</tr>';
+  }
+
+  // Task rows
+  const tasks = data.tasks || [];
+  for (const t of tasks) {
+    if (!t.active_hours?.length) continue;
+    html += `<tr><td class="row-label" title="${t.name}">&#x1f4cb; ${t.name.substring(0,35)}</td>`;
+    for (let h = minH; h <= maxH; h++) {
+      const hh = h.toString().padStart(2,'0');
+      const active = t.active_hours.includes(hh);
+      html += `<td${active?' class="active"':''}>${active?'<div class="gantt-bar task"></div>':''}</td>`;
+    }
+    html += '</tr>';
+  }
+
+  // PR rows
+  const prs = data.pr_timeline || [];
+  for (const pr of prs) {
+    const label = `#${pr.number} ${pr.title}`.substring(0,35);
+    html += `<tr><td class="row-label" title="${pr.title}">&#x1f500; ${label}</td>`;
+    for (let h = minH; h <= maxH; h++) {
+      const active = h.toString().padStart(2,'0') === pr.hour;
+      html += `<td${active?' class="active"':''}>${active?'<div class="gantt-bar pr"></div>':''}</td>`;
+    }
+    html += '</tr>';
+  }
+
+  html += '</tbody>';
+  table.innerHTML = html;
+}
+
+function renderTimeline(data) {
+  const el = document.getElementById('timeline');
+  let html = '';
+
+  for (let h = 0; h < 24; h++) {
+    const hh = h.toString().padStart(2, '0');
+    const hourData = data.hours?.[hh];
+    const active = !!hourData;
+
+    html += `<div class="timeline-hour${active?'':' inactive'}">`;
+    html += `<div class="timeline-time">${hh}:00</div>`;
+    html += `<div class="timeline-content">`;
+
+    if (hourData) {
+      html += `<div>${hourData.summary || ''}</div>`;
+      html += `<div class="timeline-badges">`;
+      if (hourData.session_count) html += `<span class="badge session">${hourData.session_count} session${hourData.session_count>1?'s':''}</span>`;
+      if (hourData.github_event_count) html += `<span class="badge github">${hourData.github_event_count} event${hourData.github_event_count>1?'s':''}</span>`;
+      if (hourData.task_count) html += `<span class="badge task">${hourData.task_count} task${hourData.task_count>1?'s':''}</span>`;
+      html += `</div>`;
+    }
+
+    html += `</div></div>`;
+  }
+
+  el.innerHTML = html;
+}
+
+function renderBreakdown(data) {
+  const canvas = document.getElementById('breakdown-chart');
+  const activeHours = Object.keys(data.hours || {}).sort();
+
+  const sessionCounts = activeHours.map(h => data.hours[h].session_count || 0);
+  const githubCounts = activeHours.map(h => data.hours[h].github_event_count || 0);
+  const taskCounts = activeHours.map(h => data.hours[h].task_count || 0);
+
+  if (breakdownChart) breakdownChart.destroy();
+
+  breakdownChart = new Chart(canvas, {
+    type: 'bar',
+    data: {
+      labels: activeHours.map(h => `${h}:00`),
+      datasets: [
+        { label: 'Agent Sessions', data: sessionCounts, backgroundColor: 'rgba(88,166,255,0.7)' },
+        { label: 'GitHub Events', data: githubCounts, backgroundColor: 'rgba(63,185,80,0.7)' },
+        { label: 'Notion Tasks', data: taskCounts, backgroundColor: 'rgba(188,140,255,0.7)' },
+      ],
+    },
+    options: {
+      responsive: true, scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } },
+      plugins: { legend: { labels: { color: '#e6edf3' } } },
+      scales: {
+        x: { ticks: { color: '#7d8590' }, grid: { color: '#30363d' } },
+        y: { ticks: { color: '#7d8590' }, grid: { color: '#30363d' } },
+      },
+    },
+  });
+}
+
+// View tabs
+document.querySelectorAll('.view-tab').forEach(tab => {
+  tab.onclick = () => {
+    document.querySelectorAll('.view-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.view-content').forEach(v => v.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(`view-${tab.dataset.view}`).classList.add('active');
+  };
+});
+
+// Init
+(async () => {
+  await loadData();
+  if (!Object.keys(allData).length) {
+    document.getElementById('stats').innerHTML = '<div class="loading">No data yet. Run the activity tracker to collect data.</div>';
+    return;
+  }
+  renderStats();
+  renderHeatmap();
+  currentDate = Object.keys(allData).sort().pop();
+  renderNav();
+  renderDayView();
+})();
+</script>
+</body>
+</html>

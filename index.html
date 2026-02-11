@@ -5,384 +5,348 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Activity Dashboard</title>
 <style>
-  :root {
-    --bg: #0d1117; --surface: #161b22; --border: #30363d;
-    --text: #e6edf3; --text-muted: #7d8590; --accent: #58a6ff;
-    --green: #3fb950; --yellow: #d29922; --red: #f85149; --purple: #bc8cff;
-    --orange: #d18616;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif; background: var(--bg); color: var(--text); }
-  .container { max-width: 1400px; margin: 0 auto; padding: 24px; }
-  h1 { font-size: 24px; font-weight: 600; margin-bottom: 8px; }
-  .subtitle { color: var(--text-muted); margin-bottom: 24px; font-size: 14px; }
+:root {
+  --bg: #0d1117; --surface: #161b22; --surface2: #1c2129; --border: #30363d;
+  --text: #e6edf3; --text-muted: #7d8590; --accent: #58a6ff;
+  --green: #3fb950; --yellow: #d29922; --red: #f85149; --purple: #bc8cff;
+  --orange: #d18616; --cyan: #39d2c0;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, sans-serif; background: var(--bg); color: var(--text); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+h1 { font-size: 24px; font-weight: 600; margin-bottom: 4px; }
+.subtitle { color: var(--text-muted); margin-bottom: 24px; font-size: 14px; }
 
-  /* Navigation */
-  .nav { display: flex; gap: 8px; margin-bottom: 24px; flex-wrap: wrap; align-items: center; }
-  .nav button { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 6px 14px;
-    border-radius: 6px; cursor: pointer; font-size: 13px; transition: all 0.15s; }
-  .nav button:hover { border-color: var(--accent); }
-  .nav button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-  .nav .spacer { flex: 1; }
-  .nav select { background: var(--surface); border: 1px solid var(--border); color: var(--text);
-    padding: 6px 10px; border-radius: 6px; font-size: 13px; }
+.stats { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px; padding: 16px 20px; min-width: 140px; }
+.stat-card .value { font-size: 28px; font-weight: 700; }
+.stat-card .label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
 
-  /* Stats bar */
-  .stats { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
-  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
-    padding: 16px 20px; min-width: 150px; }
-  .stat-card .value { font-size: 28px; font-weight: 700; }
-  .stat-card .label { font-size: 12px; color: var(--text-muted); margin-top: 4px; }
+.section { margin-bottom: 32px; }
+.section-title { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
 
-  /* Heatmap */
-  .section { margin-bottom: 32px; }
-  .section-title { font-size: 16px; font-weight: 600; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
-  .heatmap { display: flex; gap: 3px; flex-wrap: wrap; }
-  .heatmap-col { display: flex; flex-direction: column; gap: 3px; align-items: center; }
-  .heatmap-cell { width: 14px; height: 14px; border-radius: 2px; background: var(--surface); border: 1px solid var(--border);
-    cursor: pointer; transition: all 0.1s; position: relative; }
-  .heatmap-cell:hover { transform: scale(1.5); z-index: 10; }
-  .heatmap-cell.l1 { background: #0e4429; border-color: #0e4429; }
-  .heatmap-cell.l2 { background: #006d32; border-color: #006d32; }
-  .heatmap-cell.l3 { background: #26a641; border-color: #26a641; }
-  .heatmap-cell.l4 { background: #39d353; border-color: #39d353; }
-  .heatmap-label { font-size: 10px; color: var(--text-muted); width: 14px; text-align: center; margin-top: 4px; }
-  .heatmap-hour-labels { display: flex; flex-direction: column; gap: 3px; margin-right: 6px; padding-top: 0; }
-  .heatmap-hour-label { height: 14px; font-size: 10px; color: var(--text-muted); line-height: 14px; }
+/* Heatmap */
+.heatmap-wrap { display: flex; overflow-x: auto; }
+.heatmap-hour-labels { display: flex; flex-direction: column; gap: 3px; margin-right: 6px; }
+.heatmap-hour-label { height: 14px; font-size: 10px; color: var(--text-muted); line-height: 14px; }
+.heatmap { display: flex; gap: 3px; }
+.heatmap-col { display: flex; flex-direction: column; gap: 3px; align-items: center; cursor: pointer; }
+.heatmap-cell { width: 14px; height: 14px; border-radius: 2px; background: var(--surface); border: 1px solid var(--border); transition: all 0.1s; }
+.heatmap-cell:hover { transform: scale(1.5); z-index: 10; }
+.heatmap-cell.l1 { background: #0e4429; border-color: #0e4429; }
+.heatmap-cell.l2 { background: #006d32; border-color: #006d32; }
+.heatmap-cell.l3 { background: #26a641; border-color: #26a641; }
+.heatmap-cell.l4 { background: #39d353; border-color: #39d353; }
+.heatmap-label { font-size: 10px; color: var(--text-muted); margin-top: 4px; white-space: nowrap; }
 
-  /* Gantt */
-  .gantt { width: 100%; border-collapse: collapse; }
-  .gantt th { font-size: 11px; color: var(--text-muted); font-weight: 400; padding: 4px 2px; text-align: center;
-    border-bottom: 1px solid var(--border); min-width: 40px; }
-  .gantt td { padding: 4px 2px; text-align: center; border-bottom: 1px solid var(--border); height: 28px; }
-  .gantt .row-label { text-align: left; font-size: 12px; max-width: 250px; overflow: hidden;
-    text-overflow: ellipsis; white-space: nowrap; padding-right: 12px; }
-  .gantt-bar { height: 18px; border-radius: 3px; min-width: 100%; }
-  .gantt-bar.session { background: var(--accent); opacity: 0.8; }
-  .gantt-bar.task { background: var(--purple); opacity: 0.8; }
-  .gantt-bar.pr { background: var(--green); opacity: 0.8; }
-  .gantt-bar.github { background: var(--orange); opacity: 0.8; }
-  .gantt td.active { position: relative; }
+/* Day nav */
+.nav { display: flex; gap: 6px; margin-bottom: 20px; flex-wrap: wrap; }
+.nav button { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 6px 14px;
+  border-radius: 6px; cursor: pointer; font-size: 13px; transition: all 0.15s; }
+.nav button:hover { border-color: var(--accent); }
+.nav button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
 
-  /* Timeline */
-  .timeline { display: flex; flex-direction: column; gap: 2px; }
-  .timeline-hour { display: flex; gap: 12px; min-height: 36px; align-items: flex-start; padding: 6px 0;
-    border-bottom: 1px solid var(--border); }
-  .timeline-hour.inactive { opacity: 0.3; }
-  .timeline-time { font-size: 13px; font-weight: 600; color: var(--text-muted); min-width: 50px; padding-top: 2px; }
-  .timeline-content { flex: 1; font-size: 13px; line-height: 1.5; }
-  .timeline-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 4px; }
-  .badge { font-size: 11px; padding: 2px 8px; border-radius: 10px; white-space: nowrap; }
-  .badge.session { background: rgba(88,166,255,0.15); color: var(--accent); }
-  .badge.github { background: rgba(63,185,80,0.15); color: var(--green); }
-  .badge.task { background: rgba(188,140,255,0.15); color: var(--purple); }
+.day-summary { background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px 20px; margin-bottom: 24px; font-size: 14px; line-height: 1.6; }
 
-  /* Day summary */
-  .day-summary { background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
-    padding: 16px 20px; margin-bottom: 24px; font-size: 14px; line-height: 1.6; }
+/* View tabs */
+.view-tabs { display: flex; gap: 0; margin-bottom: 24px; border-bottom: 1px solid var(--border); }
+.view-tab { padding: 8px 16px; font-size: 13px; color: var(--text-muted); cursor: pointer;
+  border: none; border-bottom: 2px solid transparent; background: none; transition: all 0.15s; }
+.view-tab:hover { color: var(--text); }
+.view-tab.active { color: var(--text); border-bottom-color: var(--accent); }
+.view-content { display: none; }
+.view-content.active { display: block; }
 
-  /* Tooltip */
-  .tooltip { display: none; position: absolute; background: var(--surface); border: 1px solid var(--border);
-    border-radius: 6px; padding: 8px 12px; font-size: 12px; z-index: 100; white-space: nowrap;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4); pointer-events: none; }
+/* === GANTT === */
+.gantt-container { overflow-x: auto; }
+.gantt { width: 100%; border-collapse: collapse; }
+.gantt th { font-size: 11px; color: var(--text-muted); font-weight: 400; padding: 4px 0; text-align: center;
+  border-bottom: 1px solid var(--border); min-width: 48px; }
+.gantt th:first-child { min-width: 280px; text-align: left; padding-left: 8px; }
+.gantt td { padding: 0; text-align: center; border-bottom: 1px solid var(--border); height: 26px; position: relative; }
+.gantt .row-label { text-align: left; padding: 4px 8px; font-size: 12px; max-width: 280px;
+  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.gantt .row-label.task-row { font-weight: 600; font-size: 13px; }
+.gantt .row-label.sub-row { padding-left: 24px; color: var(--text-muted); font-size: 11px; }
+.gantt .row-label .status-dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: middle; }
+.gantt .row-label .status-dot.done { background: var(--green); }
+.gantt .row-label .status-dot.progress { background: var(--yellow); }
+.gantt .row-label .status-dot.other { background: var(--text-muted); }
 
-  /* View tabs */
-  .view-tabs { display: flex; gap: 0; margin-bottom: 24px; border-bottom: 1px solid var(--border); }
-  .view-tab { padding: 8px 16px; font-size: 13px; color: var(--text-muted); cursor: pointer;
-    border-bottom: 2px solid transparent; transition: all 0.15s; background: none; border-top: none;
-    border-left: none; border-right: none; }
-  .view-tab:hover { color: var(--text); }
-  .view-tab.active { color: var(--text); border-bottom-color: var(--accent); }
-  .view-content { display: none; }
-  .view-content.active { display: block; }
+.gantt-bar { position: absolute; top: 3px; left: 2px; right: 2px; bottom: 3px; border-radius: 3px; opacity: 0.85; }
+.gantt-bar.task { background: var(--purple); }
+.gantt-bar.pr { background: var(--green); }
+.gantt-bar.push { background: var(--orange); }
+.gantt-bar.session { background: var(--accent); }
 
-  /* Loading */
-  .loading { text-align: center; padding: 60px; color: var(--text-muted); }
+.gantt .type-icon { margin-right: 4px; font-size: 11px; }
 
-  @media (max-width: 768px) {
-    .container { padding: 12px; }
-    .stats { gap: 8px; }
-    .stat-card { min-width: 100px; padding: 12px; }
-    .stat-card .value { font-size: 22px; }
-  }
+/* === TIMELINE === */
+.timeline { display: flex; flex-direction: column; gap: 0; }
+.tl-hour { border-bottom: 1px solid var(--border); padding: 10px 0; }
+.tl-hour.inactive { opacity: 0.25; padding: 4px 0; }
+.tl-header { display: flex; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+.tl-time { font-size: 14px; font-weight: 600; color: var(--text-muted); min-width: 50px; }
+.tl-summary { font-size: 13px; color: var(--text); flex: 1; }
+.tl-details { margin-left: 62px; display: flex; flex-direction: column; gap: 4px; }
+.tl-item { font-size: 12px; line-height: 1.5; display: flex; gap: 6px; align-items: flex-start; }
+.tl-item .icon { min-width: 16px; text-align: center; }
+.tl-item.event { color: var(--green); }
+.tl-item.task { color: var(--purple); }
+.tl-item.session { color: var(--accent); }
+.tl-item .detail-text { color: var(--text); }
+.tl-item .tag { font-size: 10px; padding: 1px 6px; border-radius: 8px; background: rgba(255,255,255,0.06); color: var(--text-muted); margin-left: 4px; }
+
+.loading { text-align: center; padding: 60px; color: var(--text-muted); }
+
+@media (max-width: 768px) {
+  .container { padding: 12px; }
+  .stats { gap: 8px; }
+  .stat-card { min-width: 100px; padding: 12px; }
+  .stat-card .value { font-size: 22px; }
+}
 </style>
 </head>
 <body>
 <div class="container">
   <h1>Activity Dashboard</h1>
-  <p class="subtitle">Noam Bressler &mdash; development activity at 1-hour resolution</p>
-
+  <p class="subtitle">Development activity at 1-hour resolution</p>
   <div class="stats" id="stats"></div>
-
   <div class="section">
     <div class="section-title">Activity Heatmap</div>
-    <div style="display:flex;">
-      <div class="heatmap-hour-labels" id="heatmap-hour-labels"></div>
+    <div class="heatmap-wrap">
+      <div class="heatmap-hour-labels" id="heatmap-hlabels"></div>
       <div class="heatmap" id="heatmap"></div>
     </div>
   </div>
-
   <div class="nav" id="day-nav"></div>
-
   <div class="day-summary" id="day-summary"></div>
-
   <div class="view-tabs">
     <button class="view-tab active" data-view="gantt">Gantt</button>
     <button class="view-tab" data-view="timeline">Timeline</button>
-    <button class="view-tab" data-view="breakdown">Breakdown</button>
   </div>
-
-  <div class="view-content active" id="view-gantt">
-    <div class="section"><div class="section-title">Daily Gantt</div>
-      <div style="overflow-x:auto;"><table class="gantt" id="gantt-table"></table></div>
-    </div>
-  </div>
-  <div class="view-content" id="view-timeline">
-    <div class="section"><div class="section-title">Hourly Timeline</div>
-      <div class="timeline" id="timeline"></div>
-    </div>
-  </div>
-  <div class="view-content" id="view-breakdown">
-    <div class="section"><div class="section-title">Activity Breakdown</div>
-      <canvas id="breakdown-chart" height="300"></canvas>
-    </div>
-  </div>
+  <div class="view-content active" id="view-gantt"><div class="section">
+    <div class="section-title">Task-Centric Gantt</div>
+    <div class="gantt-container"><table class="gantt" id="gantt-table"></table></div>
+  </div></div>
+  <div class="view-content" id="view-timeline"><div class="section">
+    <div class="section-title">Hourly Timeline</div>
+    <div class="timeline" id="timeline"></div>
+  </div></div>
 </div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
 <script>
 const DATES = ["2026-02-08", "2026-02-09", "2026-02-10", "2026-02-11"];
-
-let allData = {};
-let currentDate = null;
-let breakdownChart = null;
+let allData = {}, currentDate = null;
 
 async function loadData() {
-  const loads = DATES.map(async d => {
-    try {
-      const resp = await fetch(`data/${d}.json`);
-      if (resp.ok) allData[d] = await resp.json();
-    } catch(e) { console.warn(`Failed to load ${d}`, e); }
-  });
-  await Promise.all(loads);
+  await Promise.all(DATES.map(async d => {
+    try { const r = await fetch(`data/${d}.json`); if (r.ok) allData[d] = await r.json(); }
+    catch(e) { console.warn(`Failed: ${d}`, e); }
+  }));
 }
 
 function renderStats() {
   const dates = Object.keys(allData).sort();
-  const totalSessions = dates.reduce((s,d) => s + (allData[d].stats?.sessions || 0), 0);
-  const totalEvents = dates.reduce((s,d) => s + (allData[d].stats?.github_events || 0), 0);
-  const totalTasks = dates.reduce((s,d) => s + (allData[d].stats?.notion_tasks || 0), 0);
-  const totalActiveHours = dates.reduce((s,d) => s + (allData[d].active_hours || 0), 0);
-
+  let s=0, e=0, t=0, ah=0, lt=0;
+  dates.forEach(d => {
+    const x = allData[d];
+    s += x.stats?.sessions||0; e += x.stats?.github_events||0;
+    t += x.stats?.notion_tasks||0; ah += x.active_hours||0;
+    lt += x.stats?.linked_tasks||0;
+  });
   document.getElementById('stats').innerHTML = `
     <div class="stat-card"><div class="value">${dates.length}</div><div class="label">Days tracked</div></div>
-    <div class="stat-card"><div class="value">${totalActiveHours}</div><div class="label">Active hours</div></div>
-    <div class="stat-card"><div class="value">${totalSessions}</div><div class="label">Agent sessions</div></div>
-    <div class="stat-card"><div class="value">${totalEvents}</div><div class="label">GitHub events</div></div>
-    <div class="stat-card"><div class="value">${totalTasks}</div><div class="label">Notion tasks</div></div>
-  `;
+    <div class="stat-card"><div class="value">${ah}</div><div class="label">Active hours</div></div>
+    <div class="stat-card"><div class="value">${s}</div><div class="label">Agent sessions</div></div>
+    <div class="stat-card"><div class="value">${e}</div><div class="label">GitHub events</div></div>
+    <div class="stat-card"><div class="value">${t}</div><div class="label">Notion tasks</div></div>
+    <div class="stat-card"><div class="value">${lt}</div><div class="label">Tasks linked to PRs</div></div>`;
 }
 
 function renderHeatmap() {
   const dates = Object.keys(allData).sort();
   if (!dates.length) return;
-
-  // Hour labels (0-23)
-  const hlEl = document.getElementById('heatmap-hour-labels');
-  hlEl.innerHTML = '';
-  for (let h = 0; h < 24; h++) {
-    if (h % 3 === 0) {
-      const lbl = document.createElement('div');
-      lbl.className = 'heatmap-hour-label';
-      lbl.textContent = `${h}`;
-      hlEl.appendChild(lbl);
-    } else {
-      const spacer = document.createElement('div');
-      spacer.className = 'heatmap-hour-label';
-      hlEl.appendChild(spacer);
-    }
+  const hl = document.getElementById('heatmap-hlabels');
+  hl.innerHTML = '';
+  for (let h=0; h<24; h++) {
+    const l = document.createElement('div'); l.className='heatmap-hour-label';
+    l.textContent = h%3===0 ? h : ''; hl.appendChild(l);
   }
-
-  const heatEl = document.getElementById('heatmap');
-  heatEl.innerHTML = '';
-
+  const hm = document.getElementById('heatmap'); hm.innerHTML='';
   for (const d of dates) {
-    const col = document.createElement('div');
-    col.className = 'heatmap-col';
+    const col = document.createElement('div'); col.className='heatmap-col';
+    col.onclick = () => selectDate(d);
     const data = allData[d];
-
-    for (let h = 0; h < 24; h++) {
-      const hh = h.toString().padStart(2, '0');
-      const hourData = data.hours?.[hh];
-      const cell = document.createElement('div');
-      cell.className = 'heatmap-cell';
-
-      if (hourData) {
-        const intensity = (hourData.session_count || 0) + (hourData.github_event_count || 0) + (hourData.task_count || 0);
-        if (intensity >= 6) cell.classList.add('l4');
-        else if (intensity >= 4) cell.classList.add('l3');
-        else if (intensity >= 2) cell.classList.add('l2');
-        else cell.classList.add('l1');
+    for (let h=0; h<24; h++) {
+      const hh = h.toString().padStart(2,'0');
+      const hd = data.hours?.[hh];
+      const cell = document.createElement('div'); cell.className='heatmap-cell';
+      if (hd) {
+        const i = (hd.session_count||0)+(hd.github_event_count||0)+(hd.task_count||0);
+        cell.classList.add(i>=6?'l4':i>=4?'l3':i>=2?'l2':'l1');
       }
-
-      cell.title = `${d} ${hh}:00 — ${hourData?.summary || 'No activity'}`;
-      cell.onclick = () => selectDate(d);
+      cell.title = `${d} ${hh}:00`;
       col.appendChild(cell);
     }
-
-    const lbl = document.createElement('div');
-    lbl.className = 'heatmap-label';
-    const dayDate = new Date(d + 'T12:00:00');
-    lbl.textContent = dayDate.toLocaleDateString('en', { month: 'short', day: 'numeric' });
+    const lbl = document.createElement('div'); lbl.className='heatmap-label';
+    const dd = new Date(d+'T12:00:00');
+    lbl.textContent = dd.toLocaleDateString('en',{month:'short',day:'numeric'});
     col.appendChild(lbl);
-    heatEl.appendChild(col);
+    hm.appendChild(col);
   }
 }
 
 function renderNav() {
-  const dates = Object.keys(allData).sort();
-  const nav = document.getElementById('day-nav');
-  nav.innerHTML = '';
-
-  for (const d of dates) {
-    const btn = document.createElement('button');
-    const dayDate = new Date(d + 'T12:00:00');
-    btn.textContent = dayDate.toLocaleDateString('en', { weekday: 'short', month: 'short', day: 'numeric' });
-    if (d === currentDate) btn.className = 'active';
-    btn.onclick = () => selectDate(d);
-    nav.appendChild(btn);
-  }
+  const nav = document.getElementById('day-nav'); nav.innerHTML='';
+  Object.keys(allData).sort().forEach(d => {
+    const b = document.createElement('button');
+    const dd = new Date(d+'T12:00:00');
+    b.textContent = dd.toLocaleDateString('en',{weekday:'short',month:'short',day:'numeric'});
+    if (d===currentDate) b.className='active';
+    b.onclick = () => selectDate(d);
+    nav.appendChild(b);
+  });
 }
 
-function selectDate(d) {
-  currentDate = d;
-  renderNav();
-  renderDayView();
-}
+function selectDate(d) { currentDate=d; renderNav(); renderDayView(); }
 
 function renderDayView() {
-  const data = allData[currentDate];
-  if (!data) return;
-
-  // Day summary
-  document.getElementById('day-summary').textContent = data.day_summary || 'No summary available.';
-
+  const data = allData[currentDate]; if (!data) return;
+  document.getElementById('day-summary').textContent = data.day_summary||'';
   renderGantt(data);
   renderTimeline(data);
-  renderBreakdown(data);
 }
 
-function renderGantt(data) {
-  const table = document.getElementById('gantt-table');
-  // Find active hour range
-  const activeHours = Object.keys(data.hours || {}).map(Number).sort((a,b) => a-b);
-  const minH = Math.max(0, (activeHours[0] || 8) - 1);
-  const maxH = Math.min(23, (activeHours[activeHours.length-1] || 18) + 1);
+function statusDot(status) {
+  const s = (status||'').toLowerCase();
+  if (s==='done') return '<span class="status-dot done"></span>';
+  if (s.includes('progress')) return '<span class="status-dot progress"></span>';
+  return '<span class="status-dot other"></span>';
+}
 
-  let html = '<thead><tr><th style="min-width:200px"></th>';
-  for (let h = minH; h <= maxH; h++) html += `<th>${h}:00</th>`;
+function esc(s) { const d=document.createElement('div'); d.textContent=s; return d.innerHTML; }
+
+function renderGantt(data) {
+  const items = data.work_items || [];
+  if (!items.length) { document.getElementById('gantt-table').innerHTML='<tr><td>No work items</td></tr>'; return; }
+
+  // Determine hour range
+  let allHours = new Set();
+  items.forEach(w => (w.active_hours||[]).forEach(h => allHours.add(parseInt(h))));
+  Object.keys(data.hours||{}).forEach(h => allHours.add(parseInt(h)));
+  if (!allHours.size) { document.getElementById('gantt-table').innerHTML=''; return; }
+  const minH = Math.max(0, Math.min(...allHours)-1);
+  const maxH = Math.min(23, Math.max(...allHours)+1);
+
+  let html = '<thead><tr><th>Work Item</th>';
+  for (let h=minH; h<=maxH; h++) html += `<th>${h}:00</th>`;
   html += '</tr></thead><tbody>';
 
-  // Session rows
-  const sessions = data.session_timeline || [];
-  for (const s of sessions) {
-    html += `<tr><td class="row-label" title="${s.topic || s.title}">&#x1f4ac; ${s.title.replace(/-/g,' ').substring(0,35)}</td>`;
-    for (let h = minH; h <= maxH; h++) {
+  // Sort: tasks first (by number of active hours desc), then orphan PRs, then orphan sessions
+  const sorted = [...items].sort((a,b) => {
+    const order = {task:0, orphan_pr:1, orphan_session:2};
+    if (order[a.type]!==order[b.type]) return order[a.type]-order[b.type];
+    return (b.active_hours?.length||0)-(a.active_hours?.length||0);
+  });
+
+  for (const w of sorted) {
+    if (!(w.active_hours?.length) && w.type==='task' && !w.prs?.length && !w.sessions?.length) continue;
+
+    // Main row: task / orphan_pr / orphan_session
+    const icon = w.type==='task' ? '&#x1f4cb;' : w.type==='orphan_pr' ? '&#x1f500;' : '&#x1f4ac;';
+    const label = w.type==='task'
+      ? `${statusDot(w.status)}${esc(w.name)}`
+      : w.type==='orphan_pr'
+        ? `<span class="type-icon">&#x1f500;</span>${esc(w.name)}`
+        : `<span class="type-icon">&#x1f4ac;</span>${esc(w.name)}`;
+    const rowClass = w.type==='task' ? 'task-row' : '';
+
+    // Composite bar: show all active hours for this work item
+    const activeSet = new Set(w.active_hours||[]);
+    html += `<tr><td class="row-label ${rowClass}">${label}</td>`;
+    for (let h=minH; h<=maxH; h++) {
       const hh = h.toString().padStart(2,'0');
-      const startH = parseInt(s.start_hour);
-      const endH = parseInt(s.end_hour);
-      const active = h >= startH && h <= endH;
-      html += `<td${active?' class="active"':''}>${active?'<div class="gantt-bar session"></div>':''}</td>`;
+      if (activeSet.has(hh)) {
+        const cls = w.type==='task'?'task':w.type==='orphan_pr'?'pr':'session';
+        html += `<td><div class="gantt-bar ${cls}"></div></td>`;
+      } else html += '<td></td>';
     }
     html += '</tr>';
-  }
 
-  // Task rows
-  const tasks = data.tasks || [];
-  for (const t of tasks) {
-    if (!t.active_hours?.length) continue;
-    html += `<tr><td class="row-label" title="${t.name}">&#x1f4cb; ${t.name.substring(0,35)}</td>`;
-    for (let h = minH; h <= maxH; h++) {
-      const hh = h.toString().padStart(2,'0');
-      const active = t.active_hours.includes(hh);
-      html += `<td${active?' class="active"':''}>${active?'<div class="gantt-bar task"></div>':''}</td>`;
+    // Sub-rows: PRs linked to this task
+    for (const pr of (w.prs||[])) {
+      const prHours = new Set([...(pr.event_hours||[]),...(pr.push_hours||[])]);
+      if (!prHours.size) continue;
+      const merged = pr.merged ? ' (merged)' : '';
+      const prLabel = pr.url
+        ? `<a href="${pr.url}" target="_blank">#${pr.number}</a> ${esc(pr.title||'')}${merged}`
+        : `#${pr.number} ${esc(pr.title||'')}${merged}`;
+      html += `<tr><td class="row-label sub-row"><span class="type-icon">&#x1f500;</span>${prLabel}</td>`;
+      for (let h=minH; h<=maxH; h++) {
+        const hh = h.toString().padStart(2,'0');
+        if (prHours.has(hh)) html += '<td><div class="gantt-bar pr"></div></td>';
+        else html += '<td></td>';
+      }
+      html += '</tr>';
     }
-    html += '</tr>';
-  }
 
-  // PR rows
-  const prs = data.pr_timeline || [];
-  for (const pr of prs) {
-    const label = `#${pr.number} ${pr.title}`.substring(0,35);
-    html += `<tr><td class="row-label" title="${pr.title}">&#x1f500; ${label}</td>`;
-    for (let h = minH; h <= maxH; h++) {
-      const active = h.toString().padStart(2,'0') === pr.hour;
-      html += `<td${active?' class="active"':''}>${active?'<div class="gantt-bar pr"></div>':''}</td>`;
+    // Sub-rows: Sessions linked to this task
+    for (const s of (w.sessions||[])) {
+      if (!(s.active_hours?.length)) continue;
+      const sHours = new Set(s.active_hours);
+      const sLabel = esc((s.title_slug||'').replace(/-/g,' ').substring(0,40));
+      html += `<tr><td class="row-label sub-row"><span class="type-icon">&#x1f4ac;</span>${sLabel} (${s.message_count} msgs)</td>`;
+      for (let h=minH; h<=maxH; h++) {
+        const hh = h.toString().padStart(2,'0');
+        if (sHours.has(hh)) html += '<td><div class="gantt-bar session"></div></td>';
+        else html += '<td></td>';
+      }
+      html += '</tr>';
     }
-    html += '</tr>';
   }
-
   html += '</tbody>';
-  table.innerHTML = html;
+  document.getElementById('gantt-table').innerHTML = html;
 }
 
 function renderTimeline(data) {
-  const el = document.getElementById('timeline');
-  let html = '';
+  const el = document.getElementById('timeline'); let html = '';
+  for (let h=0; h<24; h++) {
+    const hh = h.toString().padStart(2,'0');
+    const hd = data.hours?.[hh];
+    if (!hd) {
+      html += `<div class="tl-hour inactive"><div class="tl-header"><span class="tl-time">${hh}:00</span></div></div>`;
+      continue;
+    }
+    html += `<div class="tl-hour"><div class="tl-header"><span class="tl-time">${hh}:00</span><span class="tl-summary">${esc(hd.summary||'')}</span></div>`;
+    html += '<div class="tl-details">';
 
-  for (let h = 0; h < 24; h++) {
-    const hh = h.toString().padStart(2, '0');
-    const hourData = data.hours?.[hh];
-    const active = !!hourData;
-
-    html += `<div class="timeline-hour${active?'':' inactive'}">`;
-    html += `<div class="timeline-time">${hh}:00</div>`;
-    html += `<div class="timeline-content">`;
-
-    if (hourData) {
-      html += `<div>${hourData.summary || ''}</div>`;
-      html += `<div class="timeline-badges">`;
-      if (hourData.session_count) html += `<span class="badge session">${hourData.session_count} session${hourData.session_count>1?'s':''}</span>`;
-      if (hourData.github_event_count) html += `<span class="badge github">${hourData.github_event_count} event${hourData.github_event_count>1?'s':''}</span>`;
-      if (hourData.task_count) html += `<span class="badge task">${hourData.task_count} task${hourData.task_count>1?'s':''}</span>`;
-      html += `</div>`;
+    // Events with details
+    for (const ev of (hd.events||[])) {
+      const desc = esc(ev.description||'');
+      let extra = '';
+      if (ev.commits?.length) extra = '<br>' + ev.commits.map(c => `<span style="color:var(--text-muted);margin-left:22px;font-size:11px">${esc(c)}</span>`).join('<br>');
+      if (ev.pr_url) extra += ` <a href="${ev.pr_url}" target="_blank" style="font-size:11px">view</a>`;
+      html += `<div class="tl-item event"><span class="icon">&#9679;</span><span class="detail-text">${desc}${extra}</span></div>`;
     }
 
-    html += `</div></div>`;
+    // Tasks with status
+    for (const t of (hd.tasks||[])) {
+      const tags = (t.tags||[]).map(tg => `<span class="tag">${esc(tg)}</span>`).join('');
+      html += `<div class="tl-item task"><span class="icon">&#9679;</span><span class="detail-text">${statusDot(t.status)}<strong>[${esc(t.status)}]</strong> ${esc(t.name)} ${tags}</span></div>`;
+    }
+
+    // Sessions
+    for (const s of (hd.sessions||[])) {
+      const topic = esc((s.topic||s.title_slug||'').substring(0,100));
+      html += `<div class="tl-item session"><span class="icon">&#9679;</span><span class="detail-text">${topic} <span class="tag">${s.messages||0} msgs</span></span></div>`;
+    }
+
+    html += '</div></div>';
   }
-
   el.innerHTML = html;
-}
-
-function renderBreakdown(data) {
-  const canvas = document.getElementById('breakdown-chart');
-  const activeHours = Object.keys(data.hours || {}).sort();
-
-  const sessionCounts = activeHours.map(h => data.hours[h].session_count || 0);
-  const githubCounts = activeHours.map(h => data.hours[h].github_event_count || 0);
-  const taskCounts = activeHours.map(h => data.hours[h].task_count || 0);
-
-  if (breakdownChart) breakdownChart.destroy();
-
-  breakdownChart = new Chart(canvas, {
-    type: 'bar',
-    data: {
-      labels: activeHours.map(h => `${h}:00`),
-      datasets: [
-        { label: 'Agent Sessions', data: sessionCounts, backgroundColor: 'rgba(88,166,255,0.7)' },
-        { label: 'GitHub Events', data: githubCounts, backgroundColor: 'rgba(63,185,80,0.7)' },
-        { label: 'Notion Tasks', data: taskCounts, backgroundColor: 'rgba(188,140,255,0.7)' },
-      ],
-    },
-    options: {
-      responsive: true, scales: { x: { stacked: true }, y: { stacked: true, beginAtZero: true } },
-      plugins: { legend: { labels: { color: '#e6edf3' } } },
-      scales: {
-        x: { ticks: { color: '#7d8590' }, grid: { color: '#30363d' } },
-        y: { ticks: { color: '#7d8590' }, grid: { color: '#30363d' } },
-      },
-    },
-  });
 }
 
 // View tabs
@@ -395,18 +359,15 @@ document.querySelectorAll('.view-tab').forEach(tab => {
   };
 });
 
-// Init
 (async () => {
   await loadData();
   if (!Object.keys(allData).length) {
-    document.getElementById('stats').innerHTML = '<div class="loading">No data yet. Run the activity tracker to collect data.</div>';
+    document.getElementById('stats').innerHTML = '<div class="loading">No data yet.</div>';
     return;
   }
-  renderStats();
-  renderHeatmap();
+  renderStats(); renderHeatmap();
   currentDate = Object.keys(allData).sort().pop();
-  renderNav();
-  renderDayView();
+  renderNav(); renderDayView();
 })();
 </script>
 </body>

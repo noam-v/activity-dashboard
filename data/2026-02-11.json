@@ -1,11 +1,12 @@
 {
   "date": "2026-02-11",
-  "day_summary": "The developer focused heavily on code review and bug fixes for the script.it project, working with AI agents to analyze branch differences and resolve production issues. They addressed database connection problems, authentication bugs, and sandbox-related issues while also setting up automation for specstory history tracking. Multiple pull requests were opened, reviewed, and merged throughout the day.",
+  "day_summary": "The developer focused heavily on bug fixes and infrastructure improvements, particularly around sandbox management and authentication. They worked on multiple pull requests addressing MCP proxy issues, sandbox lifecycle management, and LLM gateway authentication, while also investigating production database connection issues.",
   "active_hours": 10,
   "stats": {
     "sessions": 24,
-    "github_events": 34,
-    "notion_tasks": 14
+    "github_events": 40,
+    "notion_tasks": 14,
+    "linked_tasks": 4
   },
   "hours": {
     "06": {
@@ -13,6 +14,8 @@
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 0,
+      "events": [],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-11_06-59-29Z-please-see-https-github.md",
@@ -20,58 +23,38 @@
           "topic": "Please see https://github.com/bespo-ai/script.it/pull/285 it was deployed to prod 12:30AM GMT+2 This was supposed to stop a persistant error we were seeing in our monitor \"[PRODUCTION] LiteLLM High La",
           "messages": 4
         }
-      ],
-      "github_events": [],
-      "notion_tasks": []
+      ]
     },
     "07": {
-      "summary": "Continued discussing the production deployment issue while opening new PRs and working on backend scaling preparation tasks.",
+      "summary": "Continued discussing the production deployment issue while opening PR #295 to fix MCP proxy paths and working on Scale preparation tasks.",
       "session_count": 1,
       "github_event_count": 3,
       "task_count": 1,
-      "sessions": [
-        {
-          "filename": "2026-02-11_06-59-29Z-please-see-https-github.md",
-          "title_slug": "please-see-https-github",
-          "topic": "Please see https://github.com/bespo-ai/script.it/pull/285 it was deployed to prod 12:30AM GMT+2 This was supposed to stop a persistant error we were seeing in our monitor \"[PRODUCTION] LiteLLM High La",
-          "messages": 4
-        }
-      ],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-11T07:22:19Z",
-          "hour": "07",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #295 assigned: fix(sandbox): return 405 for GET on MCP proxy paths to prevent long-lived SSE",
           "pr_number": 295,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/295"
         },
         {
           "timestamp": "2026-02-11T07:22:19Z",
-          "hour": "07",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #295 opened: fix(sandbox): return 405 for GET on MCP proxy paths to prevent long-lived SSE",
           "pr_number": 295,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/295"
         },
         {
           "timestamp": "2026-02-11T07:22:13Z",
-          "hour": "07",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "noam/fix/prevent-mcp-long-lived-sse"
+          "description": "Created branch noam/fix/prevent-mcp-long-lived-sse"
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "303ec4e5-8f15-80aa-8e86-f8c428b92e7e",
           "name": "Prepare for Scale",
@@ -80,100 +63,83 @@
             "Script.it Backend"
           ]
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-11_06-59-29Z-please-see-https-github.md",
+          "title_slug": "please-see-https-github",
+          "topic": "Please see https://github.com/bespo-ai/script.it/pull/285 it was deployed to prod 12:30AM GMT+2 This was supposed to stop a persistant error we were seeing in our monitor \"[PRODUCTION] LiteLLM High La",
+          "messages": 4
+        }
       ]
     },
     "08": {
-      "summary": "Actively managed multiple PRs with pushes and merges while completing tasks related to email automation and MCP connection bugs.",
+      "summary": "Completed work on killing/stopping processes before revoking access and finished tasks related to email automation and MCP SSE connections.",
       "session_count": 0,
       "github_event_count": 8,
       "task_count": 3,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-11T08:38:23Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "closed",
+          "description": "PR #296 closed: Kill / stop before revoking & use lock for inactivity",
           "pr_number": 296,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/296"
         },
         {
           "timestamp": "2026-02-11T08:38:22Z",
-          "hour": "08",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/fix/kill-before-revoke",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/fix/kill-before-revoke",
+          "commits": []
         },
         {
           "timestamp": "2026-02-11T08:28:22Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #296 opened: Kill / stop before revoking & use lock for inactivity",
           "pr_number": 296,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/296"
         },
         {
           "timestamp": "2026-02-11T08:28:22Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #296 assigned: Kill / stop before revoking & use lock for inactivity",
           "pr_number": 296,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/296"
         },
         {
           "timestamp": "2026-02-11T08:28:05Z",
-          "hour": "08",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/fix/kill-before-revoke",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/fix/kill-before-revoke",
+          "commits": []
         },
         {
           "timestamp": "2026-02-11T08:27:51Z",
-          "hour": "08",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "noam/fix/kill-before-revoke"
+          "description": "Created branch noam/fix/kill-before-revoke"
         },
         {
           "timestamp": "2026-02-11T08:22:41Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "merged",
+          "description": "PR #295 merged: fix(sandbox): return 405 for GET on MCP proxy paths to prevent long-lived SSE",
           "pr_number": 295,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/295"
         },
         {
           "timestamp": "2026-02-11T08:06:23Z",
-          "hour": "08",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/fix/prevent-mcp-long-lived-sse",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/fix/prevent-mcp-long-lived-sse",
+          "commits": []
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "303ec4e5-8f15-8135-8575-e1b2914f1551",
           "name": "Update email automation welcome prompt for Gmail suggestions",
@@ -200,16 +166,16 @@
             "Script.it Backend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "09": {
-      "summary": "Updated task statuses for frontend bugs including sandbox resume issues and session message display problems.",
+      "summary": "Reviewed frontend bugs including sandbox resume issues and cancelled work on message display race conditions.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 2,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "304ec4e5-8f15-8000-a05f-f8928e5f31f2",
           "name": "BUG - clicking resume sandbox does not refresh screen (stays in \u201cno sandbox\u201d mode)",
@@ -226,13 +192,54 @@
             "Script.it Frontend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "10": {
-      "summary": "Extensively used AI agents for deep code review and branch comparison analysis while creating multiple new PRs and pushing code changes.",
+      "summary": "Conducted extensive code reviews comparing current branch to dev branch while opening PR #297 for kill-before-revoke fixes.",
       "session_count": 9,
       "github_event_count": 5,
       "task_count": 0,
+      "events": [
+        {
+          "timestamp": "2026-02-11T10:56:00Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/fix/kill-before-revoke",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-11T10:30:55Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #297 opened: Noam/fix/kill before revoke",
+          "pr_number": 297,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/297"
+        },
+        {
+          "timestamp": "2026-02-11T10:30:55Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #297 assigned: Noam/fix/kill before revoke",
+          "pr_number": 297,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/297"
+        },
+        {
+          "timestamp": "2026-02-11T10:30:38Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/fix/kill-before-revoke",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-11T10:27:39Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/fix/kill-before-revoke",
+          "commits": []
+        }
+      ],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-11_10-26-24Z-please-deeply-understand-the.md",
@@ -288,67 +295,72 @@
           "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git diff 4b1e23999ec85eedaaf2183898ca0915b54499a7` to",
           "messages": 1
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-11T10:56:00Z",
-          "hour": "10",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "noam/fix/kill-before-revoke",
-          "commit_count": 0,
-          "commit_messages": []
-        },
-        {
-          "timestamp": "2026-02-11T10:30:55Z",
-          "hour": "10",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "opened",
-          "pr_number": 297,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T10:30:55Z",
-          "hour": "10",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "assigned",
-          "pr_number": 297,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T10:30:38Z",
-          "hour": "10",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "noam/fix/kill-before-revoke",
-          "commit_count": 0,
-          "commit_messages": []
-        },
-        {
-          "timestamp": "2026-02-11T10:27:39Z",
-          "hour": "10",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "noam/fix/kill-before-revoke",
-          "commit_count": 0,
-          "commit_messages": []
-        }
-      ],
-      "notion_tasks": []
+      ]
     },
     "11": {
-      "summary": "Continued intensive code review sessions with AI agents while merging PRs and working on LLM gateway authentication fixes.",
+      "summary": "Continued code reviews and merged PR #297, then opened PR #298 for sandbox JWT authentication through LLM gateway.",
       "session_count": 8,
       "github_event_count": 6,
       "task_count": 2,
+      "events": [
+        {
+          "timestamp": "2026-02-11T11:58:25Z",
+          "type": "PullRequestReviewEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewEvent"
+        },
+        {
+          "timestamp": "2026-02-11T11:58:24Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to hotfix/llm-gateway-auth",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-11T11:24:17Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #297 merged: Noam/fix/kill before revoke",
+          "pr_number": 297,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/297"
+        },
+        {
+          "timestamp": "2026-02-11T11:21:16Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #298 assigned: pass sandbox jwt though llm gateway",
+          "pr_number": 298,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/298"
+        },
+        {
+          "timestamp": "2026-02-11T11:21:16Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #298 opened: pass sandbox jwt though llm gateway",
+          "pr_number": 298,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/298"
+        },
+        {
+          "timestamp": "2026-02-11T11:21:07Z",
+          "type": "CreateEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Created branch hotfix/llm-gateway-auth"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "304ec4e5-8f15-80aa-abbf-f9a258c53cc1",
+          "name": "",
+          "status": "Not started",
+          "tags": []
+        },
+        {
+          "id": "304ec4e5-8f15-803a-aa2c-e1a40f2ed73f",
+          "name": "synced input doesn\u2019t work for yaml",
+          "status": "Not started",
+          "tags": []
+        }
+      ],
       "sessions": [
         {
           "filename": "2026-02-11_10-26-24Z-please-deeply-understand-the.md",
@@ -398,91 +410,78 @@
           "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git diff 4b1e23999ec85eedaaf2183898ca0915b54499a7` to",
           "messages": 77
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-11T11:58:25Z",
-          "hour": "11",
-          "type": "PullRequestReviewEvent",
-          "repo": "bespo-ai/script.it",
-          "pr_number": 298,
-          "pr_title": "",
-          "review_state": "dismissed"
-        },
-        {
-          "timestamp": "2026-02-11T11:58:24Z",
-          "hour": "11",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "hotfix/llm-gateway-auth",
-          "commit_count": 0,
-          "commit_messages": []
-        },
-        {
-          "timestamp": "2026-02-11T11:24:17Z",
-          "hour": "11",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "merged",
-          "pr_number": 297,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T11:21:16Z",
-          "hour": "11",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "assigned",
-          "pr_number": 298,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T11:21:16Z",
-          "hour": "11",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "opened",
-          "pr_number": 298,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T11:21:07Z",
-          "hour": "11",
-          "type": "CreateEvent",
-          "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "hotfix/llm-gateway-auth"
-        }
-      ],
-      "notion_tasks": [
-        {
-          "id": "304ec4e5-8f15-80aa-abbf-f9a258c53cc1",
-          "name": "",
-          "status": "Not started",
-          "tags": []
-        },
-        {
-          "id": "304ec4e5-8f15-803a-aa2c-e1a40f2ed73f",
-          "name": "synced input doesn\u2019t work for yaml",
-          "status": "Not started",
-          "tags": []
-        }
       ]
     },
     "12": {
-      "summary": "Investigated high database connection issues in production using AI agents while managing PR workflows and completing frontend progress indication tasks.",
+      "summary": "Investigated high database connections in production while merging authentication fixes and opening PR #302 for connector security.",
       "session_count": 4,
       "github_event_count": 5,
       "task_count": 3,
+      "events": [
+        {
+          "timestamp": "2026-02-11T12:35:15Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #302 assigned: make X-Scriptit-Connector-Proof secure",
+          "pr_number": 302,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/302"
+        },
+        {
+          "timestamp": "2026-02-11T12:35:15Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #302 opened: make X-Scriptit-Connector-Proof secure",
+          "pr_number": 302,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/302"
+        },
+        {
+          "timestamp": "2026-02-11T12:35:04Z",
+          "type": "CreateEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Created branch noam/fix/make-llm-gateway-header-secure"
+        },
+        {
+          "timestamp": "2026-02-11T12:10:32Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #298 merged: pass sandbox jwt though llm gateway",
+          "pr_number": 298,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/298"
+        },
+        {
+          "timestamp": "2026-02-11T12:04:39Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to hotfix/llm-gateway-auth",
+          "commits": []
+        }
+      ],
+      "tasks": [
+        {
+          "id": "303ec4e5-8f15-8021-b66b-e240f426e7c6",
+          "name": "Running scripts manually need to show progress in the script view and some indication in the chat",
+          "status": "Done",
+          "tags": [
+            "Script.it Frontend"
+          ]
+        },
+        {
+          "id": "304ec4e5-8f15-80a2-a655-d68965705edd",
+          "name": "Deleting trigger registration for disabled accounts/integrations",
+          "status": "Upcoming",
+          "tags": [
+            "Script.it Backend"
+          ]
+        },
+        {
+          "id": "304ec4e5-8f15-81f8-9cb5-dd0d4eb7300a",
+          "name": "Expression syntax ${{ }} not resolved in script input defaults",
+          "status": "Added by Agent",
+          "tags": [
+            "Script.it DSL"
+          ]
+        }
+      ],
       "sessions": [
         {
           "filename": "2026-02-11_12-01-23Z-i-m-seeing-a.md",
@@ -508,94 +507,53 @@
           "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git diff 4b1e23999ec85eedaaf2183898ca0915b54499a7` to",
           "messages": 79
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-11T12:35:15Z",
-          "hour": "12",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "assigned",
-          "pr_number": 302,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T12:35:15Z",
-          "hour": "12",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "opened",
-          "pr_number": 302,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T12:35:04Z",
-          "hour": "12",
-          "type": "CreateEvent",
-          "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "noam/fix/make-llm-gateway-header-secure"
-        },
-        {
-          "timestamp": "2026-02-11T12:10:32Z",
-          "hour": "12",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "merged",
-          "pr_number": 298,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T12:04:39Z",
-          "hour": "12",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "hotfix/llm-gateway-auth",
-          "commit_count": 0,
-          "commit_messages": []
-        }
-      ],
-      "notion_tasks": [
-        {
-          "id": "303ec4e5-8f15-8021-b66b-e240f426e7c6",
-          "name": "Running scripts manually need to show progress in the script view and some indication in the chat",
-          "status": "Done",
-          "tags": [
-            "Script.it Frontend"
-          ]
-        },
-        {
-          "id": "304ec4e5-8f15-80a2-a655-d68965705edd",
-          "name": "Deleting trigger registration for disabled accounts/integrations",
-          "status": "Upcoming",
-          "tags": [
-            "Script.it Backend"
-          ]
-        },
-        {
-          "id": "304ec4e5-8f15-81f8-9cb5-dd0d4eb7300a",
-          "name": "Expression syntax ${{ }} not resolved in script input defaults",
-          "status": "Added by Agent",
-          "tags": [
-            "Script.it DSL"
-          ]
-        }
       ]
     },
     "13": {
-      "summary": "Continued investigating database connection problems while merging PRs and working on LLM gateway security improvements.",
+      "summary": "Continued investigating database connection issues while reverting and re-applying the kill-before-revoke changes.",
       "session_count": 1,
       "github_event_count": 5,
       "task_count": 0,
+      "events": [
+        {
+          "timestamp": "2026-02-11T13:55:24Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #303 merged: Revert \"Revert \"Noam/fix/kill before revoke\"\"",
+          "pr_number": 303,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/303"
+        },
+        {
+          "timestamp": "2026-02-11T13:54:45Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #303 opened: Revert \"Revert \"Noam/fix/kill before revoke\"\"",
+          "pr_number": 303,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/303"
+        },
+        {
+          "timestamp": "2026-02-11T13:54:45Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #303 assigned: Revert \"Revert \"Noam/fix/kill before revoke\"\"",
+          "pr_number": 303,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/303"
+        },
+        {
+          "timestamp": "2026-02-11T13:54:38Z",
+          "type": "CreateEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Created branch revert-299-revert-297-noam/fix/kill-before-revoke"
+        },
+        {
+          "timestamp": "2026-02-11T13:37:38Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/fix/make-llm-gateway-header-secure",
+          "commits": []
+        }
+      ],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-11_12-01-23Z-i-m-seeing-a.md",
@@ -603,92 +561,24 @@
           "topic": "I'm seeing a high amount of db connections in prod. Please check what is driving that --- _**Agent (gpt-5.3-codex 2026-02-11 12:01:33Z)**_ **Announcing database inspection skill use** _**Agent (gpt-5.",
           "messages": 3
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-11T13:55:24Z",
-          "hour": "13",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "merged",
-          "pr_number": 303,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T13:54:45Z",
-          "hour": "13",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "opened",
-          "pr_number": 303,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T13:54:45Z",
-          "hour": "13",
-          "type": "PullRequestEvent",
-          "repo": "bespo-ai/script.it",
-          "action": "assigned",
-          "pr_number": 303,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
-        },
-        {
-          "timestamp": "2026-02-11T13:54:38Z",
-          "hour": "13",
-          "type": "CreateEvent",
-          "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "revert-299-revert-297-noam/fix/kill-before-revoke"
-        },
-        {
-          "timestamp": "2026-02-11T13:37:38Z",
-          "hour": "13",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "noam/fix/make-llm-gateway-header-secure",
-          "commit_count": 0,
-          "commit_messages": []
-        }
-      ],
-      "notion_tasks": []
+      ]
     },
     "14": {
-      "summary": "Debugged development environment errors and completed tasks related to sandbox lock refactoring and agent LLM gateway access issues.",
+      "summary": "Debugged integration route errors in the dev environment and completed sandbox lock refactoring and agent LLM gateway fixes.",
       "session_count": 1,
       "github_event_count": 1,
       "task_count": 2,
-      "sessions": [
-        {
-          "filename": "2026-02-11_14-42-08Z-got-this-in-our.md",
-          "title_slug": "got-this-in-our",
-          "topic": "Got this in our dev env { \"insertId\": \"698c94a00009386c72c5f85c\", \"jsonPayload\": { \"logger\": \"app.api.integration_routes\", \"timestamp\": \"2026-02-11T14:39:28.603951+00:00\", \"message\": \"Unexpected HTTP ",
-          "messages": 8
-        }
-      ],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-11T14:39:46Z",
-          "hour": "14",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "merged",
+          "description": "PR #302 merged: make X-Scriptit-Connector-Proof secure",
           "pr_number": 302,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/302"
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "304ec4e5-8f15-80bf-b6c6-ed907dafd2da",
           "name": "BUG - Refactor sandbox lock & prevent 401 auth errors on sandbox stop",
@@ -705,13 +595,80 @@
             "Script.it Agent"
           ]
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-11_14-42-08Z-got-this-in-our.md",
+          "title_slug": "got-this-in-our",
+          "topic": "Got this in our dev env { \"insertId\": \"698c94a00009386c72c5f85c\", \"jsonPayload\": { \"logger\": \"app.api.integration_routes\", \"timestamp\": \"2026-02-11T14:39:28.603951+00:00\", \"message\": \"Unexpected HTTP ",
+          "messages": 8
+        }
       ]
     },
     "15": {
-      "summary": "Continued debugging development environment issues and set up automation for pushing specstory history to a private repository.",
+      "summary": "Continued debugging integration issues and worked on setting up a post-push hook for .specstory/history to push to a private repo.",
       "session_count": 2,
-      "github_event_count": 1,
+      "github_event_count": 7,
       "task_count": 1,
+      "events": [
+        {
+          "timestamp": "2026-02-11T15:56:11Z",
+          "type": "PushEvent",
+          "repo": "noam-v/activity-dashboard",
+          "description": "Pushed 0 commit(s) to main",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-11T15:55:25Z",
+          "type": "PushEvent",
+          "repo": "noam-v/activity-dashboard",
+          "description": "Pushed 0 commit(s) to main",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-11T15:55:23Z",
+          "type": "PushEvent",
+          "repo": "noam-v/activity-dashboard",
+          "description": "Pushed 0 commit(s) to main",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-11T15:54:48Z",
+          "type": "PushEvent",
+          "repo": "noam-v/activity-dashboard",
+          "description": "Pushed 0 commit(s) to main",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-11T15:54:46Z",
+          "type": "PushEvent",
+          "repo": "noam-v/activity-dashboard",
+          "description": "Pushed 0 commit(s) to main",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-11T15:54:44Z",
+          "type": "CreateEvent",
+          "repo": "noam-v/activity-dashboard",
+          "description": "Created branch main"
+        },
+        {
+          "timestamp": "2026-02-11T15:40:22Z",
+          "type": "CreateEvent",
+          "repo": "noam-v/noam-specstory",
+          "description": "Created branch main"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "304ec4e5-8f15-8040-9497-dabe4eb837bb",
+          "name": "Scaling to support 1T events per month",
+          "status": "Upcoming",
+          "tags": [
+            "Script.it Backend"
+          ]
+        }
+      ],
       "sessions": [
         {
           "filename": "2026-02-11_14-42-08Z-got-this-in-our.md",
@@ -725,31 +682,12 @@
           "topic": ".specstory/history is currently gitignored. I want a post-push hook that will push it into a private repo called noam-specstory",
           "messages": 6
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-11T15:40:22Z",
-          "hour": "15",
-          "type": "CreateEvent",
-          "repo": "noam-v/noam-specstory",
-          "ref_type": "branch",
-          "ref": "main"
-        }
-      ],
-      "notion_tasks": [
-        {
-          "id": "304ec4e5-8f15-8040-9497-dabe4eb837bb",
-          "name": "Scaling to support 1T events per month",
-          "status": "Upcoming",
-          "tags": [
-            "Script.it Backend"
-          ]
-        }
       ]
     }
   },
-  "tasks": [
+  "work_items": [
     {
+      "type": "task",
       "id": "303ec4e5-8f15-80aa-8e86-f8c428b92e7e",
       "name": "Prepare for Scale",
       "status": "Upcoming",
@@ -757,13 +695,15 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Prepare-for-Scale-303ec4e58f1580aa8e86f8c428b92e7e",
       "active_hours": [
         "07"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-8135-8575-e1b2914f1551",
       "name": "Update email automation welcome prompt for Gmail suggestions",
       "status": "Done",
@@ -771,13 +711,26 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Update-email-automation-welcome-prompt-for-Gmail-suggestions-303ec4e58f1581358575e1b2914f1551",
       "active_hours": [
-        "08"
+        "08",
+        "10"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-11_10-43-47Z-please-help-me-debug.md",
+          "title_slug": "please-help-me-debug",
+          "topic": "Please help me debug this production error { \"textPayload\": \"Traceback (most recent call last):\\n  File \\\"/usr/lib/python3.13/site-packages/starlette/",
+          "active_hours": [
+            "10"
+          ],
+          "message_count": 8
+        }
       ]
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-809c-bbb6-dd5fdcfdc2da",
       "name": "BUG - Avoid MCP long-lived SSE connections",
       "status": "Done",
@@ -785,13 +738,33 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-Avoid-MCP-long-lived-SSE-connections-304ec4e58f15809cbbb6dd5fdcfdc2da",
       "active_hours": [
+        "07",
         "08"
-      ]
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#295",
+          "repo": "bespo-ai/script.it",
+          "number": 295,
+          "title": "fix(sandbox): return 405 for GET on MCP proxy paths to prevent long-lived SSE",
+          "url": "https://github.com/bespo-ai/script.it/pull/295",
+          "branch": "noam/fix/prevent-mcp-long-lived-sse",
+          "merged": true,
+          "event_hours": [
+            "07",
+            "08"
+          ],
+          "push_hours": [
+            "08"
+          ]
+        }
+      ],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2e7ec4e5-8f15-80c2-926b-d0156ff84d8a",
       "name": "Realtime updates from the shell run",
       "status": "Upcoming",
@@ -801,13 +774,64 @@
         "Script.it Agent",
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Realtime-updates-from-the-shell-run-2e7ec4e58f1580c2926bd0156ff84d8a",
       "active_hours": [
-        "08"
+        "08",
+        "10",
+        "11",
+        "12"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-11_10-28-07Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
+          "active_hours": [
+            "10"
+          ],
+          "message_count": 2
+        },
+        {
+          "filename": "2026-02-11_10-41-45Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
+          "active_hours": [
+            "10"
+          ],
+          "message_count": 2
+        },
+        {
+          "filename": "2026-02-11_11-23-17Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
+          "active_hours": [
+            "11"
+          ],
+          "message_count": 2
+        },
+        {
+          "filename": "2026-02-11_11-28-42Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
+          "active_hours": [
+            "11"
+          ],
+          "message_count": 2
+        },
+        {
+          "filename": "2026-02-11_12-04-55Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
+          "active_hours": [
+            "12"
+          ],
+          "message_count": 2
+        }
       ]
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-8000-a05f-f8928e5f31f2",
       "name": "BUG - clicking resume sandbox does not refresh screen (stays in \u201cno sandbox\u201d mode)",
       "status": "Not started",
@@ -815,13 +839,15 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-clicking-resume-sandbox-does-not-refresh-screen-stays-in-no-sandbox-mode-304ec4e58f158000a05ff8928e5f31f2",
       "active_hours": [
         "09"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2faec4e5-8f15-80fc-8744-fbd1fdfb645b",
       "name": "Messages not displayed when moving between sessions (Race issue)",
       "status": "Cancel",
@@ -829,37 +855,71 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Messages-not-displayed-when-moving-between-sessions-Race-issue-2faec4e58f1580fc8744fbd1fdfb645b",
       "active_hours": [
         "09"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-80aa-abbf-f9a258c53cc1",
       "name": "",
       "status": "Not started",
       "priority": "",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/304ec4e58f1580aaabbff9a258c53cc1",
       "active_hours": [
         "11"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-803a-aa2c-e1a40f2ed73f",
       "name": "synced input doesn\u2019t work for yaml",
       "status": "Not started",
       "priority": "Low",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/synced-input-doesn-t-work-for-yaml-304ec4e58f15803aaa2ce1a40f2ed73f",
       "active_hours": [
-        "11"
+        "11",
+        "13",
+        "14",
+        "15"
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#303",
+          "repo": "bespo-ai/script.it",
+          "number": 303,
+          "title": "Revert \"Revert \"Noam/fix/kill before revoke\"\"",
+          "url": "https://github.com/bespo-ai/script.it/pull/303",
+          "branch": "revert-299-revert-297-noam/fix/kill-before-revoke",
+          "merged": true,
+          "event_hours": [
+            "13"
+          ],
+          "push_hours": []
+        }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-11_14-42-08Z-got-this-in-our.md",
+          "title_slug": "got-this-in-our",
+          "topic": "Got this in our dev env { \"insertId\": \"698c94a00009386c72c5f85c\", \"jsonPayload\": { \"logger\": \"app.api.integration_routes\", \"timestamp\": \"2026-02-11T14",
+          "active_hours": [
+            "14",
+            "15"
+          ],
+          "message_count": 8
+        }
       ]
     },
     {
+      "type": "task",
       "id": "303ec4e5-8f15-8021-b66b-e240f426e7c6",
       "name": "Running scripts manually need to show progress in the script view and some indication in the chat",
       "status": "Done",
@@ -867,13 +927,26 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Running-scripts-manually-need-to-show-progress-in-the-script-view-and-some-indication-in-the-chat-303ec4e58f158021b66be240f426e7c6",
       "active_hours": [
-        "12"
+        "12",
+        "15"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-11_15-31-51Z-specstory-history-is-currently.md",
+          "title_slug": "specstory-history-is-currently",
+          "topic": ".specstory/history is currently gitignored. I want a post-push hook that will push it into a private repo called noam-specstory",
+          "active_hours": [
+            "15"
+          ],
+          "message_count": 6
+        }
       ]
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-80a2-a655-d68965705edd",
       "name": "Deleting trigger registration for disabled accounts/integrations",
       "status": "Upcoming",
@@ -881,13 +954,136 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Deleting-trigger-registration-for-disabled-accounts-integrations-304ec4e58f1580a2a655d68965705edd",
       "active_hours": [
+        "10",
+        "11",
         "12"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-11_10-26-24Z-please-deeply-understand-the.md",
+          "title_slug": "please-deeply-understand-the",
+          "topic": "Please deeply understand the current branch compared to dev, then report back --- _**Agent (claude-opus-4-6 2026-02-11 10:26:27Z)**_ _**Agent (claude-",
+          "active_hours": [
+            "10",
+            "11"
+          ],
+          "message_count": 25
+        },
+        {
+          "filename": "2026-02-11_10-27-58Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "10"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-11_10-32-27Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "10"
+          ],
+          "message_count": 67
+        },
+        {
+          "filename": "2026-02-11_10-41-39Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "10"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-11_10-49-50Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "10"
+          ],
+          "message_count": 81
+        },
+        {
+          "filename": "2026-02-11_10-54-50Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "10"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-11_11-02-07Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "11"
+          ],
+          "message_count": 79
+        },
+        {
+          "filename": "2026-02-11_11-23-15Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "11"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-11_11-25-58Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "11"
+          ],
+          "message_count": 47
+        },
+        {
+          "filename": "2026-02-11_11-28-37Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "11"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-11_11-34-43Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "11"
+          ],
+          "message_count": 77
+        },
+        {
+          "filename": "2026-02-11_12-04-50Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "12"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-11_12-11-39Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
+          "active_hours": [
+            "12"
+          ],
+          "message_count": 79
+        }
       ]
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-81f8-9cb5-dd0d4eb7300a",
       "name": "Expression syntax ${{ }} not resolved in script input defaults",
       "status": "Added by Agent",
@@ -895,13 +1091,28 @@
       "tags": [
         "Script.it DSL"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Expression-syntax-not-resolved-in-script-input-defaults-304ec4e58f1581f89cb5dd0d4eb7300a",
       "active_hours": [
+        "06",
+        "07",
         "12"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-11_06-59-29Z-please-see-https-github.md",
+          "title_slug": "please-see-https-github",
+          "topic": "Please see https://github.com/bespo-ai/script.it/pull/285 it was deployed to prod 12:30AM GMT+2 This was supposed to stop a persistant error we were s",
+          "active_hours": [
+            "06",
+            "07"
+          ],
+          "message_count": 4
+        }
       ]
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-80bf-b6c6-ed907dafd2da",
       "name": "BUG - Refactor sandbox lock & prevent 401 auth errors on sandbox stop",
       "status": "Done",
@@ -909,13 +1120,52 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-Refactor-sandbox-lock-prevent-401-auth-errors-on-sandbox-stop-304ec4e58f1580bfb6c6ed907dafd2da",
       "active_hours": [
+        "08",
+        "10",
+        "11",
         "14"
-      ]
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#297",
+          "repo": "bespo-ai/script.it",
+          "number": 297,
+          "title": "Noam/fix/kill before revoke",
+          "url": "https://github.com/bespo-ai/script.it/pull/297",
+          "branch": "noam/fix/kill-before-revoke",
+          "merged": true,
+          "event_hours": [
+            "10",
+            "11"
+          ],
+          "push_hours": [
+            "08",
+            "10"
+          ]
+        },
+        {
+          "key": "bespo-ai/script.it#296",
+          "repo": "bespo-ai/script.it",
+          "number": 296,
+          "title": "Kill / stop before revoking & use lock for inactivity",
+          "url": "https://github.com/bespo-ai/script.it/pull/296",
+          "branch": "noam/fix/kill-before-revoke",
+          "merged": false,
+          "event_hours": [
+            "08"
+          ],
+          "push_hours": [
+            "08",
+            "10"
+          ]
+        }
+      ],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-80ce-9f9e-e72e4c29ab18",
       "name": "BUG - Agent couldn\u2019t use llm-gateway - tried openai sdk",
       "status": "Done",
@@ -923,13 +1173,63 @@
       "tags": [
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-Agent-couldn-t-use-llm-gateway-tried-openai-sdk-304ec4e58f1580ce9f9ee72e4c29ab18",
       "active_hours": [
+        "11",
+        "12",
+        "13",
         "14"
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#302",
+          "repo": "bespo-ai/script.it",
+          "number": 302,
+          "title": "make X-Scriptit-Connector-Proof secure",
+          "url": "https://github.com/bespo-ai/script.it/pull/302",
+          "branch": "noam/fix/make-llm-gateway-header-secure",
+          "merged": true,
+          "event_hours": [
+            "12",
+            "14"
+          ],
+          "push_hours": [
+            "13"
+          ]
+        },
+        {
+          "key": "bespo-ai/script.it#298",
+          "repo": "bespo-ai/script.it",
+          "number": 298,
+          "title": "pass sandbox jwt though llm gateway",
+          "url": "https://github.com/bespo-ai/script.it/pull/298",
+          "branch": "hotfix/llm-gateway-auth",
+          "merged": true,
+          "event_hours": [
+            "11",
+            "12"
+          ],
+          "push_hours": [
+            "11",
+            "12"
+          ]
+        }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-11_12-01-23Z-i-m-seeing-a.md",
+          "title_slug": "i-m-seeing-a",
+          "topic": "I'm seeing a high amount of db connections in prod. Please check what is driving that --- _**Agent (gpt-5.3-codex 2026-02-11 12:01:33Z)**_ **Announcin",
+          "active_hours": [
+            "12",
+            "13"
+          ],
+          "message_count": 3
+        }
       ]
     },
     {
+      "type": "task",
       "id": "304ec4e5-8f15-8040-9497-dabe4eb837bb",
       "name": "Scaling to support 1T events per month",
       "status": "Upcoming",
@@ -937,230 +1237,12 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Scaling-to-support-1T-events-per-month-304ec4e58f1580409497dabe4eb837bb",
       "active_hours": [
         "15"
-      ]
-    }
-  ],
-  "session_timeline": [
-    {
-      "title": "please-see-https-github",
-      "topic": "Please see https://github.com/bespo-ai/script.it/pull/285 it was deployed to prod 12:30AM GMT+2 This was supposed to stop a persistant error we were s",
-      "start_hour": "06",
-      "end_hour": "07",
-      "message_count": 4
-    },
-    {
-      "title": "please-deeply-understand-the",
-      "topic": "Please deeply understand the current branch compared to dev, then report back --- _**Agent (claude-opus-4-6 2026-02-11 10:26:27Z)**_ _**Agent (claude-",
-      "start_hour": "10",
-      "end_hour": "11",
-      "message_count": 25
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "10",
-      "end_hour": "10",
-      "message_count": 1
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
-      "start_hour": "10",
-      "end_hour": "10",
-      "message_count": 2
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "10",
-      "end_hour": "10",
-      "message_count": 67
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "10",
-      "end_hour": "10",
-      "message_count": 1
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
-      "start_hour": "10",
-      "end_hour": "10",
-      "message_count": 2
-    },
-    {
-      "title": "please-help-me-debug",
-      "topic": "Please help me debug this production error { \"textPayload\": \"Traceback (most recent call last):\\n  File \\\"/usr/lib/python3.13/site-packages/starlette/",
-      "start_hour": "10",
-      "end_hour": "10",
-      "message_count": 8
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "10",
-      "end_hour": "10",
-      "message_count": 81
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "10",
-      "end_hour": "10",
-      "message_count": 1
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "11",
-      "end_hour": "11",
-      "message_count": 79
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "11",
-      "end_hour": "11",
-      "message_count": 1
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
-      "start_hour": "11",
-      "end_hour": "11",
-      "message_count": 2
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "11",
-      "end_hour": "11",
-      "message_count": 47
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "11",
-      "end_hour": "11",
-      "message_count": 1
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
-      "start_hour": "11",
-      "end_hour": "11",
-      "message_count": 2
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "11",
-      "end_hour": "11",
-      "message_count": 77
-    },
-    {
-      "title": "i-m-seeing-a",
-      "topic": "I'm seeing a high amount of db connections in prod. Please check what is driving that --- _**Agent (gpt-5.3-codex 2026-02-11 12:01:33Z)**_ **Announcin",
-      "start_hour": "12",
-      "end_hour": "13",
-      "message_count": 3
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "12",
-      "end_hour": "12",
-      "message_count": 1
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
-      "start_hour": "12",
-      "end_hour": "12",
-      "message_count": 2
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'dev'. The merge base commit for this comparison is 4b1e23999ec85eedaaf2183898ca0915b54499a7. Run `git",
-      "start_hour": "12",
-      "end_hour": "12",
-      "message_count": 79
-    },
-    {
-      "title": "got-this-in-our",
-      "topic": "Got this in our dev env { \"insertId\": \"698c94a00009386c72c5f85c\", \"jsonPayload\": { \"logger\": \"app.api.integration_routes\", \"timestamp\": \"2026-02-11T14",
-      "start_hour": "14",
-      "end_hour": "15",
-      "message_count": 8
-    },
-    {
-      "title": "specstory-history-is-currently",
-      "topic": ".specstory/history is currently gitignored. I want a post-push hook that will push it into a private repo called noam-specstory",
-      "start_hour": "15",
-      "end_hour": "15",
-      "message_count": 6
-    }
-  ],
-  "pr_timeline": [
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 302,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "14"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 303,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "13"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 298,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "12"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 297,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "11"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 296,
-      "title": "",
-      "url": "",
-      "action": "closed",
-      "merged": false,
-      "hour": "08"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 295,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "08"
+      ],
+      "prs": [],
+      "sessions": []
     }
   ]
 }

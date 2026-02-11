@@ -1,18 +1,21 @@
 {
   "date": "2026-02-09",
-  "day_summary": "The developer had a productive day working on the Script.it project, focusing heavily on code reviews, pull request management, and bug fixes. They spent significant time using AI agents to review code changes and read project plans, while also pushing multiple commits across different feature branches. The day concluded successfully with several pull requests being merged and multiple tasks being marked as completed.",
+  "day_summary": "The developer focused heavily on token management improvements, working on removing token rotation and implementing refresh token functionality. Multiple pull requests were created, reviewed, and merged throughout the day, with significant agent-assisted code review sessions in the afternoon.",
   "active_hours": 12,
   "stats": {
     "sessions": 10,
     "github_events": 36,
-    "notion_tasks": 15
+    "notion_tasks": 15,
+    "linked_tasks": 1
   },
   "hours": {
     "06": {
-      "summary": "Used an AI agent to read project plans and review code diffs between development branches.",
+      "summary": "Started the day by having an agent review a development plan and compare diffs between dev and staging branches.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 0,
+      "events": [],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-09_16-31-51Z-command-name-clear-command.md",
@@ -20,107 +23,80 @@
           "topic": "please read the plan /Users/noam/code/script.it/.opencode/plans/1770534166001-gentle-cactus.md and diffs from dev to understand the current feature Then await further orders --- _**Agent (claude-opus-",
           "messages": 66
         }
-      ],
-      "github_events": [],
-      "notion_tasks": []
+      ]
     },
     "08": {
-      "summary": "Pushed code to multiple repositories, opened and assigned pull requests, and worked on UI sorting alignment tasks.",
+      "summary": "Created and opened PR #43 to remove SCRIPTIT_TOKEN_PATH while pushing changes to remove rotation feature branch.",
       "session_count": 0,
       "github_event_count": 9,
       "task_count": 1,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-09T08:27:54Z",
-          "hour": "08",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T08:27:42Z",
-          "hour": "08",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "branch": "noam/feat/no-token",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/no-token",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T08:18:06Z",
-          "hour": "08",
           "type": "IssueCommentEvent",
-          "repo": "bespo-ai/script.it"
+          "repo": "bespo-ai/script.it",
+          "description": "IssueCommentEvent"
         },
         {
           "timestamp": "2026-02-09T08:15:27Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "action": "assigned",
+          "description": "PR #43 assigned: remove SCRIPTIT_TOKEN_PATHh",
           "pr_number": 43,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/43"
         },
         {
           "timestamp": "2026-02-09T08:15:27Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "action": "opened",
+          "description": "PR #43 opened: remove SCRIPTIT_TOKEN_PATHh",
           "pr_number": 43,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/43"
         },
         {
           "timestamp": "2026-02-09T08:15:18Z",
-          "hour": "08",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "ref_type": "branch",
-          "ref": "noam/feat/no-token"
+          "description": "Created branch noam/feat/no-token"
         },
         {
           "timestamp": "2026-02-09T08:13:10Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #277 assigned: Replace rotation with refresh token",
           "pr_number": 277,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/277"
         },
         {
           "timestamp": "2026-02-09T08:13:10Z",
-          "hour": "08",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #277 opened: Replace rotation with refresh token",
           "pr_number": 277,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/277"
         },
         {
           "timestamp": "2026-02-09T08:12:11Z",
-          "hour": "08",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "noam/feat/remove-rotation"
+          "description": "Created branch noam/feat/remove-rotation"
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "2faec4e5-8f15-80e6-9dee-dbdcbd7f3b86",
           "name": "Align scripts and sessions sorting in UI - either ascending or descending ",
@@ -129,42 +105,31 @@
             "Script.it Frontend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "09": {
-      "summary": "Continued reviewing project plans with an AI agent while pushing more commits and addressing various UI loading issues.",
+      "summary": "Continued agent-assisted plan review and pushed additional changes to the rotation removal branch while tracking UI loading issues.",
       "session_count": 1,
       "github_event_count": 2,
       "task_count": 3,
-      "sessions": [
-        {
-          "filename": "2026-02-09_16-31-51Z-command-name-clear-command.md",
-          "title_slug": "command-name-clear-command",
-          "topic": "please read the plan /Users/noam/code/script.it/.opencode/plans/1770534166001-gentle-cactus.md and diffs from dev to understand the current feature Then await further orders --- _**Agent (claude-opus-",
-          "messages": 66
-        }
-      ],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-09T09:15:15Z",
-          "hour": "09",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T09:15:02Z",
-          "hour": "09",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "302ec4e5-8f15-8066-b729-ee28e914158f",
           "name": "Session sidebar failed to load",
@@ -183,26 +148,31 @@
           "status": "Not started",
           "tags": []
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-09_16-31-51Z-command-name-clear-command.md",
+          "title_slug": "command-name-clear-command",
+          "topic": "please read the plan /Users/noam/code/script.it/.opencode/plans/1770534166001-gentle-cactus.md and diffs from dev to understand the current feature Then await further orders --- _**Agent (claude-opus-",
+          "messages": 66
+        }
       ]
     },
     "10": {
-      "summary": "Made additional code pushes and worked on session tagging features and API upload capabilities.",
+      "summary": "Made another push to the rotation removal branch and added new tasks including multipart upload support for the CLI.",
       "session_count": 0,
       "github_event_count": 1,
       "task_count": 3,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-09T10:20:11Z",
-          "hour": "10",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "2faec4e5-8f15-808a-ac8b-c0340057b47f",
           "name": "Add ability to tag a previous session",
@@ -227,86 +197,71 @@
           "status": "Not started",
           "tags": []
         }
-      ]
+      ],
+      "sessions": []
     },
     "11": {
-      "summary": "Engaged in pull request reviews and discussions while continuing development on the remove-rotation feature branch.",
+      "summary": "Engaged in code review activities with multiple pushes to both rotation removal and token-related branches.",
       "session_count": 0,
       "github_event_count": 8,
       "task_count": 2,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-09T11:38:24Z",
-          "hour": "11",
           "type": "PullRequestReviewCommentEvent",
-          "repo": "bespo-ai/script.it"
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent"
         },
         {
           "timestamp": "2026-02-09T11:58:50Z",
-          "hour": "11",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T11:57:19Z",
-          "hour": "11",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T11:57:08Z",
-          "hour": "11",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "branch": "noam/feat/no-token",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/no-token",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T11:56:23Z",
-          "hour": "11",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T11:55:14Z",
-          "hour": "11",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T11:43:43Z",
-          "hour": "11",
           "type": "PullRequestReviewEvent",
           "repo": "bespo-ai/script.it",
-          "pr_number": 277,
-          "pr_title": "",
-          "review_state": "commented"
+          "description": "PullRequestReviewEvent"
         },
         {
           "timestamp": "2026-02-09T11:04:46Z",
-          "hour": "11",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "302ec4e5-8f15-8040-92ab-c4ce7afd479f",
           "name": "output tags don\u2019t show",
@@ -321,13 +276,16 @@
             "Script.it Agent"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "12": {
-      "summary": "Used an AI agent to investigate bridge logs in the e2b sandbox environment.",
+      "summary": "Used agent assistance to check bridge logs in the e2b sandbox for specific log patterns.",
       "session_count": 1,
       "github_event_count": 0,
       "task_count": 0,
+      "events": [],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-09_12-58-31Z-command-name-clear-command.md",
@@ -335,91 +293,64 @@
           "topic": "Please check the bridge logs in my e2b sandbox - do you find logs that look like [2026-02-09T12:42:27.613Z] INFO agent_connected {\"detail\":{\"apiPort\":4096,\"workspaceDir\":\"/workspace\",\"httpReadyMs\":6}}",
           "messages": 7
         }
-      ],
-      "github_events": [],
-      "notion_tasks": []
+      ]
     },
     "13": {
-      "summary": "Continued debugging bridge logs while opening new pull requests and working on sandbox selection UI improvements.",
+      "summary": "Continued bridge log investigation while creating and opening PR #278 for refresh token revocation functionality.",
       "session_count": 1,
       "github_event_count": 7,
       "task_count": 1,
-      "sessions": [
-        {
-          "filename": "2026-02-09_12-58-31Z-command-name-clear-command.md",
-          "title_slug": "command-name-clear-command",
-          "topic": "Please check the bridge logs in my e2b sandbox - do you find logs that look like [2026-02-09T12:42:27.613Z] INFO agent_connected {\"detail\":{\"apiPort\":4096,\"workspaceDir\":\"/workspace\",\"httpReadyMs\":6}}",
-          "messages": 7
-        }
-      ],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-09T13:39:26Z",
-          "hour": "13",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/refresh-token-revoke",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/refresh-token-revoke",
+          "commits": []
         },
         {
           "timestamp": "2026-02-09T13:18:31Z",
-          "hour": "13",
           "type": "PullRequestReviewEvent",
           "repo": "bespo-ai/script.it",
-          "pr_number": 278,
-          "pr_title": "",
-          "review_state": "commented"
+          "description": "PullRequestReviewEvent"
         },
         {
           "timestamp": "2026-02-09T13:18:30Z",
-          "hour": "13",
           "type": "PullRequestReviewCommentEvent",
-          "repo": "bespo-ai/script.it"
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent"
         },
         {
           "timestamp": "2026-02-09T13:13:23Z",
-          "hour": "13",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "assigned",
+          "description": "PR #278 assigned: Revoke refresh token",
           "pr_number": 278,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/278"
         },
         {
           "timestamp": "2026-02-09T13:13:23Z",
-          "hour": "13",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "opened",
+          "description": "PR #278 opened: Revoke refresh token",
           "pr_number": 278,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/278"
         },
         {
           "timestamp": "2026-02-09T13:13:11Z",
-          "hour": "13",
           "type": "CreateEvent",
           "repo": "bespo-ai/script.it",
-          "ref_type": "branch",
-          "ref": "noam/feat/refresh-token-revoke"
+          "description": "Created branch noam/feat/refresh-token-revoke"
         },
         {
           "timestamp": "2026-02-09T13:12:39Z",
-          "hour": "13",
           "type": "PushEvent",
           "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/remove-rotation",
-          "commit_count": 0,
-          "commit_messages": []
+          "description": "Pushed 0 commit(s) to noam/feat/remove-rotation",
+          "commits": []
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "301ec4e5-8f15-80a0-ac1b-eab89cb5afec",
           "name": "\u201cSelect a sandbox to get started\u201d",
@@ -428,16 +359,23 @@
             "Script.it Frontend"
           ]
         }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-09_12-58-31Z-command-name-clear-command.md",
+          "title_slug": "command-name-clear-command",
+          "topic": "Please check the bridge logs in my e2b sandbox - do you find logs that look like [2026-02-09T12:42:27.613Z] INFO agent_connected {\"detail\":{\"apiPort\":4096,\"workspaceDir\":\"/workspace\",\"httpReadyMs\":6}}",
+          "messages": 7
+        }
       ]
     },
     "14": {
-      "summary": "Focused on agent behavior improvements, specifically preventing unnecessary YAML returns.",
+      "summary": "Added a new task about agent YAML output behavior.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 1,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "2ffec4e5-8f15-809c-9abc-c8cc4d3d60ef",
           "name": "Agent shouldn\u2019t return yaml unless explicitly asked",
@@ -446,13 +384,59 @@
             "Script.it Agent"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "16": {
-      "summary": "Conducted extensive code reviews using AI agents, examining changes against feature branches and addressing previously identified issues.",
+      "summary": "Conducted extensive agent-assisted code reviews with multiple sessions reviewing changes against the rotation removal branch.",
       "session_count": 7,
       "github_event_count": 5,
       "task_count": 1,
+      "events": [
+        {
+          "timestamp": "2026-02-09T16:28:53Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/refresh-token-revoke",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-09T16:58:34Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/refresh-token-revoke",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-09T16:02:44Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/refresh-token-revoke",
+          "commits": []
+        },
+        {
+          "timestamp": "2026-02-09T16:03:19Z",
+          "type": "PullRequestReviewEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewEvent"
+        },
+        {
+          "timestamp": "2026-02-09T16:03:18Z",
+          "type": "PullRequestReviewCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent"
+        }
+      ],
+      "tasks": [
+        {
+          "id": "2faec4e5-8f15-80d4-9eda-d3dd6a554ef8",
+          "name": "Let agent view/search contents of other sessions",
+          "status": "Added by Agent",
+          "tags": [
+            "Script.it Agent"
+          ]
+        }
+      ],
       "sessions": [
         {
           "filename": "2026-02-09_16-05-02Z-command-message-review-command.md",
@@ -496,67 +480,23 @@
           "topic": "please read the plan /Users/noam/code/script.it/.opencode/plans/1770534166001-gentle-cactus.md and diffs from dev to understand the current feature Then await further orders --- _**Agent (claude-opus-",
           "messages": 66
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-09T16:28:53Z",
-          "hour": "16",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/refresh-token-revoke",
-          "commit_count": 0,
-          "commit_messages": []
-        },
-        {
-          "timestamp": "2026-02-09T16:58:34Z",
-          "hour": "16",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/refresh-token-revoke",
-          "commit_count": 0,
-          "commit_messages": []
-        },
-        {
-          "timestamp": "2026-02-09T16:02:44Z",
-          "hour": "16",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/refresh-token-revoke",
-          "commit_count": 0,
-          "commit_messages": []
-        },
-        {
-          "timestamp": "2026-02-09T16:03:19Z",
-          "hour": "16",
-          "type": "PullRequestReviewEvent",
-          "repo": "bespo-ai/script.it",
-          "pr_number": 278,
-          "pr_title": "",
-          "review_state": "commented"
-        },
-        {
-          "timestamp": "2026-02-09T16:03:18Z",
-          "hour": "16",
-          "type": "PullRequestReviewCommentEvent",
-          "repo": "bespo-ai/script.it"
-        }
-      ],
-      "notion_tasks": [
-        {
-          "id": "2faec4e5-8f15-80d4-9eda-d3dd6a554ef8",
-          "name": "Let agent view/search contents of other sessions",
-          "status": "Added by Agent",
-          "tags": [
-            "Script.it Agent"
-          ]
-        }
       ]
     },
     "17": {
-      "summary": "Returned to reviewing project plans and code diffs using an AI agent while making additional commits.",
+      "summary": "Returned to agent-assisted plan review and made final pushes to the refresh token revoke branch.",
       "session_count": 1,
       "github_event_count": 1,
       "task_count": 0,
+      "events": [
+        {
+          "timestamp": "2026-02-09T17:00:07Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/refresh-token-revoke",
+          "commits": []
+        }
+      ],
+      "tasks": [],
       "sessions": [
         {
           "filename": "2026-02-09_16-31-51Z-command-name-clear-command.md",
@@ -564,65 +504,40 @@
           "topic": "please read the plan /Users/noam/code/script.it/.opencode/plans/1770534166001-gentle-cactus.md and diffs from dev to understand the current feature Then await further orders --- _**Agent (claude-opus-",
           "messages": 66
         }
-      ],
-      "github_events": [
-        {
-          "timestamp": "2026-02-09T17:00:07Z",
-          "hour": "17",
-          "type": "PushEvent",
-          "repo": "bespo-ai/script.it",
-          "branch": "noam/feat/refresh-token-revoke",
-          "commit_count": 0,
-          "commit_messages": []
-        }
-      ],
-      "notion_tasks": []
+      ]
     },
     "18": {
-      "summary": "Successfully merged multiple pull requests across different repositories and completed several bug fixes including session filters and token rotation issues.",
+      "summary": "Successfully merged three major pull requests: token path removal, rotation replacement, and refresh token revocation.",
       "session_count": 0,
       "github_event_count": 3,
       "task_count": 2,
-      "sessions": [],
-      "github_events": [
+      "events": [
         {
           "timestamp": "2026-02-09T18:38:09Z",
-          "hour": "18",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it-dsl",
-          "action": "merged",
+          "description": "PR #43 merged: remove SCRIPTIT_TOKEN_PATHh",
           "pr_number": 43,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it-dsl/pull/43"
         },
         {
           "timestamp": "2026-02-09T18:37:40Z",
-          "hour": "18",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "merged",
+          "description": "PR #277 merged: Replace rotation with refresh token",
           "pr_number": 277,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/277"
         },
         {
           "timestamp": "2026-02-09T18:31:40Z",
-          "hour": "18",
           "type": "PullRequestEvent",
           "repo": "bespo-ai/script.it",
-          "action": "merged",
+          "description": "PR #278 merged: Revoke refresh token",
           "pr_number": 278,
-          "pr_title": "",
-          "pr_url": "",
-          "pr_state": "",
-          "merged": false
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/278"
         }
       ],
-      "notion_tasks": [
+      "tasks": [
         {
           "id": "302ec4e5-8f15-8097-a85e-c92268db2c62",
           "name": "Sessions filter doesn\u2019t work",
@@ -639,16 +554,16 @@
             "Script.it Backend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     },
     "19": {
-      "summary": "Wrapped up the day by marking backend error tasks as completed.",
+      "summary": "Completed backend error resolution tasks.",
       "session_count": 0,
       "github_event_count": 0,
       "task_count": 1,
-      "sessions": [],
-      "github_events": [],
-      "notion_tasks": [
+      "events": [],
+      "tasks": [
         {
           "id": "302ec4e5-8f15-8089-b860-f8f255a6b2dd",
           "name": "Backend Errors",
@@ -657,11 +572,13 @@
             "Script.it Backend"
           ]
         }
-      ]
+      ],
+      "sessions": []
     }
   },
-  "tasks": [
+  "work_items": [
     {
+      "type": "task",
       "id": "2faec4e5-8f15-80e6-9dee-dbdcbd7f3b86",
       "name": "Align scripts and sessions sorting in UI - either ascending or descending ",
       "status": "Not started",
@@ -669,49 +586,68 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Align-scripts-and-sessions-sorting-in-UI-either-ascending-or-descending-2faec4e58f1580e69deedbdcbd7f3b86",
       "active_hours": [
         "08"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-8066-b729-ee28e914158f",
       "name": "Session sidebar failed to load",
       "status": "Not started",
       "priority": "High",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/Session-sidebar-failed-to-load-302ec4e58f158066b729ee28e914158f",
       "active_hours": [
         "09"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-80ce-a309-fdfa7d89ca68",
       "name": "Workspace doesn\u2019t load for a really long time",
       "status": "Not started",
       "priority": "High",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/Workspace-doesn-t-load-for-a-really-long-time-302ec4e58f1580cea309fdfa7d89ca68",
       "active_hours": [
-        "09"
+        "09",
+        "16"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-09_16-16-50Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "IMPORTANT: The following issues have ALREADY been found and addressed or intentionally ignored. Do NOT repeat them. Focus ONLY on NEW issues not cover",
+          "active_hours": [
+            "16"
+          ],
+          "message_count": 2
+        }
       ]
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-8054-9f30-ec50a8ba3a78",
       "name": "Block outputs don\u2019t load",
       "status": "Not started",
       "priority": "High",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/Block-outputs-don-t-load-302ec4e58f1580549f30ec50a8ba3a78",
       "active_hours": [
         "09"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2faec4e5-8f15-808a-ac8b-c0340057b47f",
       "name": "Add ability to tag a previous session",
       "status": "Upcoming",
@@ -721,13 +657,15 @@
         "Script.it Backend",
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Add-ability-to-tag-a-previous-session-2faec4e58f15808aac8bc0340057b47f",
       "active_hours": [
         "10"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-8140-a3d4-ca25f1263049",
       "name": "scriptit-api CLI cannot perform multipart/related uploads (e.g. Google Drive file upload)",
       "status": "Added by Agent",
@@ -735,37 +673,43 @@
       "tags": [
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/scriptit-api-CLI-cannot-perform-multipart-related-uploads-e-g-Google-Drive-file-upload-302ec4e58f158140a3d4ca25f1263049",
       "active_hours": [
         "10"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-806a-b921-dbafc1b35ee3",
       "name": "",
       "status": "Not started",
       "priority": "",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/302ec4e58f15806ab921dbafc1b35ee3",
       "active_hours": [
         "10"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-8040-92ab-c4ce7afd479f",
       "name": "output tags don\u2019t show",
       "status": "Not started",
       "priority": "Low",
       "tags": [],
-      "pr_url": "",
       "url": "https://www.notion.so/output-tags-don-t-show-302ec4e58f15804092abc4ce7afd479f",
       "active_hours": [
         "11"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-800b-b2ca-ce30e52f945a",
       "name": "BUG - session stop buttons fails to kill agent-initiated bash",
       "status": "Upcoming",
@@ -773,13 +717,15 @@
       "tags": [
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-session-stop-buttons-fails-to-kill-agent-initiated-bash-302ec4e58f15800bb2cace30e52f945a",
       "active_hours": [
         "11"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "301ec4e5-8f15-80a0-ac1b-eab89cb5afec",
       "name": "\u201cSelect a sandbox to get started\u201d",
       "status": "In progress",
@@ -787,13 +733,27 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Select-a-sandbox-to-get-started-301ec4e58f1580a0ac1beab89cb5afec",
       "active_hours": [
+        "12",
         "13"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-09_12-58-31Z-command-name-clear-command.md",
+          "title_slug": "command-name-clear-command",
+          "topic": "Please check the bridge logs in my e2b sandbox - do you find logs that look like [2026-02-09T12:42:27.613Z] INFO agent_connected {\"detail\":{\"apiPort\":",
+          "active_hours": [
+            "12",
+            "13"
+          ],
+          "message_count": 7
+        }
       ]
     },
     {
+      "type": "task",
       "id": "2ffec4e5-8f15-809c-9abc-c8cc4d3d60ef",
       "name": "Agent shouldn\u2019t return yaml unless explicitly asked",
       "status": "Not started",
@@ -801,13 +761,15 @@
       "tags": [
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Agent-shouldn-t-return-yaml-unless-explicitly-asked-2ffec4e58f15809c9abcc8cc4d3d60ef",
       "active_hours": [
         "14"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "2faec4e5-8f15-80d4-9eda-d3dd6a554ef8",
       "name": "Let agent view/search contents of other sessions",
       "status": "Added by Agent",
@@ -815,13 +777,25 @@
       "tags": [
         "Script.it Agent"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Let-agent-view-search-contents-of-other-sessions-2faec4e58f1580d49edad3dd6a554ef8",
       "active_hours": [
         "16"
+      ],
+      "prs": [],
+      "sessions": [
+        {
+          "filename": "2026-02-09_16-05-02Z-command-message-review-command.md",
+          "title_slug": "command-message-review-command",
+          "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
+          "active_hours": [
+            "16"
+          ],
+          "message_count": 2
+        }
       ]
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-8097-a85e-c92268db2c62",
       "name": "Sessions filter doesn\u2019t work",
       "status": "Done",
@@ -829,13 +803,15 @@
       "tags": [
         "Script.it Frontend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Sessions-filter-doesn-t-work-302ec4e58f158097a85ec92268db2c62",
       "active_hours": [
         "18"
-      ]
+      ],
+      "prs": [],
+      "sessions": []
     },
     {
+      "type": "task",
       "id": "301ec4e5-8f15-807d-9646-c48a65d30077",
       "name": "BUG - token rotation not restarting",
       "status": "Done",
@@ -843,13 +819,135 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/BUG-token-rotation-not-restarting-301ec4e58f15807d9646c48a65d30077",
       "active_hours": [
+        "06",
+        "08",
+        "09",
+        "10",
+        "11",
+        "13",
+        "16",
+        "17",
         "18"
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it-dsl#43",
+          "repo": "bespo-ai/script.it-dsl",
+          "number": 43,
+          "title": "remove SCRIPTIT_TOKEN_PATHh",
+          "url": "https://github.com/bespo-ai/script.it-dsl/pull/43",
+          "branch": "noam/feat/no-token",
+          "merged": true,
+          "event_hours": [
+            "08",
+            "18"
+          ],
+          "push_hours": [
+            "08",
+            "11"
+          ]
+        },
+        {
+          "key": "bespo-ai/script.it#277",
+          "repo": "bespo-ai/script.it",
+          "number": 277,
+          "title": "Replace rotation with refresh token",
+          "url": "https://github.com/bespo-ai/script.it/pull/277",
+          "branch": "noam/feat/remove-rotation",
+          "merged": true,
+          "event_hours": [
+            "08",
+            "18"
+          ],
+          "push_hours": [
+            "08",
+            "09",
+            "10",
+            "11",
+            "13"
+          ]
+        },
+        {
+          "key": "bespo-ai/script.it#278",
+          "repo": "bespo-ai/script.it",
+          "number": 278,
+          "title": "Revoke refresh token",
+          "url": "https://github.com/bespo-ai/script.it/pull/278",
+          "branch": "noam/feat/refresh-token-revoke",
+          "merged": true,
+          "event_hours": [
+            "13",
+            "18"
+          ],
+          "push_hours": [
+            "13",
+            "16",
+            "17"
+          ]
+        }
+      ],
+      "sessions": [
+        {
+          "filename": "2026-02-09_10-54-48Z-sandbox-refresh-token-revocation-plan.md",
+          "title_slug": "sandbox-refresh-token-revocation-plan",
+          "topic": "",
+          "active_hours": [],
+          "message_count": 0
+        },
+        {
+          "filename": "2026-02-09_16-05-02Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'noam/feat/remove-rotation'. The merge base commit for this comparison is d472d6527e3664eea7b6b60a3d01",
+          "active_hours": [
+            "16"
+          ],
+          "message_count": 60
+        },
+        {
+          "filename": "2026-02-09_16-05-03Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'noam/feat/remove-rotation'. The merge base commit for this comparison is d472d6527e3664eea7b6b60a3d01",
+          "active_hours": [
+            "16"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-09_16-19-33Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'noam/feat/remove-rotation'. The merge base commit for this comparison is d472d6527e3664eea7b6b60a3d01",
+          "active_hours": [
+            "16"
+          ],
+          "message_count": 58
+        },
+        {
+          "filename": "2026-02-09_16-19-34Z-review-the-code-changes.md",
+          "title_slug": "review-the-code-changes",
+          "topic": "Review the code changes against the base branch 'noam/feat/remove-rotation'. The merge base commit for this comparison is d472d6527e3664eea7b6b60a3d01",
+          "active_hours": [
+            "16"
+          ],
+          "message_count": 1
+        },
+        {
+          "filename": "2026-02-09_16-31-51Z-command-name-clear-command.md",
+          "title_slug": "command-name-clear-command",
+          "topic": "please read the plan /Users/noam/code/script.it/.opencode/plans/1770534166001-gentle-cactus.md and diffs from dev to understand the current feature Th",
+          "active_hours": [
+            "06",
+            "09",
+            "16",
+            "17"
+          ],
+          "message_count": 66
+        }
       ]
     },
     {
+      "type": "task",
       "id": "302ec4e5-8f15-8089-b860-f8f255a6b2dd",
       "name": "Backend Errors",
       "status": "Done",
@@ -857,98 +955,12 @@
       "tags": [
         "Script.it Backend"
       ],
-      "pr_url": "",
       "url": "https://www.notion.so/Backend-Errors-302ec4e58f158089b860f8f255a6b2dd",
       "active_hours": [
         "19"
-      ]
-    }
-  ],
-  "session_timeline": [
-    {
-      "title": "command-name-clear-command",
-      "topic": "Please check the bridge logs in my e2b sandbox - do you find logs that look like [2026-02-09T12:42:27.613Z] INFO agent_connected {\"detail\":{\"apiPort\":",
-      "start_hour": "12",
-      "end_hour": "13",
-      "message_count": 7
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "You are an expert code reviewer. Follow these steps: 1. If no PR number is provided in the args, use Bash(\"gh pr list\") to show open PRs 2. If a PR nu",
-      "start_hour": "16",
-      "end_hour": "16",
-      "message_count": 2
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'noam/feat/remove-rotation'. The merge base commit for this comparison is d472d6527e3664eea7b6b60a3d01",
-      "start_hour": "16",
-      "end_hour": "16",
-      "message_count": 60
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'noam/feat/remove-rotation'. The merge base commit for this comparison is d472d6527e3664eea7b6b60a3d01",
-      "start_hour": "16",
-      "end_hour": "16",
-      "message_count": 1
-    },
-    {
-      "title": "command-message-review-command",
-      "topic": "IMPORTANT: The following issues have ALREADY been found and addressed or intentionally ignored. Do NOT repeat them. Focus ONLY on NEW issues not cover",
-      "start_hour": "16",
-      "end_hour": "16",
-      "message_count": 2
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'noam/feat/remove-rotation'. The merge base commit for this comparison is d472d6527e3664eea7b6b60a3d01",
-      "start_hour": "16",
-      "end_hour": "16",
-      "message_count": 58
-    },
-    {
-      "title": "review-the-code-changes",
-      "topic": "Review the code changes against the base branch 'noam/feat/remove-rotation'. The merge base commit for this comparison is d472d6527e3664eea7b6b60a3d01",
-      "start_hour": "16",
-      "end_hour": "16",
-      "message_count": 1
-    },
-    {
-      "title": "command-name-clear-command",
-      "topic": "please read the plan /Users/noam/code/script.it/.opencode/plans/1770534166001-gentle-cactus.md and diffs from dev to understand the current feature Th",
-      "start_hour": "06",
-      "end_hour": "17",
-      "message_count": 66
-    }
-  ],
-  "pr_timeline": [
-    {
-      "repo": "bespo-ai/script.it-dsl",
-      "number": 43,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "18"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 277,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "18"
-    },
-    {
-      "repo": "bespo-ai/script.it",
-      "number": 278,
-      "title": "",
-      "url": "",
-      "action": "merged",
-      "merged": false,
-      "hour": "18"
+      ],
+      "prs": [],
+      "sessions": []
     }
   ]
 }

@@ -1,0 +1,1290 @@
+{
+  "date": "2026-03-19",
+  "day_summary": "Developer had a highly productive day focused on bug fixes and feature development across multiple areas: trigger credit autopause, SSE connection management, session handling, and UI improvements. Major accomplishments included merging PR #692 for SSE connection cap enforcement, completing file input rendering, and stabilizing session autoscroll functionality. Work spanned from early morning through late evening with consistent progress on both backend infrastructure and frontend features.",
+  "active_hours": 15,
+  "stats": {
+    "sessions": 0,
+    "github_events": 47,
+    "notion_tasks": 27,
+    "linked_tasks": 3
+  },
+  "hours": {
+    "08": {
+      "summary": "Pushed changes to worktree-trigger-credit-autopause branch and completed back button navigation task with multiple code review interactions.",
+      "session_count": 0,
+      "github_event_count": 5,
+      "task_count": 1,
+      "events": [
+        {
+          "timestamp": "2026-03-19T08:40:23Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to worktree-trigger-credit-autopause",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T08:40:04Z",
+          "type": "IssueCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "IssueCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T08:29:13Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to worktree-trigger-credit-autopause",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T08:25:10Z",
+          "type": "PullRequestReviewCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T08:25:10Z",
+          "type": "PullRequestReviewEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewEvent",
+          "highlight": false
+        }
+      ],
+      "tasks": [
+        {
+          "id": "30aec4e5-8f15-80eb-9267-c1d18825ccc7",
+          "name": "Back button for navigation",
+          "status": "Done",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": true
+        }
+      ],
+      "sessions": []
+    },
+    "09": {
+      "summary": "Continued work on worktree-trigger-credit-autopause with a push and issue comment, while starting organization and custom integrations task.",
+      "session_count": 0,
+      "github_event_count": 2,
+      "task_count": 1,
+      "events": [
+        {
+          "timestamp": "2026-03-19T09:21:43Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to worktree-trigger-credit-autopause",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T09:20:19Z",
+          "type": "IssueCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "IssueCommentEvent",
+          "highlight": false
+        }
+      ],
+      "tasks": [
+        {
+          "id": "31fec4e5-8f15-804c-9a77-ee4497d8b689",
+          "name": "Organization (For On Prem and Saas) + Custom Integrations",
+          "status": "Not started",
+          "tags": [
+            "Script.it Infra",
+            "Script.it Frontend",
+            "Script.it Backend",
+            "Script.it Agent"
+          ],
+          "highlight": false
+        }
+      ],
+      "sessions": []
+    },
+    "10": {
+      "summary": "Made a single push to worktree-trigger-credit-autopause branch.",
+      "session_count": 0,
+      "github_event_count": 1,
+      "task_count": 0,
+      "events": [
+        {
+          "timestamp": "2026-03-19T10:53:12Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to worktree-trigger-credit-autopause",
+          "commits": [],
+          "highlight": false
+        }
+      ],
+      "tasks": [],
+      "sessions": []
+    },
+    "11": {
+      "summary": "Opened and assigned PR #692 for SSE connection cap enforcement, merged trigger credit autopause feature, and completed trigger credit autopause and instance locking tasks.",
+      "session_count": 0,
+      "github_event_count": 8,
+      "task_count": 6,
+      "events": [
+        {
+          "timestamp": "2026-03-19T11:59:07Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #692 assigned: Enforce SSE connection cap to match adapter cache",
+          "pr_number": 692,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/692",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T11:59:07Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #692 opened: Enforce SSE connection cap to match adapter cache",
+          "pr_number": 692,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/692",
+          "highlight": true
+        },
+        {
+          "timestamp": "2026-03-19T11:58:53Z",
+          "type": "CreateEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Created branch noam/feat/sse-connection-cap",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T11:38:19Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #686 merged: feat: SQL-efficient trigger credit autopause",
+          "pr_number": 686,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/686",
+          "highlight": true
+        },
+        {
+          "timestamp": "2026-03-19T11:28:38Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/remove-load",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T11:15:50Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to worktree-trigger-credit-autopause",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T11:06:11Z",
+          "type": "IssueCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "IssueCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T11:03:18Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to worktree-trigger-credit-autopause",
+          "commits": [],
+          "highlight": false
+        }
+      ],
+      "tasks": [
+        {
+          "id": "30fec4e5-8f15-803c-81d3-ea17802f05f3",
+          "name": "Make sure that taking the triggers is locked so 2 instances of cloud run can\u2019t take at the same time",
+          "status": "Done",
+          "tags": [
+            "Script.it Backend"
+          ],
+          "highlight": true
+        },
+        {
+          "id": "328ec4e5-8f15-803e-8064-c24a8c76c7d1",
+          "name": "Don\u2019t save empty sessions",
+          "status": "Not started",
+          "tags": [
+            "Script.it Backend",
+            "Script.it Frontend"
+          ],
+          "highlight": false
+        },
+        {
+          "id": "317ec4e5-8f15-8073-9f61-f3037d214ae8",
+          "name": "Stable ID for scripts",
+          "status": "Not started",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": false
+        },
+        {
+          "id": "320ec4e5-8f15-81d3-a09f-fcf5f275ad12",
+          "name": "BUG - Revert fails with index out of bounds due to synthetic message count mismatch",
+          "status": "In Review",
+          "tags": [
+            "Script.it Frontend",
+            "Script.it Agent"
+          ],
+          "highlight": false
+        },
+        {
+          "id": "327ec4e5-8f15-81f8-aa8c-ca1edb848835",
+          "name": "Trigger credit autopause + expired grant fixes",
+          "status": "Done",
+          "tags": [
+            "Script.it Backend"
+          ],
+          "highlight": true
+        },
+        {
+          "id": "328ec4e5-8f15-808b-85cc-ca92c0e4e086",
+          "name": "Block specific triggers that can fire a lot (until we solve it in the infra level)",
+          "status": "Done",
+          "tags": [
+            "Script.it Backend"
+          ],
+          "highlight": true
+        }
+      ],
+      "sessions": []
+    },
+    "12": {
+      "summary": "Pushed SSE connection cap changes and reviewed SSE connection accumulation bug fix.",
+      "session_count": 0,
+      "github_event_count": 2,
+      "task_count": 1,
+      "events": [
+        {
+          "timestamp": "2026-03-19T12:32:52Z",
+          "type": "IssueCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "IssueCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T12:32:40Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/sse-connection-cap",
+          "commits": [],
+          "highlight": false
+        }
+      ],
+      "tasks": [
+        {
+          "id": "328ec4e5-8f15-8141-8084-f01329e4c0b8",
+          "name": "BUG - SSE connections accumulate beyond adapter cache size during rapid session switching",
+          "status": "In Review",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": false
+        }
+      ],
+      "sessions": []
+    },
+    "13": {
+      "summary": "Merged PR #692 for SSE connection cap enforcement and continued work on multiple feature branches with code reviews.",
+      "session_count": 0,
+      "github_event_count": 11,
+      "task_count": 0,
+      "events": [
+        {
+          "timestamp": "2026-03-19T13:53:44Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/remove-load",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:53:42Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #692 merged: Enforce SSE connection cap to match adapter cache",
+          "pr_number": 692,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/692",
+          "highlight": true
+        },
+        {
+          "timestamp": "2026-03-19T13:50:23Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/sse-connection-cap",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:49:41Z",
+          "type": "PullRequestReviewCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:49:42Z",
+          "type": "PullRequestReviewEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:49:08Z",
+          "type": "PullRequestReviewCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:49:08Z",
+          "type": "PullRequestReviewEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:48:23Z",
+          "type": "PullRequestReviewCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:48:24Z",
+          "type": "PullRequestReviewEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:48:13Z",
+          "type": "PullRequestReviewCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T13:48:13Z",
+          "type": "PullRequestReviewEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewEvent",
+          "highlight": false
+        }
+      ],
+      "tasks": [],
+      "sessions": []
+    },
+    "14": {
+      "summary": "Pushed e2b-log-collector changes multiple times and reviewed code while working on session needs review indicator feature.",
+      "session_count": 0,
+      "github_event_count": 6,
+      "task_count": 2,
+      "events": [
+        {
+          "timestamp": "2026-03-19T14:34:37Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T14:33:22Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T14:31:28Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T14:30:40Z",
+          "type": "PullRequestReviewCommentEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewCommentEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T14:30:40Z",
+          "type": "PullRequestReviewEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PullRequestReviewEvent",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T14:07:48Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to noam/feat/remove-load",
+          "commits": [],
+          "highlight": false
+        }
+      ],
+      "tasks": [
+        {
+          "id": "327ec4e5-8f15-80f3-bbb2-c9af0ab5aa27",
+          "name": "Needs review indicator for sessions",
+          "status": "In progress",
+          "tags": [
+            "Script.it Frontend",
+            "Script.it Agent"
+          ],
+          "highlight": true
+        },
+        {
+          "id": "2faec4e5-8f15-8016-9298-f27f786ae9b7",
+          "name": "Bug - sending a message and moving a tab - stops the agent run",
+          "status": "In Review",
+          "tags": [
+            "Script.it Agent",
+            "Script.it Backend"
+          ],
+          "highlight": false
+        }
+      ],
+      "sessions": []
+    },
+    "15": {
+      "summary": "Closed PR #677 for e2b log collector service and pushed multiple e2b-log-collector updates while managing session completion indicator work.",
+      "session_count": 0,
+      "github_event_count": 10,
+      "task_count": 3,
+      "events": [
+        {
+          "timestamp": "2026-03-19T15:54:26Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to claude/add-session-completion-indicator-TpgxC",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:53:00Z",
+          "type": "PullRequestEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "PR #677 closed: feat: add standalone E2B log collector service",
+          "pr_number": 677,
+          "pr_url": "https://github.com/bespo-ai/script.it/pull/677",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:46:00Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:43:21Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:35:15Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:32:35Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:25:11Z",
+          "type": "CreateEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Created branch claude/add-session-completion-indicator-TpgxC",
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:14:31Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:13:23Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T15:05:07Z",
+          "type": "PushEvent",
+          "repo": "bespo-ai/script.it",
+          "description": "Pushed 0 commit(s) to feat/e2b-log-collector",
+          "commits": [],
+          "highlight": false
+        }
+      ],
+      "tasks": [
+        {
+          "id": "328ec4e5-8f15-80cf-a07f-c8c5396f1707",
+          "name": "",
+          "status": "Not started",
+          "tags": [
+            "Script.it Frontend",
+            "Script.it Backend"
+          ],
+          "highlight": false
+        },
+        {
+          "id": "326ec4e5-8f15-80db-b09b-cc14c323bfc3",
+          "name": "Pull E2B logs to gcp",
+          "status": "On Hold",
+          "tags": [
+            "Script.it Backend"
+          ],
+          "highlight": false
+        },
+        {
+          "id": "303ec4e5-8f15-80e5-87b6-e031d32676c0",
+          "name": "Harden session/new - Optimize starting new sessions",
+          "status": "Cancel",
+          "tags": [
+            "Script.it Agent"
+          ],
+          "highlight": false
+        }
+      ],
+      "sessions": []
+    },
+    "16": {
+      "summary": "Identified and documented bug with archived session unarchiving functionality.",
+      "session_count": 0,
+      "github_event_count": 0,
+      "task_count": 1,
+      "events": [],
+      "tasks": [
+        {
+          "id": "1d2f41c6-42dc-4397-bdfc-94b712b0019a",
+          "name": "BUG - Unarchiving session does not remove it from archived list (count updates, refresh reverts)",
+          "status": "Not started",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": false
+        }
+      ],
+      "sessions": []
+    },
+    "18": {
+      "summary": "Completed file inputs rendering task.",
+      "session_count": 0,
+      "github_event_count": 0,
+      "task_count": 1,
+      "events": [],
+      "tasks": [
+        {
+          "id": "319ec4e5-8f15-802a-954d-e5d0e418fda9",
+          "name": "File inputs rendering",
+          "status": "Done",
+          "tags": [
+            "Script.it DSL",
+            "Script.it Frontend"
+          ],
+          "highlight": true
+        }
+      ],
+      "sessions": []
+    },
+    "19": {
+      "summary": "Fixed critical JSON parse error in session loading and cancelled several UI refinement tasks.",
+      "session_count": 0,
+      "github_event_count": 0,
+      "task_count": 4,
+      "events": [],
+      "tasks": [
+        {
+          "id": "328ec4e5-8f15-806b-9a45-e8cf7a704bbe",
+          "name": "normalizing json and csv viewers",
+          "status": "Cancel",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": false
+        },
+        {
+          "id": "328ec4e5-8f15-8085-b6ae-cfb137fdd113",
+          "name": "apply patch tool doesn\u2019t render nicely in session",
+          "status": "Cancel",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": false
+        },
+        {
+          "id": "bc0bcaa7-47b4-48b5-8f19-c10a4730555a",
+          "name": "BUG - Session auto-scrolls down unexpectedly, and doesn\u2019t let scrolling up during generation",
+          "status": "Cancel",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": false
+        },
+        {
+          "id": "328ec4e5-8f15-806b-b77f-fff5065d0e4a",
+          "name": "Fix: session not loading due to \u201cJSON Parse error: Unexpected identifier \u201c (issue in  scriptit-output-manager)",
+          "status": "Done",
+          "tags": [
+            "Script.it Agent"
+          ],
+          "highlight": true
+        }
+      ],
+      "sessions": []
+    },
+    "20": {
+      "summary": "Worked on auto-detecting list formatting during typing.",
+      "session_count": 0,
+      "github_event_count": 0,
+      "task_count": 1,
+      "events": [],
+      "tasks": [
+        {
+          "id": "326ec4e5-8f15-804b-924f-f00e50d9e5a5",
+          "name": "Auto-detect list formatting during typing",
+          "status": "In progress",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": true
+        }
+      ],
+      "sessions": []
+    },
+    "21": {
+      "summary": "Completed multiple session UI improvements including tabular viewer sharing, agent prompt refinement, and autoscroll stabilization.",
+      "session_count": 0,
+      "github_event_count": 0,
+      "task_count": 5,
+      "events": [],
+      "tasks": [
+        {
+          "id": "328ec4e5-8f15-81aa-8e07-fcce3696f4d8",
+          "name": "Share tabular viewer across CSV and JSON previews",
+          "status": "Done",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": true
+        },
+        {
+          "id": "328ec4e5-8f15-81aa-908c-eea1f79b819a",
+          "name": "Refine agent prompts for JSON and file inputs",
+          "status": "Done",
+          "tags": [
+            "Script.it Agent",
+            "Script.it DSL"
+          ],
+          "highlight": true
+        },
+        {
+          "id": "328ec4e5-8f15-8061-acdd-ee09a3c015c7",
+          "name": "Yahel\u2019s issue with empty session",
+          "status": "Cancel",
+          "tags": [],
+          "highlight": false
+        },
+        {
+          "id": "328ec4e5-8f15-81f7-8523-f01b5f5b1d03",
+          "name": "Stabilize session autoscroll and tighten block output spacing",
+          "status": "Done",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": true
+        },
+        {
+          "id": "30aec4e5-8f15-818a-b8a4-fe658964efbc",
+          "name": "Replayable /events with cursor + stream gap handling",
+          "status": "In Review",
+          "tags": [
+            "Script.it Backend",
+            "Script.it Frontend"
+          ],
+          "highlight": false
+        }
+      ],
+      "sessions": []
+    },
+    "22": {
+      "summary": "Completed rendering of apply_patch tool calls and script change tracking.",
+      "session_count": 0,
+      "github_event_count": 0,
+      "task_count": 1,
+      "events": [],
+      "tasks": [
+        {
+          "id": "328ec4e5-8f15-8111-b0dd-d1b21e6ac893",
+          "name": "Render apply_patch tool calls and track patched script changes",
+          "status": "Done",
+          "tags": [
+            "Script.it Frontend"
+          ],
+          "highlight": true
+        }
+      ],
+      "sessions": []
+    },
+    "23": {
+      "summary": "Pushed final changes to main branch.",
+      "session_count": 0,
+      "github_event_count": 2,
+      "task_count": 0,
+      "events": [
+        {
+          "timestamp": "2026-03-19T23:05:14Z",
+          "type": "PushEvent",
+          "repo": "noam-v/activity-dashboard",
+          "description": "Pushed 0 commit(s) to main",
+          "commits": [],
+          "highlight": false
+        },
+        {
+          "timestamp": "2026-03-19T23:05:12Z",
+          "type": "PushEvent",
+          "repo": "noam-v/activity-dashboard",
+          "description": "Pushed 0 commit(s) to main",
+          "commits": [],
+          "highlight": false
+        }
+      ],
+      "tasks": [],
+      "sessions": []
+    }
+  },
+  "work_items": [
+    {
+      "type": "task",
+      "id": "30aec4e5-8f15-80eb-9267-c1d18825ccc7",
+      "name": "Back button for navigation",
+      "status": "Done",
+      "priority": "Low",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/Back-button-for-navigation-30aec4e58f1580eb9267c1d18825ccc7",
+      "active_hours": [
+        "08"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "31fec4e5-8f15-804c-9a77-ee4497d8b689",
+      "name": "Organization (For On Prem and Saas) + Custom Integrations",
+      "status": "Not started",
+      "priority": "Medium",
+      "tags": [
+        "Script.it Infra",
+        "Script.it Frontend",
+        "Script.it Backend",
+        "Script.it Agent"
+      ],
+      "url": "https://www.notion.so/Organization-For-On-Prem-and-Saas-Custom-Integrations-31fec4e58f15804c9a77ee4497d8b689",
+      "active_hours": [
+        "09"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "30fec4e5-8f15-803c-81d3-ea17802f05f3",
+      "name": "Make sure that taking the triggers is locked so 2 instances of cloud run can\u2019t take at the same time",
+      "status": "Done",
+      "priority": "Medium",
+      "tags": [
+        "Script.it Backend"
+      ],
+      "url": "https://www.notion.so/Make-sure-that-taking-the-triggers-is-locked-so-2-instances-of-cloud-run-can-t-take-at-the-same-time-30fec4e58f15803c81d3ea17802f05f3",
+      "active_hours": [
+        "11"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-803e-8064-c24a8c76c7d1",
+      "name": "Don\u2019t save empty sessions",
+      "status": "Not started",
+      "priority": "Medium",
+      "tags": [
+        "Script.it Backend",
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/Don-t-save-empty-sessions-328ec4e58f15803e8064c24a8c76c7d1",
+      "active_hours": [
+        "11"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "317ec4e5-8f15-8073-9f61-f3037d214ae8",
+      "name": "Stable ID for scripts",
+      "status": "Not started",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/Stable-ID-for-scripts-317ec4e58f1580739f61f3037d214ae8",
+      "active_hours": [
+        "11"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "320ec4e5-8f15-81d3-a09f-fcf5f275ad12",
+      "name": "BUG - Revert fails with index out of bounds due to synthetic message count mismatch",
+      "status": "In Review",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend",
+        "Script.it Agent"
+      ],
+      "url": "https://www.notion.so/BUG-Revert-fails-with-index-out-of-bounds-due-to-synthetic-message-count-mismatch-320ec4e58f1581d3a09ffcf5f275ad12",
+      "active_hours": [
+        "11"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "327ec4e5-8f15-81f8-aa8c-ca1edb848835",
+      "name": "Trigger credit autopause + expired grant fixes",
+      "status": "Done",
+      "priority": "Medium",
+      "tags": [
+        "Script.it Backend"
+      ],
+      "url": "https://www.notion.so/Trigger-credit-autopause-expired-grant-fixes-327ec4e58f1581f8aa8cca1edb848835",
+      "active_hours": [
+        "08",
+        "09",
+        "10",
+        "11"
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#686",
+          "repo": "bespo-ai/script.it",
+          "number": 686,
+          "title": "feat: SQL-efficient trigger credit autopause",
+          "url": "https://github.com/bespo-ai/script.it/pull/686",
+          "branch": "worktree-trigger-credit-autopause",
+          "merged": true,
+          "merged_at": "2026-03-19T11:38:19Z",
+          "event_hours": [
+            "11"
+          ],
+          "push_hours": [
+            "08",
+            "09",
+            "10",
+            "11"
+          ]
+        }
+      ],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-808b-85cc-ca92c0e4e086",
+      "name": "Block specific triggers that can fire a lot (until we solve it in the infra level)",
+      "status": "Done",
+      "priority": "High",
+      "tags": [
+        "Script.it Backend"
+      ],
+      "url": "https://www.notion.so/Block-specific-triggers-that-can-fire-a-lot-until-we-solve-it-in-the-infra-level-328ec4e58f15808b85ccca92c0e4e086",
+      "active_hours": [
+        "11"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-8141-8084-f01329e4c0b8",
+      "name": "BUG - SSE connections accumulate beyond adapter cache size during rapid session switching",
+      "status": "In Review",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/BUG-SSE-connections-accumulate-beyond-adapter-cache-size-during-rapid-session-switching-328ec4e58f1581418084f01329e4c0b8",
+      "active_hours": [
+        "11",
+        "12",
+        "13"
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#692",
+          "repo": "bespo-ai/script.it",
+          "number": 692,
+          "title": "Enforce SSE connection cap to match adapter cache",
+          "url": "https://github.com/bespo-ai/script.it/pull/692",
+          "branch": "noam/feat/sse-connection-cap",
+          "merged": true,
+          "merged_at": "2026-03-19T13:53:42Z",
+          "event_hours": [
+            "11",
+            "13"
+          ],
+          "push_hours": [
+            "12",
+            "13"
+          ]
+        }
+      ],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "327ec4e5-8f15-80f3-bbb2-c9af0ab5aa27",
+      "name": "Needs review indicator for sessions",
+      "status": "In progress",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend",
+        "Script.it Agent"
+      ],
+      "url": "https://www.notion.so/Needs-review-indicator-for-sessions-327ec4e58f1580f3bbb2c9af0ab5aa27",
+      "active_hours": [
+        "14"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "2faec4e5-8f15-8016-9298-f27f786ae9b7",
+      "name": "Bug - sending a message and moving a tab - stops the agent run",
+      "status": "In Review",
+      "priority": "High",
+      "tags": [
+        "Script.it Agent",
+        "Script.it Backend"
+      ],
+      "url": "https://www.notion.so/Bug-sending-a-message-and-moving-a-tab-stops-the-agent-run-2faec4e58f1580169298f27f786ae9b7",
+      "active_hours": [
+        "14"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-80cf-a07f-c8c5396f1707",
+      "name": "",
+      "status": "Not started",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend",
+        "Script.it Backend"
+      ],
+      "url": "https://www.notion.so/328ec4e58f1580cfa07fc8c5396f1707",
+      "active_hours": [
+        "15"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "326ec4e5-8f15-80db-b09b-cc14c323bfc3",
+      "name": "Pull E2B logs to gcp",
+      "status": "On Hold",
+      "priority": "Low",
+      "tags": [
+        "Script.it Backend"
+      ],
+      "url": "https://www.notion.so/Pull-E2B-logs-to-gcp-326ec4e58f1580dbb09bcc14c323bfc3",
+      "active_hours": [
+        "14",
+        "15"
+      ],
+      "prs": [
+        {
+          "key": "bespo-ai/script.it#677",
+          "repo": "bespo-ai/script.it",
+          "number": 677,
+          "title": "feat: add standalone E2B log collector service",
+          "url": "https://github.com/bespo-ai/script.it/pull/677",
+          "branch": "feat/e2b-log-collector",
+          "merged": false,
+          "merged_at": null,
+          "event_hours": [
+            "15"
+          ],
+          "push_hours": [
+            "14",
+            "15"
+          ]
+        }
+      ],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "303ec4e5-8f15-80e5-87b6-e031d32676c0",
+      "name": "Harden session/new - Optimize starting new sessions",
+      "status": "Cancel",
+      "priority": "High",
+      "tags": [
+        "Script.it Agent"
+      ],
+      "url": "https://www.notion.so/Harden-session-new-Optimize-starting-new-sessions-303ec4e58f1580e587b6e031d32676c0",
+      "active_hours": [
+        "15"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "1d2f41c6-42dc-4397-bdfc-94b712b0019a",
+      "name": "BUG - Unarchiving session does not remove it from archived list (count updates, refresh reverts)",
+      "status": "Not started",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/BUG-Unarchiving-session-does-not-remove-it-from-archived-list-count-updates-refresh-reverts-1d2f41c642dc4397bdfc94b712b0019a",
+      "active_hours": [
+        "16"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "319ec4e5-8f15-802a-954d-e5d0e418fda9",
+      "name": "File inputs rendering",
+      "status": "Done",
+      "priority": "High",
+      "tags": [
+        "Script.it DSL",
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/File-inputs-rendering-319ec4e58f15802a954de5d0e418fda9",
+      "active_hours": [
+        "18"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-806b-9a45-e8cf7a704bbe",
+      "name": "normalizing json and csv viewers",
+      "status": "Cancel",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/normalizing-json-and-csv-viewers-328ec4e58f15806b9a45e8cf7a704bbe",
+      "active_hours": [
+        "19"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-8085-b6ae-cfb137fdd113",
+      "name": "apply patch tool doesn\u2019t render nicely in session",
+      "status": "Cancel",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/apply-patch-tool-doesn-t-render-nicely-in-session-328ec4e58f158085b6aecfb137fdd113",
+      "active_hours": [
+        "19"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "bc0bcaa7-47b4-48b5-8f19-c10a4730555a",
+      "name": "BUG - Session auto-scrolls down unexpectedly, and doesn\u2019t let scrolling up during generation",
+      "status": "Cancel",
+      "priority": "High",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/BUG-Session-auto-scrolls-down-unexpectedly-and-doesn-t-let-scrolling-up-during-generation-bc0bcaa747b448b58f19c10a4730555a",
+      "active_hours": [
+        "19"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-806b-b77f-fff5065d0e4a",
+      "name": "Fix: session not loading due to \u201cJSON Parse error: Unexpected identifier \u201c (issue in  scriptit-output-manager)",
+      "status": "Done",
+      "priority": "Medium",
+      "tags": [
+        "Script.it Agent"
+      ],
+      "url": "https://www.notion.so/Fix-session-not-loading-due-to-JSON-Parse-error-Unexpected-identifier-issue-in-scriptit-output-328ec4e58f15806bb77ffff5065d0e4a",
+      "active_hours": [
+        "19"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "326ec4e5-8f15-804b-924f-f00e50d9e5a5",
+      "name": "Auto-detect list formatting during typing",
+      "status": "In progress",
+      "priority": "Medium",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/Auto-detect-list-formatting-during-typing-326ec4e58f15804b924ff00e50d9e5a5",
+      "active_hours": [
+        "20"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-81aa-8e07-fcce3696f4d8",
+      "name": "Share tabular viewer across CSV and JSON previews",
+      "status": "Done",
+      "priority": "",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/Share-tabular-viewer-across-CSV-and-JSON-previews-328ec4e58f1581aa8e07fcce3696f4d8",
+      "active_hours": [
+        "21"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-81aa-908c-eea1f79b819a",
+      "name": "Refine agent prompts for JSON and file inputs",
+      "status": "Done",
+      "priority": "",
+      "tags": [
+        "Script.it Agent",
+        "Script.it DSL"
+      ],
+      "url": "https://www.notion.so/Refine-agent-prompts-for-JSON-and-file-inputs-328ec4e58f1581aa908ceea1f79b819a",
+      "active_hours": [
+        "21"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-8061-acdd-ee09a3c015c7",
+      "name": "Yahel\u2019s issue with empty session",
+      "status": "Cancel",
+      "priority": "",
+      "tags": [],
+      "url": "https://www.notion.so/Yahel-s-issue-with-empty-session-328ec4e58f158061acddee09a3c015c7",
+      "active_hours": [
+        "21"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-81f7-8523-f01b5f5b1d03",
+      "name": "Stabilize session autoscroll and tighten block output spacing",
+      "status": "Done",
+      "priority": "",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/Stabilize-session-autoscroll-and-tighten-block-output-spacing-328ec4e58f1581f78523f01b5f5b1d03",
+      "active_hours": [
+        "21"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "30aec4e5-8f15-818a-b8a4-fe658964efbc",
+      "name": "Replayable /events with cursor + stream gap handling",
+      "status": "In Review",
+      "priority": "High",
+      "tags": [
+        "Script.it Backend",
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/Replayable-events-with-cursor-stream-gap-handling-30aec4e58f15818ab8a4fe658964efbc",
+      "active_hours": [
+        "21"
+      ],
+      "prs": [],
+      "sessions": []
+    },
+    {
+      "type": "task",
+      "id": "328ec4e5-8f15-8111-b0dd-d1b21e6ac893",
+      "name": "Render apply_patch tool calls and track patched script changes",
+      "status": "Done",
+      "priority": "",
+      "tags": [
+        "Script.it Frontend"
+      ],
+      "url": "https://www.notion.so/Render-apply_patch-tool-calls-and-track-patched-script-changes-328ec4e58f158111b0ddd1b21e6ac893",
+      "active_hours": [
+        "22"
+      ],
+      "prs": [],
+      "sessions": []
+    }
+  ]
+}
